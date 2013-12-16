@@ -2,15 +2,25 @@
 #+AUTHOR: amoblin
 #+EMAIL: amoblin@gmail.com
 #+DATE: 2013-12-16 13:11:23
+#+OPTIONS: toc:nil
+
+[[http://orgmode.org/img/org-mode-unicorn-logo.png]]
 
 Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理待办事项、安排项目以及制作文档。
 -- 由Carsten Dominik于2003年创建，目前有数千用户和Carsten一起维护。
 
 * 下载和安装
+
 最新稳定版 8.2.4 (2013年12月) -- tar.gz或者zip(更新日志)
+
 开发版(cgit):
-~$ git clone git://orgmode.org/org-mode.git
+
+#+BEGIN_SRC shell
+  ~$ git clone git://orgmode.org/org-mode.git
+#+END_SRC
+
 M-x list-packages RET(see Org ELPA)
+
 每日更新版：tar.gz 或者 zip
 
 - 新特性列表
@@ -26,16 +36,25 @@ M-x list-packages RET(see Org ELPA)
 安装Org mode的详情
 
 * 文档和文学
+
 购买 Org手册的 印刷版 ()
+
 每本书里，Network-Theory Ltd. 会捐助1美元给Org mode维护者
+
 浏览手册(每章一页)
+
 阅读完整手册：HTML或者PDF
+
 阅读精华版指南：HTML 或者 PDF
 
 逛逛 Worg上的 FAQ、hacks，和指南
+
 逛逛 关于 钩子、命令和选项的 参考 文档 
+
 看看 关于Org mode的（学术）论文 列表
+
 提交bug报告之前，最好先读读手册里的“反馈”章节
+
 还可以读读 如何聪明地问问题 ，由 Eric S. Raymond 和 Rick Moen合著。
 
 M-x org-submit-bug-report RET
