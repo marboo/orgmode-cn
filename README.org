@@ -19,7 +19,9 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
   ~$ git clone git://orgmode.org/org-mode.git
 #+END_SRC
 
-M-x list-packages RET(see Org ELPA)
+#+BEGIN_SRC shell
+  M-x list-packages RET(see Org ELPA)
+#+END_SRC
 
 每日更新版：tar.gz 或者 zip
 
@@ -47,14 +49,16 @@ M-x list-packages RET(see Org ELPA)
 
 阅读精华版指南：HTML 或者 PDF
 
-逛逛 Worg上的 FAQ、hacks，和指南
+查看 Worg上的 FAQ、hacks，和指南
 
-逛逛 关于 钩子、命令和选项的 参考 文档 
+查看 关于 钩子、命令和选项的 参考 文档 
 
-看看 关于Org mode的（学术）论文 列表
+查看 关于Org mode的（学术）论文 列表
 
 提交bug报告之前，最好先读读手册里的“反馈”章节
 
 还可以读读 如何聪明地问问题 ，由 Eric S. Raymond 和 Rick Moen合著。
 
-M-x org-submit-bug-report RET
+#+BEGIN_SRC shell
+  M-x org-submit-bug-report RET
+#+END_SRC
