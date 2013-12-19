@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>欢迎来到Org-Mode社区：Worg！</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="欢迎来到Org-Mode社区：Worg！"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-12-19T13:38+0800"/>
+<meta name="author" content="Worg people"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">欢迎来到Org-Mode社区：Worg！</h1>
+
+
+
+
+<p>
+Worg <a href="http://orgmode.org/worg/sitemap.html">sitemap</a> and <a href="http://orgmode.org/worg/theindex.html">index</a>
+</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Org-Mode和Worg介绍</a></li>
+<li><a href="#sec-2">Org-Mode资源</a>
+<ul>
+<li><a href="#sec-2-1">学习Org-Mode</a></li>
+<li><a href="#sec-2-2">Get Help with Org-Mode</a></li>
+<li><a href="#sec-2-3">Use Org-Mode Effectively</a></li>
+<li><a href="#sec-2-4">Dive Deeper into Org-Mode</a></li>
+<li><a href="#sec-2-5">Check Out Third-Party Contributions</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">加入社区</a>
+<ul>
+<li><a href="#sec-3-1">Help out</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">Worg的维护</a>
+<ul>
+<li><a href="#sec-4-1">Latest changes to the Worg git repository</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">Git'r done!</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Org-Mode和Worg介绍</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+<a href="http://orgmode.org">Org-mode</a> is a powerful system for organizing your complex life with
+simple plain-text files.  It seamlessly integrates all your notes,
+mindmaps, TODO lists, calendar, day planner, and project schedules
+into a single system that can be easily searched (e.g. by grep),
+encrypted (e.g. by <a href="http://www.gnupg.org/">GnuPG</a>), backed up and synced (e.g.  by Dropbox),
+imported/exported, and <a href="org-faq.html">accessed on the go</a> (e.g. on an iPhone or
+Android smartphone).  It can even be used for authoring web pages and
+documents.
+</p>
+<p>
+Check out some <a href="org-screenshots.html">screenshots of Org-mode</a> in action.  See <a href="org-quotes.html">what people have to say</a> about Org-mode, and read a few <a href="org-testimonies/index.html">user stories</a>!
+</p>
+<p>
+Org-mode is distributed as part of the popular <a href="http://www.gnu.org/software/emacs/">Emacs</a> text editor and runs
+wherever Emacs runs, including on GNU-Linux, Windows, and Mac.  Written by
+Carsten Dominik, it is currently maintained by Bastien Guerry and used by
+many helpful people who, like you, are desperate to get and stay organized.
+</p>
+<p>
+The page you're reading is part of <code>Worg</code>, a section of the <a href="http://orgmode.org/">Org-mode web site</a> that is written by a volunteer community of Org-mode fans.  It
+includes tutorials, ideas, code snippets, etc., shared to make your
+introduction and customization of Org-mode as easy as possible.  Worg is
+maintained by Matthew Lundin, a group of <a href="worgers.html">Worg contributors</a>, and maybe <a href="worg-todo.html">you</a>.
+</p></div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><a name="ID-A6F83C16-B1B9-405A-B996-8D2CA1274DEB" id="ID-A6F83C16-B1B9-405A-B996-8D2CA1274DEB"></a>Org-Mode资源</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1">学习Org-Mode</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+
+<ul>
+<li><a href="http://orgmode.org/">Org-mode Main Page</a>               : The official page for Org-mode
+</li>
+<li><a href="org-tutorials/index.html">Org-mode Tutorials</a>               : Your best starting point
+</li>
+<li><a href="org-glossary.html">Org-mode Glossary</a>                : An explanation of org-mode terminology
+</li>
+<li><a href="http://orgmode.org/manual/index.html">Org-mode Manual</a>             : Extensive and complete documentation
+</li>
+<li><a href="http://orgmode.org/guide/index.html">Org-mode Guide</a>                   : Not extensive, but complete documentation
+<ul>
+<li>Spanish translation of the orgguide (<a href="orgguide/orgguide.es.texi">texi</a> - <a href="http://www.davidam.com/docu/orgguide.es.html">html</a>)
+</li>
+</ul>
+
+</li>
+<li><a href="org-configs/index.html">Org-mode configuration</a>           : Beginner's customization guide, examples, survey,
+  and a list of all hooks
+</li>
+<li><a href="orgcard.html">Org-mode reference card</a>          : check the <a href="orgcard.html">HTML</a>, <a href="http://orgmode.org/orgcard.pdf">pdf</a> and <a href="http://orgmode.org/orgcard.txt">ASCII</a> versions.
+<ul>
+<li>French translation of the orgcard (<a href="code/latex/fr-orgcard.tex">tex</a> - <a href="images/bzg/fr-orgcard.pdf">pdf</a>)
+</li>
+</ul>
+
+</li>
+<li><a href="exporters/index.html">New exporter</a>            : Preliminary documentation for the new exporter.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2">Get Help with Org-Mode</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+<ul>
+<li><a href="org-faq.html">Org-mode FAQ</a>      : Check here before writing to the mailing list
+</li>
+<li><a href="org-mailing-list.html">Org-mode Mailing List</a>   : For unanswered questions, suggestions, and
+  discussion
+</li>
+<li>Org-mode IRC Channel    : For live Q&amp;A, go to <code>#org-mode</code> on <a href="http://freenode.net/">Freenode</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3">Use Org-Mode Effectively</h3>
+<div class="outline-text-3" id="text-2-3">
+
+
+<ul>
+<li>Use Org-mode as a <a href="org-gtd-etc.html">task management system</a> (perfect for GTD and the
+  Pomodoro Technique)
+</li>
+<li>Author <a href="org-blog-wiki.html">Blogs and Wikis with Org-mode</a> (see <a href="org-web.html">example web wages</a>)
+</li>
+<li>Integrate <a href="org-mac.html">Org-mode with Mac OS X</a>
+</li>
+<li>Synchronize org-mode files easily with <a href="https://github.com/simonthum/git-sync">git-sync</a>, a <a href="org-tutorials/org-vcs.html">VCS of your choice</a>, or <a href="org-tutorials/unison-sync.html">Unison</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4">Dive Deeper into Org-Mode</h3>
+<div class="outline-text-3" id="text-2-4">
+
+
+<ul>
+<li><a href="dev/index.html">Org-mode for developers</a> : reference documentation for developers
+</li>
+<li><a href="org-blog-articles.html">Blog posts</a>              : Read a variety of articles from introductions to
+  specific customizations
+</li>
+<li><a href="org-hacks.html">Org-mode Hacks</a>          : Copy code snippets from other users
+</li>
+<li><a href="org-contrib/babel/index.html">Org Babel</a> : Learn about <a href="http://en.wikipedia.org/wiki/Literate_programming">Literate programming</a> within Org-mode
+</li>
+<li>Tools
+<ul>
+<li><a href="org-translators.html">Org-mode conversion tools</a>  : Import into and export out of Org-mode
+</li>
+<li><a href="org-tools/index.html">Org-mode parsing libraries</a> : Parse and analyze .org files
+</li>
+</ul>
+
+</li>
+<li><a href="org-dependencies.html">Org-mode dependencies</a> : Dependencies on external packages for advanced
+  functionality [Work in progress]
+</li>
+<li><a href="org-papers.html">Org-papers</a> : Whitepapers and books about Org-mode
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-5" class="outline-3">
+<h3 id="sec-2-5">Check Out Third-Party Contributions</h3>
+<div class="outline-text-3" id="text-2-5">
+
+
+<ul>
+<li><a href="org-contrib/index.html">Contributed packages</a>, including extensive documentation
+</li>
+<li>Repository of contributed code:
+<ol>
+<li>the <code>contrib/</code> directory of the Org-mode package
+</li>
+<li>the <a href="http://orgmode.org/worg/code/">code</a> directory of Worg
+<ul>
+<li><a href="http://orgmode.org/worg/code/org-info-js">org-info-js</a> by Sebastian Rose: great javascript
+       tool to navigate through a HTML page (as exported by Org) the way you
+       navigate through an Org or an info manual, i.e. supporting folding,
+       previous/next buttons, etc.
+</li>
+</ul>
+
+</li>
+</ol>
+
+</li>
+<li><a href="org-devel.html">Additions under development</a>
+</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">加入社区</h2>
+<div class="outline-text-2" id="text-3">
+
+
+<ul>
+<li>Check out the list of <a href="worgers.html">Worgers and their User Pages</a> and a few
+    <a href="org-people.html">profiles of the Org-mode Community</a> (with photos ☺)
+</li>
+<li>Meet other users in the flesh at <a href="orgcamps.html">OrgCamps</a>
+</li>
+</ul>
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Help out</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+<ul>
+<li>Improve Worg by sharing your knowledge about Org-mode: see <a href="#Maintenance-of-Worg">Maintenance of Worg</a>.
+</li>
+<li>Improve Org-mode:
+<ul>
+<li>Send <a href="http://orgmode.org/org.html#Feedback">bug reports</a> after checking the <a href="org-issues.html">issue tracker</a>
+</li>
+<li>Help <a href="org-tests/index.html">test</a>
+</li>
+<li><a href="org-contribute.html">Contribute to Org-mode</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">Worg的维护</h2>
+<div class="outline-text-2" id="text-4">
+
+
+<ul>
+<li>Intro
+<ul>
+<li><a href="worg-about.html">About the Worg project</a>
+</li>
+<li><a href="worg-setup.html">How Worg is set up on the server</a>
+</li>
+<li><a href="worg-maintainance.html">About Worg maintainer and gardners</a>
+</li>
+</ul>
+
+</li>
+<li>Tasks
+<ul>
+<li><a href="worg-todo.html">The Worg TODO file</a>
+</li>
+</ul>
+
+</li>
+<li>Howtos
+<ul>
+<li><a href="worg-git.html">An introduction to git for Worgers</a>
+</li>
+<li><a href="worg-editing.html">Conventions and tools for editing Worg</a>
+</li>
+<li><a href="worg-git-ssh-key.html">How to create your own SSH key?</a>
+</li>
+</ul>
+
+</li>
+<li>Miscellaneous
+<ul>
+<li><a href="http://orgmode.org/w/worg.git">Recent changes to Worg</a> (git log at <i>orgmode.org</i>)
+</li>
+<li><a href="http://orgmode.org/worg/sources/">Org-mode source documents of all Worg pages</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1">Latest changes to the Worg git repository</h3>
+<div class="outline-text-3" id="text-4-1">
+
+
+<p>
+Note: You can also subscribe to changes via <a href="http://orgmode.org/w/?p=worg.git;a=rss;opt=--no-merges">RSS</a> or <a href="http://orgmode.org/w/?p=worg.git;a=atom;opt=--no-merges">ATOM</a> (courtesy of repo.or.cz).
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">Git'r done!</h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+If you like losing your time by reading stuff on how to get organized,
+go and check the <a href="gitrdone.html">Git'r done!</a> page.
+</p></div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-12-19T13:38+0800</p>
+<p class="author">Author: Worg people</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
