@@ -29,7 +29,7 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 - 新特性列表
 - 手册和教程
 - Org工具(可能和Emacs毫无瓜葛)
-- [[file:worg/index.org][Worg: 社区文档]]
+- [[file:worg/][Worg: 社区文档]]
 - 向Org贡献
 - 历史和鸣谢
 - 谈谈Org mode
