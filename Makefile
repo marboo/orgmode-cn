@@ -7,7 +7,10 @@
 defualt:
 	find . -type f -name \*.org | xargs touch
 
+html:
+	cp worg/guide/index.html html/worg/guide/index.html
+
 gen:
 	./generate.el
 
-.PHONEY: gen
+.PHONY: gen html
