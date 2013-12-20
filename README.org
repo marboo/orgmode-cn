@@ -12,9 +12,9 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 
 * 下载和安装
 
-最新稳定版 8.2.4 (2013年12月) -- tar.gz或者zip(更新日志)
+最新稳定版 8.2.4 (2013年12月) -- [[http://orgmode.org/org-8.2.4.tar.gz][tar.gz]] 或者[[http://orgmode.org/org-8.2.4.zip][zip]] ([[file:Changes][更新日志]])
 
-开发版(cgit):
+开发版([[http://orgmode.org/cgit.cgi/org-mode.git/][cgit]]):
 
 #+BEGIN_SRC shell
   ~$ git clone git://orgmode.org/org-mode.git
@@ -24,17 +24,17 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
   M-x list-packages RET(see Org ELPA)
 #+END_SRC
 
-每日更新版：tar.gz 或者 zip
+每日更新版：[[http://orgmode.org/org-latest.tar.gz][tar.gz]] 或者 [[http://orgmode.org/org-latest.zip][zip]]
 
-- 新特性列表
-- 手册和教程
-- Org工具(可能和Emacs毫无瓜葛)
+- [[file:features][新特性列表]]
+- [[file:#docs][手册和教程]]
+- [[file:worg/org-tools/index][Org工具(可能和Emacs毫无瓜葛)]]
 - [[file:worg/][Worg: 社区文档]]
-- 向Org贡献
-- 历史和鸣谢
-- 谈谈Org mode
-- 谷歌2012编程之夏
-- 邮件列表和涂鸦
+- [[file:worg/org-contribute][如何向Org贡献？]]
+- [[file:org.html][历史和鸣谢]]
+- [[file:talks][谈谈Org mode]]
+- [[file:community.html#gsoc][谷歌2012编程之夏]]
+- [[file:community.html][邮件列表和涂鸦]]
 
 安装Org mode的详情
 

@@ -10,9 +10,6 @@
 #+CATEGORY: worg
 #+OPTIONS: H:3 num:nil toc:t \n:nil ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc
 
-
-
-
 Worg的 [[http://orgmode.org/worg/sitemap.html][站点地图]] 和 [[http://orgmode.org/worg/theindex.html][索引]]
 
 * Org-Mode和Worg介绍
@@ -55,8 +52,8 @@ Worg贡献者小组的Matthew Lundin维护，下一个可能就是你噢。
 - [[file:org-tutorials/index.org][Org-mode 向导]]              : 学习Org-mode的完美起点
 - [[file:org-glossary.org][Org-mode 术语表]]               : org-mode技术详解
 - [[http://orgmode.org/manual/index.html][Org-mode 手册]]            : 广而全的文档
-- [[http://orgmode.org/guide/index.html][Org-mode 指南]]                  : Not extensive, but complete documentation
-  - Spanish translation of the orgguide ([[file:orgguide/orgguide.es.texi][texi]] - [[http://www.davidam.com/docu/orgguide.es.html][html]])
+- [[file:guide/index.html][Org-mode 指南]]                 : Not extensive, but complete documentation
+  - org ([[file:orgguide/orgguide.es.texi][texi]] - [[http://www.davidam.com/docu/orgguide.es.html][html]])
 - [[file:org-configs/index.org][Org-mode configuration]]           : Beginner's customization guide, examples, survey,
   and a list of all hooks
 - [[file:orgcard.org][Org-mode reference card]]          : check the [[file:orgcard.org][HTML]], [[http://orgmode.org/orgcard.pdf][pdf]] and [[http://orgmode.org/orgcard.txt][ASCII]] versions.

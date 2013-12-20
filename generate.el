@@ -25,6 +25,6 @@
 	 :recursive t
 	 :publishing-function org-publish-attachment
 	 )
-	("org" :components ("org-notes" "org-static"))
+	("org" :components ("org-notes"))
       ))
 (org-publish-project "org")

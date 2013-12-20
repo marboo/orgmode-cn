@@ -1,0 +1,276 @@
+# Created 2013-12-17 Tue 09:39
+#+TITLE: Org tutorials
+#+AUTHOR: Worg people
+#+OPTIONS: H:3 num:nil toc:t \n:nil ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc
+#+STARTUP: align fold nodlcheck hidestars oddeven lognotestate
+#+SEQ_TODO: TODO(t) INPROGRESS(i) WAITING(w@) | DONE(d) CANCELED(c@)
+#+TAGS: Write(w) Update(u) Fix(f) Check(c) NEW(n)
+#+LANGUAGE: en
+#+PRIORITIES: A C B
+#+CATEGORY: worg
+
+[[file:../index.org][{Back to Worg's index}]]
+
+#+INDEX: Tutorials
+
+* General Introductions to Org-mode
+- [[http://orgmode.org/talks/GoogleTech.html][Google Tech Talk about Org-mode]], a 45 minute talk given by Carsten
+  Dominik during a visit at [[http://maps.google.com/%3Fq%3D37.423156,-122.084917%2B(Google%20Inc.)&hl%3Den][Google]].
+
+- [[http://www.nf.mpg.de/orgmode/guest-talk-dominik.html][Organizing a Scientist's Life and Work]], a 45 minute talk given by
+  Carsten Dominik during a visit at the [[http://www.nf.mpg.de/][Max-Planck Institute for
+  neurological Research Cologne]].
+
+- On [[http://twit.tv/floss136][FLOSS Weekly Episode 136]] (Audio+Video download available) 
+  Randal Schwartz interviews Carsten Dominik about Org-mode.
+
+- [[http://orgmode.org/worg/org-tutorials/org-screencasts/ghm2011-demo.html][Emacs Org-mode presentation at GNU Hackers Meeting 2011 in Paris]] (in
+  English), by Bastien Guerry.
+
+- [[http://www.linuxjournal.com/article/9116][Getting Organized with Emacs Org-mode]] by [[http://www.planetizen.com/user/2][Abhijeet Chavan]], an article
+  originally published in the [[http://www.linuxjournal.com/][Linux Journal]].
+
+- [[file:orgtutorial_dto.org][The OrgMode tutorial]] by [[http://dto.freeshell.org/notebook/][David O'Toole]], covering the basics of TODO
+  lists and the agenda.  It has been translated into [[file:orgtutorial_dto-fr.org][French]], [[http://hpcgi1.nifty.com/spen/index.cgi?OrgMode%2fOrgTutorial][Japanese]],
+  [[file:orgtutorial_dto-es.org][Spanish]], [[http://hokmen.chan.googlepages.com/OrgTutorial.en-cn.html][Chinese]], [[http://jmjeong.com/index.php?display=Emacs/OrgMode][Korean]], [[http://habrahabr.ru/blogs/emacs/105300/][Russian]] and [[http://deneb.iszt.hu/~pasztor/orgtutorial/notebook/orgtutorial-hu.html][Hungarian]].
+
+- [[http://jaderholm.com/screencasts.html][A 25 minute screencast]] by [[http://jaderholm.com][Scott Jaderholm]], demonstrating the basic
+  features of Org-mode.
+
+- [[http://sachachua.com/wp/2008/01/18/outlining-your-notes-with-org/][Outlining Your Notes with Org]] by [[http://sachachua.com/wp/][Sacha Chua]] covers outlining,
+  searching and internal links.
+
+- [[http://members.optusnet.com.au/~charles57/GTD/orgmode.html][Using Emacs org-mode for GTD]] by [[http://members.optusnet.com.au/~charles57/GTD/][Charles Cave]] contains an
+  introduction into Org-mode, among other things.  Charles has also
+  written a more extensive document ([[id:50A0DEB1-4B63-4CC4-840E-313615C4BAE3][see below]]), but here we still
+  link to the earlier version because of its nice overview over
+  Org-mode.
+
+- Emacs Org-mode, [[http://article.gmane.org/gmane.emacs.orgmode/8547][video version of a 2-hour talk]] by Russell Adams at
+  the [[http://www.hlug.org/][Houston Linux User Group]].  The first half of the first hour is
+  /not/ about Org-mode, but about the Linux command =xargs=.
+
+- [[https://github.com/novoid/org-mode-workshop/blob/master/featureshow/org-mode-teaser.org][Demonstration of Org-mode features]] by Karl Voit, presented for the
+  first time at [[http://glt12-programm.linuxtage.at/events/96.de.html][Grazer Linuxtage 2012]].
+
+- [[https://github.com/novoid/org-mode-workshop][Org-mode Workshop]] by Karl Voit, conducted at [[http://www.TUGraz.at][Graz University of
+  Technology]] in November 2012 (3x4 hours). It includes a newer version
+  of the feature-show from the entry above.
+
+- [[file:org-outside-org.org][Org-mode outside Org-mode]] by Thorsten Jolitz and François Pinard. An
+  introduction to the available libraries for using Org-mode's concepts and
+  Org-mode's functionality outside of Org-mode files, e.g. when working with
+  programming-language source-code files.
+
+- /In German language:/ [[ftp://ftp.freiesmagazin.de/2009/freiesMagazin-2009-10.pdf][Ordnung ins Chaos mit Org-Mode]], an excellent
+  introduction into Org-mode, by Rainer Koenig, published in the free
+  electronic journal [[http://www.freiesmagazin.de/][Freies Magazin]].
+
+- /In French:/ A [[http://www.olivierberger.com/weblog/index.php?post/2010/08/14/Ma-vie-a-chang%C3%A9-%3A-j-utilise-org-mode][general introduction]] on Org for the "[[http://lifehacking.fr][lifehacking]]"
+  group, by Olivier Berger.
+
+- /In German:/ [[http://www.suenkler.info/emacs-orgmode.html][Der Emacs Org mode]], a comprehensive blog post about Org-mode, by
+  Hendrik Sünkler.
+
+- /In Spanish:/ [[file:org-reference-guide-es.org][A reference guide]] of each features, their text format and their available keys.
+* Power users describe their setup
+#+INDEX: Setup
+
+In the following documents, the authors describe the details of
+their setup, along with the workflows they use to get organized with
+Org-mode.  While as a beginner you probably should start with only a
+simple setup, these descriptions will be a fantastic source of
+inspiration once you start growing your use of Org-mode.
+
+- [[http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html][Using Org-mode as a day planner]] by [[http://johnwiegley.com][John Wiegley]] shows how to use
+  Org-mode after the fashion of a pen-and-paper day planner.
+
+- [[http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html][How I use Emacs and Org-mode to implement GTD]] by [[http://members.optusnet.com.au/~charles57/GTD/][Charles Cave]]
+  shows one method of doing GTD with org-mode and covers (among
+  other things) categories, effort estimates, tags, scheduling, and
+  custom agenda commands.
+
+- [[http://doc.norang.ca/org-mode.html][Organize Your Life In Plain Text!]] by Bernt Hansen describes how to
+  use Org-mode to track and clock everything you work on.
+* Tutorials on specific features
+** Lists
+
+- A short [[http://bzg.fr/org-playing-with-lists-screencast.html][screencast]] presenting a few features of plain lists, by
+  Bastien.
+** Tables, Spreadsheet, Plotting
+- [[file:tables.org][A very short introduction to tables in Org-mode]], by Bastien.
+
+- [[file:org-spreadsheet-intro.org][A very short introduction to Org as a spreadsheet system]], by
+  Bastien.
+
+- [[file:org-spreadsheet-lisp-formulas.org][Using Emacs lisp for spreadsheet formulas]] ([[file:org-tableur-tutoriel.org][french version]]), by Bastien.
+
+- [[https://github.com/novoid/org-mode-workshop/blob/master/featureshow/org-mode-teaser.org#1131-referencing-example-with-detailed-explanation][Various spreadsheet formulas with explanations how they work]]
+  by Karl Voit.
+
+- [[file:org-plot.org][Plotting tables in Org-Mode using org-plot]] by Eric Schulte
+
+- [[file:org-dot-diagrams.org][Plotting process diagrams or work flows in Org-Mode using dot]] by Karl Voit
+
+- [[http://www.youtube.com/watch?v=EQAd41VAXWo][Can your editor do this]], awesome little video showing how to create
+  HTML tables from an embedded Org-mode table.
+
+- [[file:multitarget-tables.org][Using multiple-target tables and general formatting functions]] by
+    [[http://claimid.com/ejr/][Jason Riedy]].
+
+- [[http://www.hollenback.net/index.php/EmacsOrgTimestamps][Timestamps in Org and Calc]], how to calculate and display times in Org-mode by Phil Hollenback
+
+- [[file:org-lookups.org][Table lookup functions]] by Jarmo Hurri
+
+- The following are not tutorials but listed here somehow for
+  "completeness" of the information sources to be checked too:
+  - [[http://orgmode.org/manual/The-spreadsheet.html][Org manual, section about spreadsheet]]
+
+  - [[http://orgmode.org/worg/org-faq.html#Tables][Worg FAQ, section about tables]]
+
+  - [[http://orgmode.org/worg/org-hacks.html#Tables][Worg hacks, section about tables]]
+
+  - [[http://orgmode.org/w/org-mode.git?p=org-mode.git;a=blob;f=testing/lisp/test-org-table.el;hb=HEAD][most of the automated Emacs Regression Tests (ERT) for Org tables]]
+** Dates and Times
+
+- [[http://members.optusnet.com.au/~charles57/GTD/org_dates/][Using Dates and Times in Emacs Org-mode]] by [[http://members.optusnet.com.au/~charles57/GTD/][Charles Cave]].
+
+- [[http://sachachua.com/wp/2007/12/30/clocking-time-with-emacs-org/][Clocking time with Emacs Org]] by [[http://sachachua.com/wp/][Sacha Chua]].
+** Tags, Properties, and Column View
+
+- [[http://sachachua.com/wp/2008/01/04/tagging-in-org-plus-bonus-code-for-timeclocks-and-tags/][Tagging in Org]] by [[http://sachachua.com/wp/][Sacha Chua]].
+
+- [[http://thread.gmane.org/gmane.emacs.orgmode/5107/focus%3D5134][What's the use of Column View?]] by Christian Egli is a short tutorial
+  about Column View that was sent to [[http://news.gmane.org/gmane.emacs.orgmode][emacs-orgmode@gnu.org]].
+
+- [[file:org-column-view-tutorial.org][Emacs Org's Column View]] by [[http://www.cognition.ens.fr/~guerry/][Bastien]], with an accompanying [[http://www.cognition.ens.fr/~guerry/org-column-screencast.php][screencast]].
+** Remember
+
+- [[http://members.optusnet.com.au/~charles57/GTD/remember.html][Remember mode tutorial]] by [[http://members.optusnet.com.au/~charles57/GTD/][Charles Cave]].
+
+- [[http://sachachua.com/wp/2007/10/05/remembering-to-org-and-planner/][Remembering to Org and Planner]] by [[http://sachachua.com/wp/][Sacha Chua]].
+** Capture
+
+- [[file:org-protocol-custom-handler.org][Defining custom handlers for use with org-protocol]] by Sebastian Rose
+
+- [[http://members.optusnet.com.au/~charles57/GTD/datetree.html][Capture mode  and date trees in org-mode]] by [[http://members.optusnet.com.au/~charles57/GTD/][Charles Cave]].
+** Agenda and search
+
+- [[file:org-custom-agenda-commands.org][Using custom agenda commands]] by Matt Lundin
+
+- [[file:advanced-searching.org][Advanced searching]] by Matt Lundin
+
+- [[file:../agenda-optimization.org][Agenda speed up and optimization]] by Bastien
+
+- [[file:agenda-filters.org][Agenda filters and limits]] by Bastien
+** Customization
+
+- [[file:org-customize.org][Using customize to find and set options]] by Carsten Dominik.
+- [[file:org-appearance.org][Customizing Org appearance]]
+** Export and Publishing
+
+- [[file:org-publish-html-tutorial.org][Publishing Org-mode files to HTML]], covering the basics of publishing
+  to HTML, by Sebastian Rose.
+- [[file:org-publish-layersmenu.org][Phplayersmenu and HTML publishing]], shows how to create and maintain JavaScript
+  menus (Phplayermenu) for HTML export, by Sebastian Rose.
+- [[file:images-and-xhtml-export.org][Images and XHTML export]], shows simple image handling in HTML export, by
+  Sebastian Rose.
+- [[file:org-taskjuggler.org][Creating Gantt charts by exporting to TaskJuggler]], explains the usage of
+  the TaskJuggler exporter.  There is a Serbo-Croatian translation [[file:org-taskjuggler-scr.org][here]] by
+  Jovana Milutinovich.
+- [[file:org-latex-export.org][Using the OLD LaTeX exporter]] introduces configuration topics for
+  users of Org Mode < 8.0.
+- [[file:org-latex-preview.org][Some notes on previewing LaTeX fragments]].
+- [[file:org-google-sync.org][Syncing with Google Calendar]]
+- [[http://www.youtube.com/watch?v=1-dUkyn_fZA][Demonstration of Org-mode as a tool for reproducible research]] by John Kitchin
+  at SciPy 2013.
+** Reproducible research
+A talk by [[http://www.cheme.cmu.edu/people/faculty/jkitchin.htm][John Kitchin]] at [[http://conference.scipy.org/scipy2013/][SciPy 2013]]. In his truely amazing talk
+[[http://www.youtube.com/watch?v%3D1-dUkyn_fZA][Emacs + org-mode + python in reproducible research]], John shows off
+the capabilities of Org mode for reproducible research and
+authoring.  This may be the best demonstration yet on this subject.
+
+** Import
+
+- [[file:org-import-rtm.org][Importing from remember the milk]]
+* Special tasks
+** Natural Project Planning
+
+- [[http://members.optusnet.com.au/~charles57/GTD/][Charles Cave]] about using Org-mode to implement [[http://members.optusnet.com.au/~charles57/GTD/Natural_Project_Planning.html][Natural Project
+  Planning]] according to David Allen.
+** Tracking Habits
+
+- [[file:tracking-habits.org][Tracking habits with org-mode]], by Matt Lundin.
+** Measuring Personal Effectiveness
+- [[file:org-effectiveness.org][Org Effectiveness Tutorial]]
+
+** Using version Control with Your org files
+- [[file:org-vcs.org][Using version control with your org files]], by Ian Barton.
+- Use [[https://github.com/simonthum/git-sync][git-sync]] (disclaimer: my script) if you have a git repo of your own
+  somewhere in the interclouds.
+- Use [[http://git-annex.branchable.com/sync/][git-annex]] for even more decentralized sync and/or heavier workloads.
+
+** How to use jsMath with org-mode
+- [[file:org-jsmath.org][How to use jsMath with org-mode]], by Darlan Cavalcante Moreira.
+** Creating a Blog with Jekyll and org
+- How to create a [[file:org-jekyll.org][blog]] with Jekyll.
+** Creating Beamer presentations
+
+- Here is a [[file:org-beamer/tutorial.org][tutorial]], by Eric S. Fraga.
+- Also available is a [[http://www.youtube.com/watch?v=Ho6nMWGtepY&feature=player_embedded][YouTube video]] by Shulei Zhu, demonstrating the
+  whole process.
+
+** Creating Non-Beamer presentations
+
+- A simple [[file:non-beamer-presentations.org][tutorial]] by Eric Schulte
+** Keeping up with your team's tasks
+A setup that makes it easy to [[http://juanreyero.com/article/emacs/org-teams.html][keep up with the work]] of several
+people, packaged as org-secretary.el in contrib.
+
+** Tracking tasks through a series of meetings
+This tutorial describes a workflow for running a series of
+meetings, for example of a commission or any other group, and for
+keeping track of the groups tasks.  [[file:org-meeting-tasks.org][Link to the tutorial]].
+* Personal Setup
+
+See also [[id:50A0DEB1-4B63-4CC4-840E-313615C4BAE3][Powerusers describe their setup]]
+
+- [[http://sachachua.com/wp/][Sacha Chua]] about [[http://sachachua.com/wp/2007/12/22/a-day-in-a-life-with-org/][A day in a life with Org]] and about the basics of
+      [[http://sachachua.com/wp/2007/12/28/emacs-getting-things-done-with-org-basic/][Getting Things Done with Org]]
+
+- David O'Toole explains his setup in [[http://thread.gmane.org/gmane.emacs.orgmode/4832][this post]].
+
+- This [[http://www.brool.com/?p=82][blog post]] shows a very simple and clear GTD setup.
+
+- Manuel Hermenegildo describes his [[http://thread.gmane.org/gmane.emacs.orgmode/6701/focus%3D6732][Setup for collaborative work
+  using Org]].
+
+- Jan Böcker describes his approach to [[http://www.jboecker.de/2010/04/14/general-reference-filing-with-org-mode.html][general reference filing]] with
+  org-mode.
+* Screencasts
+
+See the [[file:org-screencasts/index.org][Screencasts]] page for a complete list of Org-mode screencasts.
+* Features waiting for tutorials
+
+- The Clock Table
+- Sparse Trees
+- Hyperlinks
+- Using TODO states
+- Using TAGS
+- Embedded LaTeX
+- Using orgtbl-mode in LaTeX
+- Capture
+* Org-related pages by Tutorial authors
+
+Here are the pages of a number of people that write for or about
+Org-mode:
+
+- [[http://www.newartisans.com][John Wiegley]]
+
+- [[http://members.optusnet.com.au/~charles57/GTD/][Charles Cave]]
+
+- [[http://sachachua.com/wp/][Sacha Chua]]
+
+- [[http://www.cognition.ens.fr/~guerry/][Bastien Guerry]]
+
+# Emacs 24.2.50.1 (Org mode 8.2.4)

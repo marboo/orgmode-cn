@@ -1,0 +1,2611 @@
+转自：http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html
+
+<div id="org-content">
+<h1 class="title">Org-mode 简明手册</h1>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul id="">
+<li><a href="#sec-1">1 简介</a>
+<ul>
+<li><a href="#sec-1-1">1.1 序</a></li>
+<li><a href="#sec-1-2">1.2 安装</a></li>
+<li><a href="#sec-1-3">1.3 激活</a></li>
+<li><a href="#sec-1-4">1.4 反馈</a></li>
+</ul>
+</li>
+<li id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown"><a href="#sec-2">2 文档结构</a>
+<ul>
+<li><a href="#sec-2-1">2.1 大纲</a></li>
+<li><a href="#sec-2-2">2.2 标题</a></li>
+<li><a href="#sec-2-3">2.3 视图循环</a></li>
+<li><a href="#sec-2-4">2.4 移动</a></li>
+<li><a href="#sec-2-5">2.5 结构编辑</a></li>
+<li id=""><a href="#sec-2-6">2.6 稀疏树</a></li>
+<li><a href="#sec-2-7">2.7 文本列表</a></li>
+<li><a href="#sec-2-8">2.8 脚注</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 表格</a></li>
+<li><a href="#sec-4">4 超链接</a>
+<ul>
+<li><a href="#sec-4-1">4.1 链接格式</a></li>
+<li><a href="#sec-4-2">4.2 内部链接</a></li>
+<li><a href="#sec-4-3">4.3 外部链接</a></li>
+<li><a href="#sec-4-4">4.4 使用链接</a></li>
+<li><a href="#sec-4-5">4.5 目标链接</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 待办事项</a>
+<ul>
+<li><a href="#sec-5-1">5.1 使用TODO状态</a></li>
+<li><a href="#sec-5-2">5.2 多状态工作流程</a></li>
+<li><a href="#sec-5-3">5.3 进度日志</a></li>
+<li><a href="#sec-5-4">5.4 优先级</a></li>
+<li><a href="#sec-5-5">5.5 任务细分</a></li>
+<li><a href="#sec-5-6">5.6 复选框</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 标签</a>
+<ul>
+<li><a href="#sec-6-1">6.1 标签继承</a></li>
+<li><a href="#sec-6-2">6.2 设置标签</a></li>
+<li><a href="#sec-6-3">6.3 标签查找</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 属性</a>
+<ul>
+<li><a href="#sec-7-1">7.1 扩展阅读</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 日期和时间</a>
+<ul>
+<li><a href="#sec-8-1">8.1 时间戳</a></li>
+<li><a href="#sec-8-2">8.2 创建时间戳</a></li>
+<li><a href="#sec-8-3">8.3 截止期限和计划安排</a></li>
+<li><a href="#sec-8-4">8.4 记录工作时间</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 捕获——转发——存档</a>
+<ul>
+<li><a href="#sec-9-1">9.1 捕获</a></li>
+<li><a href="#sec-9-2">9.2 转送笔记</a></li>
+<li><a href="#sec-9-3">9.3 归档</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10 议程视图</a>
+<ul>
+<li><a href="#sec-10-1">10.1 议程文件</a></li>
+<li><a href="#sec-10-2">10.2 议程调度器</a></li>
+<li><a href="#sec-10-3">10.3 内建议程视图</a>
+<ul>
+<li><a href="#sec-10-3-1">10.3.1 周/日议程</a></li>
+<li><a href="#sec-10-3-2">10.3.2 全局TODO列表</a></li>
+<li><a href="#sec-10-3-3">10.3.3 匹配标签和属性</a></li>
+<li><a href="#sec-10-3-4">10.3.4 单文件时间轴</a></li>
+<li><a href="#sec-10-3-5">10.3.5 查找视图</a></li>
+</ul>
+</li>
+<li><a href="#sec-10-4">10.4 议程缓冲区的命令</a></li>
+<li><a href="#sec-10-5">10.5 定制议程视图</a></li>
+</ul>
+</li>
+<li><a href="#sec-11">11 准备导出</a>
+<ul>
+<li><a href="#sec-11-1">11.1 结构的组成元素</a></li>
+<li><a href="#sec-11-2">11.2 图片和表格</a></li>
+<li><a href="#sec-11-3">11.3 纯文本的例子</a></li>
+<li><a href="#sec-11-4">11.4 包含文件</a></li>
+<li><a href="#sec-11-5">11.5 嵌入 LaTex</a></li>
+</ul>
+</li>
+<li><a href="#sec-12">12 导出</a>
+<ul>
+<li><a href="#sec-12-1">12.1 导出选项</a></li>
+<li><a href="#sec-12-2">12.2 导出调度器</a></li>
+<li><a href="#sec-12-3">12.3 ASCII/Latin-1/UTF-8 的导出</a></li>
+<li><a href="#sec-12-4">12.4 HTML的导出</a></li>
+<li><a href="#sec-12-5">12.5 LaTeX和PDF的导出</a></li>
+<li><a href="#sec-12-6">12.6 DocBook的导出</a></li>
+<li><a href="#sec-12-7">12.7 iCalendar的导出</a></li>
+</ul>
+</li>
+<li><a href="#sec-13">13 发布</a></li>
+<li><a href="#sec-14">14 处理源代码</a></li>
+<li><a href="#sec-15">15 杂项</a>
+<ul>
+<li><a href="#sec-15-1">15.1 补全</a></li>
+<li><a href="#sec-15-2">15.2 一个更清晰的大纲视图</a></li>
+<li><a href="#sec-15-3">15.3 MobileOrg</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 简介<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup></h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 序</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<p>   Org 是一个用文本方式来快速高效地做笔记、维持待办事项和做项目计划的模式。它是一个创作发布系统。
+</p>
+<p>
+   <i>这个文档是 Org-mode 手册的一个压缩版本。包含了所有的基本功能和命令，以及一些重要的定制提示。本文档写给不想阅读200多页手册的新手。</i>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 安装</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<p>   <b>重要：</b> <i>如果你用的是 Emacs 或者 XEmacs 包里的 Org 版本，请跳过本节，直接阅读 1.3 节。</i>
+</p>
+<p>
+   如果你是从网站上下载的 Org 版本，无论是 zip 包还是 tar 文件或者是 Git 文件，最好在分发包目录里直接来设置它。把 lisp 子目录加到 Emacs 的加载路径里，可以把下面两句加在 “.emacs” 文件里：
+</p>
+
+
+<pre class="src src-emacs-lisp">(setq load-path (cons <span style="color: #8b2252;">"~/path/to/orgdir/lisp"</span> load-path))
+(setq load-path (cons <span style="color: #8b2252;">"~/path/to/orgdir/contrib/lisp"</span> load-path))
+</pre>
+
+
+<p>
+为了提高速度可以用下面的 shell 命令将 Lisp 文件编译一下：
+</p>
+
+
+<pre class="src src-sh">make
+</pre>
+
+
+<p>
+再把下面一行加到 .emacs 文件里。它可以使文件中的函数自动加载，而不是启动 Org 模式时立即加载。
+</p>
+
+
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">org-install</span>)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> 激活</h3>
+<div class="outline-text-3" id="text-1-3">
+
+<p>   把下面几行加到 .emacs 文件里。后三行是为命令定义全局快捷键――请改成适合你自己的。
+</p>
+
+
+<pre class="src src-emacs-lisp"><span style="color: #b22222;">;; </span><span style="color: #b22222;">The following lines are always needed. Choose your own keys.</span>
+(add-to-list 'auto-mode-alist '(<span style="color: #8b2252;">"\\.org\\'"</span> . org-mode))
+(add-hook 'org-mode-hook 'turn-on-font-lock) <span style="color: #b22222;">; </span><span style="color: #b22222;">not needed when global-font-lock-mode is on</span>
+(global-set-key <span style="color: #8b2252;">"\C-cl"</span> 'org-store-link)
+(global-set-key <span style="color: #8b2252;">"\C-ca"</span> 'org-agenda)
+(global-set-key <span style="color: #8b2252;">"\C-cb"</span> 'org-iswitchb)
+</pre>
+
+
+<p>
+设置之后，打开 .org 扩展的文件会自动进入 org 模式。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> 反馈</h3>
+<div class="outline-text-3" id="text-1-4">
+
+<p>   如果你发现了问题，或者有问题评论或新想法，可以给Org的邮件列表 <a href="#emacs-orgmode-gnu.org">emacs-orgmode@gnu.org</a> 发邮件。了解更多信息或者提交 bug，参见手册。
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 文档结构</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>  Org是基于Outline模式的，它提供了更灵活的编辑结构文件的命令。
+</p>
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 大纲</h3>
+<div class="outline-text-3" id="text-2-1">
+
+<p>   Org 是在大纲模式之上实现的。大纲模式可以让我们用层次结构来组织文档，这（至少对我来说）是笔记和想法的最好实现方式。这种结构可以折叠（隐藏）文档的一部分而只显示文档的大概结构或者只显示我们正在处理的部分。Org 大大简化了大纲模式的使用，它把大纲模式的整个显示/隐藏功能整合到了一个命令中：org-cycle，这个命令绑定到了TAB键上。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 标题</h3>
+<div class="outline-text-3" id="text-2-2">
+
+<p>   标题定义了大纲树的结构。它以处于一行左边缘的一个或多个星号开头。例如：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* Top level headline</span>
+<span style="color: #a0522d;">** Second level</span>
+<span style="color: #a020f0;">*** 3rd level</span>
+    some text
+<span style="color: #a020f0;">*** 3rd level</span>
+    more text
+
+<span style="color: #0000ff;">* Another top level headline</span>
+</pre>
+
+
+<p>
+  如果你不喜欢太多的星号，可以以空格后加一个星号作为标题的开头。查看 15.2 节 [Clean view]，那里有设置方法。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> 视图循环</h3>
+<div class="outline-text-3" id="text-2-3">
+
+<p>   大纲模式可以隐藏缓冲区里的部分正文。Org 用绑定到 TAB 和 S-TAB 上的两个全命令来改变视图。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">TAB</td><td class="left">子树循环：当加上一个前缀参数时（C-u TAB），在下面的状态中改变当前子树的视图</td></tr>
+<tr><td class="left"></td><td class="left">FOLDED -&gt; CHILDREN -&gt; SUBTREE</td></tr>
+<tr><td class="left"></td><td class="left">当加上shift键时会触发全局的视图循环。</td></tr>
+<tr><td class="left">S-TAB和C-u TAB</td><td class="left">全局循环：使整个缓冲区在下列状态中循环</td></tr>
+<tr><td class="left"></td><td class="left">OVERVIEW -&gt; CONTENTS -&gt; SHOWALL</td></tr>
+<tr><td class="left">C-u C-u C-u TAB</td><td class="left">显示全部，包括drawers。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   当 Emacs 刚打开文件时，全局的状态是 OVERVIEW，也即只有顶层的标题可见。这可以通过变量 org-startup-folded 来设置。也可以通过 startup 关键字设置只对单个文件有效：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+STARTUP: content</span>
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> 移动</h3>
+<div class="outline-text-3" id="text-2-4">
+
+<p>   下面的命令可以跳转到缓冲区其他的标题。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-n</td><td class="left">下个标题</td></tr>
+<tr><td class="left">C-c C-p</td><td class="left">上个标题</td></tr>
+<tr><td class="left">C-c C-f</td><td class="left">下个同级的标题</td></tr>
+<tr><td class="left">C-c C-b</td><td class="left">上个同级的标题</td></tr>
+<tr><td class="left">C-c C-u</td><td class="left">回到上层标题</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> 结构编辑</h3>
+<div class="outline-text-3" id="text-2-5">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">M-RET</td><td class="left">插入一个同级标题。如果光标在文本列表中，创建一个新的项（见 2.7 节 [Plain lists]）。如果处于一行的中间，这一行会被分开，后面的一部分成为新的标题。</td></tr>
+<tr><td class="left">M-S-RET</td><td class="left">插入一个和当前标题同级的 TODO 项</td></tr>
+<tr><td class="left">TAB（新的空的条目中）</td><td class="left">如果新的条目中还没有文字，TAB 会调整到合适的级别。</td></tr>
+<tr><td class="left">M-LEFT/RIGHT</td><td class="left">将当前的标题提升/降低一个等级。</td></tr>
+<tr><td class="left">M-S-LEFT/RIGHT</td><td class="left">将当前子提升/降低一个等级。</td></tr>
+<tr><td class="left">M-S-UP/DOWN</td><td class="left">将子树上/下移（和前/后个子树交换）。</td></tr>
+<tr><td class="left">C-c C-w</td><td class="left">将条目或区域传送到另一个文件中。见 9.2 节 [Refiling notes]。</td></tr>
+<tr><td class="left">C-x n s/w</td><td class="left">将缓冲区视图局限到当前子树中/再次放宽视图</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   如果有活动区域（暂时标记状态），提升和降低功能将会对区域中的所有标题起作用。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> 稀疏树</h3>
+<div class="outline-text-3" id="text-2-6">
+
+<p>   Org 模式的一个重要的功能是能根据大纲树中选择的信息构造出稀疏的树，这样文档就可以尽可能地折叠，但是选择的信息和它对应的标题会显示出来。试下就知道它是怎样工作的了。
+</p>
+<p>   
+   Org 模式有几个命令可以创建这种树，这些命令都可以通过调度器来使用：
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c /</td><td class="left">它会提示再输入一个字符来选择稀疏树的创建命令。</td></tr>
+<tr><td class="left">C-c / r</td><td class="left">触发后，会提示输入匹配串，并且将所有匹配的项显示成稀疏树。所有的匹配项都会高亮显示；按 C-c C-c 取消高亮。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   其他的基于 TODO 关键字、标签或属性来选择标题的稀疏树命令，我们会在本手册的后面讨论。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-7" class="outline-3">
+<h3 id="sec-2-7"><span class="section-number-3">2.7</span> 文本列表</h3>
+<div class="outline-text-3" id="text-2-7">
+
+<p>   在大纲树的一项中，自定义格式的列表可以提供更多的组织结构，也使我们可以得到一个复先框列表（见 5.6 节［复先框］）。Org 模式可以处理这种列表，并且 HTML 导出器（见12章）也支持这种格式。
+</p>
+<p>  
+   Org 能够识别有序列表、无序列表和描述列表。
+</p>
+<ul>
+<li>无序列表项以‘-’、‘+’或者‘*‘开头。
+</li>
+<li>有序列表项以‘1.’、‘1)’或者开头。
+</li>
+<li>描述列表用‘::’将项和描述分开。
+</li>
+</ul>
+
+
+<p>
+   同一列表中的项的第一行必须缩进相同程度。当下一行的缩进与列表项的的开头的符号或者数字相同或者更小时，这一项就结束了。当所有的项都关上时，或者后面有两个空行时，列表就结束了。例如：
+</p>
+
+
+<pre class="src src-org"><span style="color: #a0522d;">** Lord of the Rings</span>
+   My favorite scenes are (in this order)
+   1. The attack of the Rohirrim
+   2. Eowyn's fight with the witch king
+       + this was already my favorite scene in the book
+       + I really like Miranda Otto.
+   Important actors in this film are:
+   - <span style="font-weight: bold;">Elijah Wood ::</span> He plays Frodo
+   - <span style="font-weight: bold;">Sean Austin ::</span> He plays Sam, Frodo's friend.
+</pre>
+
+
+<p>
+当光标位于一项的第一行时（带有项标志符号的行），下面的命令将会作用于该项：
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">TAB</td><td class="left">折叠项</td></tr>
+<tr><td class="left">M-RET</td><td class="left">在当前级别插入一个项，有前缀时是强制新建一个标题</td></tr>
+<tr><td class="left">M-S-RET</td><td class="left">插入一个带有复先框的项（见 2.5 节［复先框］）</td></tr>
+<tr><td class="left">M-S-UP/DOWN</td><td class="left">将当前项和它的子项向上/下移动（和相同的缩进的前/后一个项交换位置）。如果列表是有序的，数字会自动改变</td></tr>
+<tr><td class="left">M-LEFT/M-RIGHT</td><td class="left">提升/降低项的缩进，不包含子项</td></tr>
+<tr><td class="left">M-S-LEFT/RIGHT</td><td class="left">提升/降低项的缩进，包含子项</td></tr>
+<tr><td class="left">C-c C-c</td><td class="left">如果项中有复先框，就触发改变其状态。并且自动保持本项的符号与缩进在列表中的一致性</td></tr>
+<tr><td class="left">C-c -</td><td class="left">循环改变将当前列表的项标志符号</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-8" class="outline-3">
+<h3 id="sec-2-8"><span class="section-number-3">2.8</span> 脚注</h3>
+<div class="outline-text-3" id="text-2-8">
+
+<p>   脚注就是以脚注定义符号开头的一段话，脚注定义符号是将脚注名称放在一个方括号里形成的，要求放在第0列，不能有缩进。而引用就是在正文中将脚注名称用方括号括起来。例如：
+</p>
+
+
+<pre class="src src-org">The Org homepage<span style="color: #a020f0; text-decoration: underline;">[fn:1]</span> now looks a lot better than it used to.
+...
+<span style="color: #a020f0; text-decoration: underline;">[fn:1]</span> The link is: <span style="color: #3a5fcd; text-decoration: underline;">http://orgmode.org</span>
+</pre>
+
+
+<p>
+用下面的命令来处理脚注：
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-x f</td><td class="left">这是一个移动命令。当光标处理引用处时，跳转到它的定义；当光标处理定义处时，跳转到第一个引用处。其他情况下，新建一个脚注。当有前缀时，会提供一个菜单供选择操作，其中包括重新给脚注编号。</td></tr>
+<tr><td class="left">C-c C-c</td><td class="left">在定义和引用之间跳转</td></tr>
+</tbody>
+</table>
+
+
+
+<p>
+<b>扩展阅读：</b><br>
+手册第 2 章<br>
+Sacha Chua's tutorial
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 表格</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>  Org 提供了快速易用的表格编辑功能。通过调用 Emacs 内嵌的 ‘calc’包（对于 Emacs 的计算器可以查看 Emacs Calculator 手册）它支持类似于制表软件的计算操作。
+</p>
+<p> 
+  Org 能够很容易地处理 ASCII 文本表格。任何以‘|’为首个非空字符的行都会被认为是表格的一部分。’|‘也是列分隔符。一个表格是下面的样子：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">| Name  | Phone | Age |</span>
+<span style="color: #0000ff;">|-------+------+-----|</span>
+<span style="color: #0000ff;">| Peter | 1234 | 17  |</span>
+<span style="color: #0000ff;">| Anna  | 4321 | 25  |</span>
+</pre>
+
+
+<p>
+当你在表格内部输入 TAB、RET 或者 C-c C-c 时表格都会自动调整。TAB 会进入下一个区域（RET 进入下一行）并且创建一个新的行。表格的缩进程度可以在第一行设定。以’|-’开头的一行会作为一个水平分隔行，当它下次调整排列时会将‘-’扩展至填充整行。所以想要建上面的那个表格，只需键入：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">|Name|Phone|Age|</span>
+<span style="color: #0000ff;">|-</span>
+</pre>
+
+
+<p>
+然后 TAB 排列表格。还有一个更快的方法就是键入|Name|Phone|Age，再 C-c RET。
+</p>
+<p>
+<i>在表格区域中输入文本时，DEL、BACKSPACE 和所有其他的字符会以特殊的方式处理，防止影响到其他的区域。当按 TAB、S-TAB 或者 RET 将光标移动到其他区域时，区域中会自动填充一些空格。</i>
+</p>
+<p>
+<b>创建和转换</b>
+</p>
+<p>
+C-c | 将活动区域（选中区域）转换成一个表。如果第一行至少有一个 TAB 字符，就用 TAB 划分内容；如果第一行都有逗号，就分逗号划分内容；否则就用空白符来划分区域。如果当前没有活动区域就会建立一个空的 Org 表格。其实用|Name|Phone|Age C-c RET 来建表会更简单一点。
+</p>
+<p>
+<b>调整和区域移动</b>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-c</td><td class="left">调整表格，不移动光标</td></tr>
+<tr><td class="left">TAB</td><td class="left">调整表格，将光标移到下一个区域，必要时新建一行</td></tr>
+<tr><td class="left">S-TAB</td><td class="left">调整表格，将光标移到上一个区域</td></tr>
+<tr><td class="left">RET</td><td class="left">调整表格，将光标移到下一行，必要时会新建一行</td></tr>
+</tbody>
+</table>
+
+
+<p>
+<b>编辑行和列</b>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">M-LEFT/RIGHT</td><td class="left">左/右移当前列</td></tr>
+<tr><td class="left">M-S-LEFT</td><td class="left">删除当前行</td></tr>
+<tr><td class="left">M-S-RIGHT</td><td class="left">在光标位置左边添加一列</td></tr>
+<tr><td class="left">M-UP/DOWN</td><td class="left">上/下移当前行</td></tr>
+<tr><td class="left">M-S-UP</td><td class="left">删除当前行</td></tr>
+<tr><td class="left">M-S-DOWN</td><td class="left">在当前行上面添加一行。如果有前缀，则在下面添加一行</td></tr>
+<tr><td class="left">C-c -</td><td class="left">在当前行下面添加一个水平线。如果带前缀，则在上面添加一行水平线</td></tr>
+<tr><td class="left">C-c RET</td><td class="left">在当前行下面添加一个水平线。并将光标移动到下一行</td></tr>
+<tr><td class="left">C-c ^</td><td class="left">将表排序。当前位置所在的列作为排序的依据。排序在距当前位置最近的两个水平线之间的行（或者整个表）中进行</td></tr>
+</tbody>
+</table>
+
+
+<p>
+<b>扩展阅读：</b><br>
+手册第 3 章<br>
+Bastien’s table tutorial<br>
+Bastien’s spreadsheet tutorial<br>
+Eric’s plotting tutoria
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> 超链接</h2>
+<div class="outline-text-2" id="text-4">
+
+<p>  就像 HTML 一样，Org 也提供了文件的内部链接，以及到其他文件、新闻组、电子邮件的外部链接等链接格式。
+</p>
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> 链接格式</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p>   Org 能够识别 URL 格式的文本并将它们处理成可点击的链接。通常链接格式是这样的：
+</p>
+
+
+<pre class="src src-ascii">[[link][description]]  或者  [[link]]
+</pre>
+
+
+<p>
+  链接输入一旦完成（所有的括号都匹配），Org 就会改变它的视图。这里会看到 ”description“ 和 ”link“ ，而不是 
+</p><pre class="example">[[link][descriptoin]]
+</pre>
+
+<p>  和 
+</p><pre class="example">[[link]]。
+</pre>
+
+<p> 要想编辑链接，可以光标置于链接上并键入 C-c C-l。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> 内部链接</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<p>   如果一个链接地址并不是 URL 的形式，就会作为当前文件内部链接来处理。最重要的一个例子是
+</p><pre class="example">[[#my-custom-id]]
+</pre>
+
+<p>它会链接到 <code>CUSTOM_ID</code> 属性是 “my-custom-id” 的项。
+</p>
+<p>
+   类似
+</p><pre class="example">[[My Target]]
+</pre>
+
+<p>   和
+</p><pre class="example">[[My Target][Find my target]]
+</pre>
+
+<p>   的链接，点击后本文件中查找对应的目标 <code>“&lt;&lt;My Target&gt;&gt;”</code> 。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> 外部链接</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<p>   Org 支持的链接格式包括文件、网页、新闻组、BBDB 数据库项、IRC 会话和记录。外部链接是 URL 格式的定位器。以识别符开头，后面跟着一个冒号，冒号后面不能有空格。下面是一些例子：
+</p>
+
+
+<pre class="src src-org"><span style="color: #3a5fcd; text-decoration: underline;">http://www.astro.uva.nl/~dominik</span>            on the web
+<span style="color: #3a5fcd; text-decoration: underline;">file:/home/dominik/images/jupiter.jpg</span>       file, absolute path
+/home/dominik/images/jupiter.jpg            same as above
+<span style="color: #3a5fcd; text-decoration: underline;">file:papers/last.pdf</span>                        file, relative path
+<span style="color: #3a5fcd; text-decoration: underline;">file:projects.org</span>                           another Org file
+<span style="color: #3a5fcd; text-decoration: underline;">docview:papers/last.pdf::NNN</span>                open file in doc-view mode at page NNN
+id:B7423F4D-2E8A-471B-8810-C40F074717E9     Link to heading by ID
+<span style="color: #3a5fcd; text-decoration: underline;">news:comp.emacs</span>                             Usenet link
+<span style="color: #3a5fcd; text-decoration: underline;">mailto:adent@galaxy.net</span>                     Mail link
+<span style="color: #3a5fcd; text-decoration: underline;">vm:folder</span>                                   VM folder link
+<span style="color: #3a5fcd; text-decoration: underline;">vm:folder#id</span>                                VM message link
+<span style="color: #3a5fcd; text-decoration: underline;">wl:folder#id</span>                                WANDERLUST message link
+<span style="color: #3a5fcd; text-decoration: underline;">mhe:folder#id</span>                               MH-E message link
+<span style="color: #3a5fcd; text-decoration: underline;">rmail:folder#id</span>                             RMAIL message link
+<span style="color: #3a5fcd; text-decoration: underline;">gnus:group#id</span>                               Gnus article link
+<span style="color: #3a5fcd; text-decoration: underline;">bbdb:R.*Stallman</span>                            BBDB link (with regexp)
+<span style="color: #3a5fcd; text-decoration: underline;">irc:/irc.com/#emacs/bob</span>                     IRC link
+<span style="color: #3a5fcd; text-decoration: underline;">info:org:External%20links</span>                   Info node link (with encoded space)
+</pre>
+
+
+<p>
+  链接的括号应当是闭合的。当链接含有描述文字是显示描述文字而不是链接地址（见 4.1 节［链接格式］），例如：
+</p>
+
+<pre class="example">[[http:www.gnu.org/software/emacs/][GNU Emacs]]
+</pre>
+
+
+<p>
+  如果描述信息是一个文件名或者是指向图片的 URL。HTML 导出（见 12.4 节[HTML 导出]）时会将图片内联成一个可以点击的按钮。如果没有描述信息且链接指向一个图片，那么图片就会嵌入到导出的 HTML 文件中。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> 使用链接</h3>
+<div class="outline-text-3" id="text-4-4">
+
+<p>   Org 提供了以下方法来创建和使用链接。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c l</td><td class="left">在当前位置保存一个链接。这是一个全局命令（你可以设置自己的快捷键），可以在任何类型的缓冲区中使用。链接保存下来以便以后插入 Org 文件中（见下面）</td></tr>
+<tr><td class="left">C-c C-l</td><td class="left">插入一个链接。它会让你输入，你可以输入一个链接，也可心用上/下键来获取保存的链接。它还会让你输入描述信息。</td></tr>
+<tr><td class="left">C-c C-l（光标在链接上）</td><td class="left">当光标处于链接上时，你可以修改链接</td></tr>
+<tr><td class="left">C-c C-o 或者 mouse-1 或者 mouse-2</td><td class="left">打开链接</td></tr>
+<tr><td class="left">C-c &amp;</td><td class="left">跳回到一个已记录的地址。用 C-c % 可以将地址记录下来，内部链接后面的命令也会自动将地址记录下来。使用这个命令多次可以一直往前定位。</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> 目标链接</h3>
+<div class="outline-text-3" id="text-4-5">
+
+<p>   文件链接可以包含一些其他信息使得进入链接时可以到达特定的位置。比如双冒号之后的一个行号或者搜索选项。
+</p>
+<p>   
+   下面是一些包含搜索定位功能的链接例子以及其说明：
+</p>
+
+
+<pre class="src src-org"><span style="color: #3a5fcd; text-decoration: underline;">file:~/code/main.c::255</span>                     进入到 255 行
+<span style="color: #3a5fcd; text-decoration: underline;">file:~/xx.org::My Target</span>                    找到目标‘&lt;&lt;My Target&gt;&gt;’
+<span style="color: #3a5fcd; text-decoration: underline;">file:~/xx.org/::#my-custom-id</span>               查找自定义 id 的项
+</pre>
+
+
+<p>   
+<b>扩展阅读：</b><br>
+手册第四章
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> 待办事项</h2>
+<div class="outline-text-2" id="text-5">
+
+<p>   Org 模式并不用一个单独的文件来维持 TODO 列表<sup><a class="footref" name="fnr.2" href="#fn.2">2</a></sup>。它是一些笔记的集合体，因为 TODO 列表是在你记录笔记的过程中逐渐形成的。你 Org 模式下可以很容易地将树中的一项标记为一个 TODO 的项。用这种方式，信息内容不会冗余加倍，而且可以显示 TODO 项的上下文环境。
+</p>
+<p>  
+   当然，这种处理待办事项的方式会将它们分散于各个笔记文件中。Org 模式提供了一些方法使我们可以把它们看作一个整体来处理。
+</p>
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> 使用TODO状态</h3>
+<div class="outline-text-3" id="text-5-1">
+
+<p>   当标题以 TODO 开关时它就成为了一个 TODO 项，例如：
+</p>
+
+
+<pre class="src src-org">***TODO Write letter to Sam Fortune
+</pre>
+
+<p>
+   下面是一些使用 TODO 项的常用命令：
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-t</td><td class="left">将当前项的状态在（unmarked）-&gt;TODO-&gt;DONE 之间循环切换，同样的切换也可以在时间轴（timeline） 和议程（ agenda） 的缓冲区（buffer）中用 t 键“远程”进行。（见 2.6 节[稀疏树]）</td></tr>
+<tr><td class="left">S-RIGHT/LEFT</td><td class="left">选择下一个/上一个 TODO 状态，与上面的循环方式相同。</td></tr>
+<tr><td class="left">C-c / t</td><td class="left">在稀疏树中显示 TODO 项。将 buffer 折叠，但是会显示 TODO 项和它们所在的层次的标题。</td></tr>
+<tr><td class="left">C-c a t</td><td class="left">显示全局 TODO 列表。从所有的议程文件中收集 TODO 项到一个缓冲区中。详见 10.3.2 节。</td></tr>
+<tr><td class="left">S-M-RET</td><td class="left">在当前项下插入一个新的 TODO 项。</td></tr>
+</tbody>
+</table>
+
+
+<p>   
+   改变 TODO 的状态会触发标签改变。查看选项 org-todo-state-tags-triggers 的描述获得更多信息。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> 多状态工作流程</h3>
+<div class="outline-text-3" id="text-5-2">
+
+<p>   你可以用 TODO 关键字来定义不同的状态，用以处理项，比如：
+</p>
+
+
+<pre class="src src-lisp">(setq org-todo-keywords
+      '((sequence <span style="color: #8b2252;">"TODO"</span> <span style="color: #8b2252;">"FEEDBACK"</span> <span style="color: #8b2252;">"VERIFY"</span> <span style="color: #8b2252;">"|"</span> <span style="color: #8b2252;">"DONE"</span> <span style="color: #8b2252;">"DELEGATED"</span>)))
+</pre>
+
+
+<p>
+   竖直线将 TODO 关键字（还需要进一步的动作）和 DONE 状态（不需要进一步的动作）分隔开。如果你不给出竖直线，最后一个状态会作为 DONE 状态。设置之后，C-c C-t 就会将状态从 TODO 转换到 FEEDBACK，再转换到 VERIFY，最后到 DONE 和 DELEGATED。
+</p>
+<p>   
+   有时你可能希望同时使用几个不同的 TODO 状态集合。例如，你可能想要一个基本的 TODO/DONE，以及一个修改 bug 的工作流程和一个隔开的状态来表示取消的项目（既还是 DONE，也不需要进一步的动作），你可以这样设置：
+</p>
+
+
+<pre class="src src-elisp">(setq org-todo-keywords
+      '((sequence <span style="color: #8b2252;">"TODO(t)"</span> <span style="color: #8b2252;">"|"</span> <span style="color: #8b2252;">"DONE(d)"</span>)
+        (sequence <span style="color: #8b2252;">"REPORT(r)"</span> <span style="color: #8b2252;">"BUG(b)"</span> <span style="color: #8b2252;">"KNOWNCAUSE(k)"</span> <span style="color: #8b2252;">"|"</span> <span style="color: #8b2252;">"FIXED(f)"</span>)
+        (sequence <span style="color: #8b2252;">"|"</span> <span style="color: #8b2252;">"CANCELED(c)"</span>)))
+</pre>
+
+<p>
+   关键字应该各不相同，这样对于一个选项 Org 才知道该用哪个状态序列（集合）。例子中也给出了快速使用一个关键字的方法，就是在关键字后面括号中给出快捷字母——当用 C-c C-t时，会询问，让你输入一个字母。
+</p>
+<p>
+   要定义只在一个文件中有效的 TODO 关键字，可以在文件中任意地方给出下面的文本：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+TODO: TODO(t) | DONE(d)</span>
+<span style="color: #b22222;">#+TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)</span>
+<span style="color: #b22222;">#+TODO: | CANCELED(c)</span>
+</pre>
+
+
+<p>
+  当改变这些行中的一行后，光标停留在改变行上，用 C-c C-c 让改变生效。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> 进度日志</h3>
+<div class="outline-text-3" id="text-5-3">
+
+<p>   当你改变一个 TODO 状态为 DONE 时，或者当你每次改变一个 TODO 项的状态时，Org 都会自动记录时间戳或者作一个记录。这是高度可配置的。可以基于每一个关键字进入设置，并且可以定位到一个文件甚至子树。怎样记录一个任务的工作时间，见 8.4 节。
+</p>
+<p>
+<b>完成的项目</b>
+</p>
+<p>
+最基本的日志功能是跟踪一个特定项目的完成。这可以这样实现：<sup><a class="footref" name="fnr.3" href="#fn.3">3</a></sup>
+</p>
+
+
+<pre class="src src-elisp">(setq org-log-done 'time)
+</pre>
+
+<p>
+    这时当你将一个项目从一个 TODO（未完成）状态改变为一个完成状态时，标题下面就会插入一行 “CLOSED:[timestamp]”。如果你想和时间戳一起作一个记录，用：<sup><a class="footref" name="fnr.4" href="#fn.4">4</a></sup>
+</p>
+
+
+<pre class="src src-elisp">(setq org-log-done 'note)
+</pre>
+
+<p>
+  这时会提示你输入一个记录（note），并将它保存在标题为“Closing Note”项目之下。
+</p>
+<p>
+<b>跟踪TODO状态变化</b>
+</p>
+<p>
+    你可能想跟踪 TODO 状态的变化。可以只记录一个时间戳，也可以为变化作一个带时间戳的记录。记录会被插入到标题之后形成列表。当有很多记录之后，你可能希望将记录取出放到抽屉里。通过定制变量 org-log-into-drawer 可以实现这个功能。
+    对于状态记录，Org 可以实现基于每个状态关键字的设置。实现方法是在每个后的括号中指定“！”（记录时间戳）或“@”（作一个记录）。例如：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+TODO: TODO(t) WAIT(w@/!) | DONE(d!) CANCELED(c@)</span>
+</pre>
+
+
+<p>
+    将会设置 TODO 关键字和快速访问字母，以及当一个项目设为 DONE 时，会记录时间戳，当状态变为 WAIT 或 CANCELED 时，会作一个记录。这个语法也适用于变量 org-todo-keywords。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> 优先级</h3>
+<div class="outline-text-3" id="text-5-4">
+
+<p>   如果你广泛地使用 Org 模式，这样你就会有大量的 TODO 项。给它们设定优先级就很有必要。可以在 TODO 项的标题中加入一些标记（cookie）来设置它们的优先级，像这样：
+</p>
+
+
+<pre class="src src-org"><span style="color: #a020f0;">*** </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #a020f0;"> </span><span style="color: #a020f0;">[#A]</span><span style="color: #a020f0;"> Write letter to Sam Fortune</span>
+</pre>
+
+
+<p>
+  Org模式支持三个优先级别：’A‘、’B‘和’C‘。’A‘是最高级别，如不指定，’B‘是默认的。优先级只在议程中有用。
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c ,</td><td class="left">设置当前标题的优先级。按’‘’‘’‘选择一个级别，或者SPC删除标记（cookie）。</td></tr>
+<tr><td class="left">S-UP</td><td class="left"></td></tr>
+<tr><td class="left">S-Down</td><td class="left">增加/减少当前标题的优先级。</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-5" class="outline-3">
+<h3 id="sec-5-5"><span class="section-number-3">5.5</span> 任务细分</h3>
+<div class="outline-text-3" id="text-5-5">
+
+<p>   很多时候将一个大的任务分成几个的易于完成的小任务是明智的。你可以通过在TODO项目下新建一个大纲树，并在子树上标记子任务来实现这个功能。为了能对已经完成的任务有个大致的了解，你可以在标题的任何地方插入‘[/]’或者‘[%]’。当每个子任务的状态变化时，或者当你在标记上按 C-c C-c时，这些标记状态也会随之更新。例如：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* Organize Party </span><span style="color: #ff0000; font-weight: bold;">[33%]</span>
+<span style="color: #a0522d;">** </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #a0522d;"> Call people </span><span style="color: #ff0000; font-weight: bold;">[1/2]</span>
+<span style="color: #a020f0;">*** </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #a020f0;"> Peter</span>
+<span style="color: #a020f0;">*** </span><span style="color: #228b22; font-weight: bold;">DONE</span><span style="color: #a020f0;"> Sarah</span>
+<span style="color: #a0522d;">** </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #a0522d;"> Buy food</span>
+<span style="color: #a0522d;">** </span><span style="color: #228b22; font-weight: bold;">DONE</span><span style="color: #a0522d;"> Talk to neighbor</span>
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-6" class="outline-3">
+<h3 id="sec-5-6"><span class="section-number-3">5.6</span> 复选框</h3>
+<div class="outline-text-3" id="text-5-6">
+
+<p>   当纯文本中的项以‘[]’开头时，就会变成一个复选框。复选框不会包含在全局 TODO 列表中，所以它们很适合地将一个任务划分成几个简单的步骤。下面是一个复选框的例子：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #0000ff;"> Organize party </span><span style="color: #ff0000; font-weight: bold;">[1/3]</span>
+  - <span style="font-weight: bold;">[-]</span> call people <span style="color: #ff0000; font-weight: bold;">[1/2]</span>
+    - <span style="font-weight: bold;">[ ]</span> Peter
+    - <span style="font-weight: bold;">[X]</span> Sarah
+  - <span style="font-weight: bold;">[X]</span> order food
+  - <span style="font-weight: bold;">[ ]</span> think about what music to play
+</pre>
+
+
+<p>
+  复选框是分层工作的。所以如果一个复选框项目如果还有子复选框，触发子复选框将会使该复选框变化以反映出一个、多个还是没有子复选框被选中。
+</p>
+<p>  
+  下面是处理复选框的命令：
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-c</td><td class="left">触发复选框的状态或者（加上前缀）触发复选框的的存在状态。</td></tr>
+<tr><td class="left">M-S-RET</td><td class="left">增加一个带有复选框的项。这只在光标处于纯文本列表项（见 2.7 节）中才起使用。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+<b>扩展阅读：</b><br>
+手册第5章<br>
+David O’Toole’s introductory tutorial<br>
+Charles Cave’s GTD setup
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> 标签</h2>
+<div class="outline-text-2" id="text-6">
+
+<p>  要为交叉相关的信息提供标签和上下文，一个不错的方法是给标题分配标签。Org 模式能够广泛地支持标签。
+</p>
+<p>
+  每一个标题都能包含多个标签，它们位于标题的后面。标签可以包含字母，数字， <code>‘_’</code> 和 <code>‘@’</code> 。标签的前面和后面都应该有一个冒号，例如，“:work:”。可以指定多个标签，就像“:work:urgent:”。标签默认是粗体，并和标题具有相同的颜色。
+</p>
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> 标签继承</h3>
+<div class="outline-text-3" id="text-6-1">
+
+<p>   标签具有大纲树的继承结构。如果一个标题具有某个标签，它的所有子标题也会继承这个标签。例如，在列表
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* Meeting with the French group     </span><span style="color: #0000ff; font-weight: bold;">:work:</span>
+<span style="color: #a0522d;">** Summary by Frank                 </span><span style="color: #a0522d; font-weight: bold;">:boss:notes:</span>
+<span style="color: #a020f0;">*** </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #a020f0;"> Prepare slides for him     </span><span style="color: #a020f0; font-weight: bold;">:action:</span>
+</pre>
+
+
+<p>
+  中,尽管没有明确标出,最后一个标题会有标签“:work:”，“:boss:”，“:note:”，和“:action”。你也可以设定一个标签让所有的标题都继承，就好像标签在包含整个文件的第零级标题中指定了一样。用下面的方法<sup><a class="footref" name="fnr.5" href="#fn.5">5</a></sup>：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+FILETAGS: :Peter:Boss:Secret:</span>
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> 设置标签</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<p>   在标题后可以很容易地输入标签。在冒号之后，M-TAB 可以补全标签。也有一些专门的命令用于输入标签：
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-q</td><td class="left">为当前标题输入标签。Org 模式既支持补全，也支持单键接口来设置标签，见下文。回车之后，标签会被插入，并放到第 org-tags-column 列。如果用前缀 C-u，会把当前缓冲区中的所有标签都对齐到那一列，这看起来很酷。</td></tr>
+<tr><td class="left">C-c C-c</td><td class="left">当光标处于标题上时，这个命令同C-c C-q。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   Org 支持基于一个标签列表来插入标签。默认情况这个列表是动态构建的，包含了当前缓冲区中使用过的所有标签。你也可以通过变量 org-tag-alist 在全局设定一个标签的硬列表（hard list）。另外，对于某个特定文件你也可以用下面这几行设置一个默认列表：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+TAGS: @work @home @tennisclub</span>
+<span style="color: #b22222;">#+TAGS: laptop car pc sailboat</span>
+</pre>
+
+
+<p>  
+  默认 Org 模式用一个迷你缓冲区补全设施来输入标签。另外，它也实现了一个更快速，称为 <i>快速标签选择</i> （ <i>fast tag selection</i> ）的标签选择方法。这使得你只用按一次键就可以选择或者取消一个标签。为了使它能很好地工作，需要为常用的标签赋唯一的值。你可以在你的“.emacs”文件中通过设置变量 org-tag-alist 作全局设定。例如，如果你需要在不同的文件中经常要给条目添加标签“:@home:”，这时你就可以像这样设置：
+</p>
+
+
+<pre class="src src-elisp">(setq org-tag-alist '((<span style="color: #8b2252;">"@work"</span> . ?w) (<span style="color: #8b2252;">"@home"</span> . ?h) (<span style="color: #8b2252;">"laptop"</span> . ?l)))
+</pre>
+
+
+<p>  
+  如果标签只用于当前正在处理的文件，那么你可以这样设置标签选项行：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+TAGS: @work(w) @home(h) @tennisclub(t) laptop(l) pc(p)</span>
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> 标签查找</h3>
+<div class="outline-text-3" id="text-6-3">
+
+<p>   一旦标签体系设置好，就可以用来收集相关联的信息到指定列表中。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c \</td><td class="left"></td></tr>
+<tr><td class="left">C-c / m</td><td class="left">用匹配标签搜索的所有标题构造一个稀疏树。带前缀参数C-u时，忽略所有还是TODO行的标题。</td></tr>
+<tr><td class="left">C-c a m</td><td class="left">用所有议程文件匹配的标签构造一个全局列表。见第 10.3.3 节。</td></tr>
+<tr><td class="left">C-c a M</td><td class="left">用所有议程文件匹配的标签构造一个全局列表，但只搜索 TODO 项，并强制搜索所有子项（见变量 org-tags-match-listsublevels）。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   这些命令都会提示输入字符串，字符串支持基本的逻辑去处。像“+boss+urgent-project1”，是搜索所有的包含标签“boss”和“urgent”但不含“project1”的项；而 “Kathy|Sally”，搜索标签包含“Kathy”或者“Sally”和项。搜索字符串的语法很丰富，支持查找TODO关键字、条目级别和属性。更详细的介绍和例子，见第 10.3.3 节。
+</p>
+<p>
+<b>扩展阅读</b><br>
+   手册第 6 章<br>
+   Sacha Chua’s article about tagging in Org-mode
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> 属性</h2>
+<div class="outline-text-2" id="text-7">
+
+<p>  属性是一些与条目关联的键值对。它们位于一个名为 <b>PROPERTIES</b> 的特殊抽屉中。第一个属性都单独一行，键在前（被冒号包围），值在后：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* CD collection</span>
+<span style="color: #a0522d;">** Classic</span>
+<span style="color: #a020f0;">*** Goldberg Variations</span>
+<span style="color: #a020f0;">    :PROPERTIES:</span>
+    <span style="color: #a020f0;">:Title:</span>    Goldberg Variations
+    <span style="color: #a020f0;">:Composer:</span> J.S. Bach
+    <span style="color: #a020f0;">:Publisher:</span> Deutsche Grammophon
+    <span style="color: #a020f0;">:NDisks:</span>   1
+<span style="color: #a020f0;">    :END:</span>
+</pre>
+
+
+<p>  
+  通过设置属性 <code>“:Xyz_ALL:”</code> ，你可以为属性 <code>“:Xyz:”</code> 设置所有合法的值。这个特定的属性是有 <i>继承性</i> 的，即，如果你是在第 1 级别设置的，那么会被应用于整个树。当合法的值设定之后，设置对应的属性就很容易了，并且不容易出现打字错误。用CD唱片集为例，我们可以预定义发行商和盒中的光盘数目：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* CD collection</span>
+<span style="color: #a020f0;">  :PROPERTIES:</span>
+  <span style="color: #a020f0;">:NDisks_ALL:</span> 1 2 3 4
+  <span style="color: #a020f0;">:Publisher_ALL:</span> "Deutsche Grammophon" Philips EMI
+<span style="color: #a020f0;">  :END:</span>
+</pre>
+
+
+<p>
+  也可以在全局设置 org-global-properties ，或者在文件级别设置：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+PROPERTY: NDisks_ALL 1 2 3 4</span>
+</pre>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-x p</td><td class="left">设置一个属性。会询问属性名和属性值。</td></tr>
+<tr><td class="left">C-c C-c d</td><td class="left">从当前项中删除一个属性。</td></tr>
+</tbody>
+</table>
+
+
+<p>  
+  要基于选择的属性创建稀疏树或者特殊列表，跟标签搜索的命令相同（见第6.3节）。搜索字符串的语法在第10.3.3节中详述。
+</p>
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> 扩展阅读</h3>
+<div class="outline-text-3" id="text-7-1">
+
+<p>   手册第7章<br>
+   Bastien Guerry’s column view tutorial
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> 日期和时间</h2>
+<div class="outline-text-2" id="text-8">
+
+<p>  为了支持工程的计划，TODO 项可以标记上日期和/或时间。带有日期和时间信息的特定格式的字符串在 Org 模式中称为时间戳。
+</p>
+
+</div>
+
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> 时间戳</h3>
+<div class="outline-text-3" id="text-8-1">
+
+<p>   时间戳是一个具有特定格式的日期（可能带有时间和时间段）说明，例如 ~ <span class="timestamp-wrapper"> <span class="timestamp">2005-10-01~ <code>Tue</code></span></span> ， ~ <span class="timestamp-wrapper"> <span class="timestamp">2003-09-16~ <code>Tue</code> <code>09:39</code></span></span> ，或者 ~ <span class="timestamp-wrapper"> <span class="timestamp">2003-09-16~ <code>Tue</code> <code>12:00-12:30</code></span></span> 。
+   时间戳可以出现在树条目的标题和正文的任何地方。它能使条目只在特定的日期才出现在议程列表中。（见第 10.3.1 节）我们区分为：
+</p>
+<p>
+<b>普通时间戳；事件；约会</b>
+</p>
+<p>
+    一个简单的时间戳只是给一个条目加上时间和日期。这跟在纸质的议程上写下约会和事件是一样的。
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* Meet Peter at the movies </span><span style="color: #a020f0; text-decoration: underline;">&lt;2006-11-01 Wed 19:15&gt;</span>
+<span style="color: #0000ff;">* Discussion on climate change </span><span style="color: #a020f0; text-decoration: underline;">&lt;2006-11-02 Thu 20:00-22:00&gt;</span>
+</pre>
+
+
+<p>
+<b>具有时间间隔的时间戳</b>
+</p>
+<p>
+    一个时间戳可以包含一个时间间隔，表示事件不只在指定的时间发生，还在每隔一个特定的时间如 N 天（d）、周（w）、月（m）或者年（y）之后重复发生。下面的事件每周二在议程中显示：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* Pick up Sam at school </span><span style="color: #a020f0; text-decoration: underline;">&lt;2007-05-16 Wed 12:30 +1w&gt;</span>
+</pre>
+
+
+<p>  
+<b>日记样式的 sexp 条目</b>
+</p>
+<p>
+    为了能定义更复杂的时间，Org 模式支持 Emacs 日历/日记包（calendar/diary package）中的日记条目。例如：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* The nerd meeting on every 2nd Thursday of the month</span>
+  <span style="color: #a020f0;">&lt;%%(diary-float t 4 2)&gt;</span>
+</pre>
+
+
+<p>
+<b>时间/日期段</b>
+</p>
+<p>
+    两个时间戳用‘–’连接起来就定义了一个时间段：
+</p>
+
+
+<pre class="src src-org"><span style="color: #a0522d;">** Meeting in Amsterdam</span>
+   <span style="color: #a020f0; text-decoration: underline;">&lt;2004-08-23 Mon&gt;--&lt;2004-08-26 Thu&gt;</span>
+</pre>
+
+
+<p>
+<b>非激活的时间戳</b>
+</p>
+<p>
+    跟普通时间戳一样，但是这里是方括号而不是尖括号。这种时间戳是未激活的，它 <i>不</i> 会让一个条目显示在议程中。
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* Gillian comes late for the fifth time </span><span style="color: #a020f0; text-decoration: underline;">[2006-11-01 Wed]</span>
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> 创建时间戳</h3>
+<div class="outline-text-3" id="text-8-2">
+
+<p>   时间戳要有特定的格式，这样才能被Org模式识别。下面的命令可以用来正确地处理时间戳的格式。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c .</td><td class="left">询问日期并输入正确的时间戳。当光标处理一个时间戳之上时，是修改这个时间戳，而不是插入一个新的。如果这个命令连用再次，就会插入一个时间段。加上前缀会附带当前时间。</td></tr>
+<tr><td class="left">C-c !</td><td class="left">功能同C-c .，但是插入的是一个未激活的时间戳。</td></tr>
+<tr><td class="left">S-LEFT/RIGHT</td><td class="left">将光标处理的时间戳改变一天。</td></tr>
+<tr><td class="left">S-UP/DOWN</td><td class="left">改变时间戳中光标下的项。光标可以处在年、月、日、时或者分之上。当时间戳包含一个时间段时，如 “15:30-16:30”，修改第一个时间，会自动同时修改第二个时间，以保持时间段长度不变。想修改时间段长度，可以修改第二个时间。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+当 Org 模式询问时间/日期时，能接收任何包含时间和/或日期的字符串，它能根据当前的时间日期智能地分析字符串，从而得到没有指明的信息。你也可以用弹出的日历中选择日期。想完整地了解时间/日期询问的工作方式，可以参考手册。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-8-3" class="outline-3">
+<h3 id="sec-8-3"><span class="section-number-3">8.3</span> 截止期限和计划安排</h3>
+<div class="outline-text-3" id="text-8-3">
+
+<p>   时间戳前面可以加一些关键字来协助计划安排。
+</p>
+<p>
+<b>截止期限</b>
+</p>
+<p>
+意义：任务（大多数情况都会是一个TODO项，当然也可以不是）应该完成的日期。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-d</td><td class="left">在标题下面一行插入一个带有“DEADLINE”关键字的时间戳。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+在 <i>截止日期</i> ， <i>任务</i> 会列在 <i>议程</i> 中。另外， <i>今天的议程</i> 会在任务到期 orgdeadline-warning-days 天前对即将即将到期以及已经过期的任务给出提醒，直到任务被标记为 DONE。例如：
+</p>
+
+
+<pre class="src src-org"><span style="color: #a020f0;">*** </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #a020f0;"> write article about the Earth for the Guide</span>
+    The editor in charge is <span style="color: #3a5fcd; text-decoration: underline;">bbdb:Ford Prefect</span>
+    <span style="color: #a020f0;">DEADLINE:</span> <span style="color: #a020f0; text-decoration: underline;">&lt;2004-02-29 Sun&gt;</span>
+</pre>
+
+
+<p>
+<b>日程安排</b>
+</p>
+<p>
+    意义：你计划在给定的那个日期开始进行那项任务。<sup><a class="footref" name="fnr.6" href="#fn.6">6</a></sup>
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-s</td><td class="left">在标题下面插入一个带有“SCHEDULED”关键字的时间戳。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+    在给定的日期标题会列在议程中。<sup><a class="footref" name="fnr.7" href="#fn.7">7</a></sup>另外，对于过期的日程安排会在编辑为 <i>今天</i> 并给出提醒，直到被标记为 DONE。也就是说，任务会自动推迟日期直到它被完成。
+</p>
+
+
+<pre class="src src-org"><span style="color: #a020f0;">*** </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #a020f0;"> Call Trillian for a date on New Years Eve.</span>
+    <span style="color: #a020f0;">SCHEDULED:</span> <span style="color: #a020f0; text-decoration: underline;">&lt;2004-12-25 Sat&gt;</span>
+</pre>
+
+
+<p>  
+  有些任务需要一再重复出现。Org 模式在截止期限、计划安排和普通时间戳中用所谓的中继器来管理这种任务。在下面的例子中：
+</p>
+
+
+<pre class="src src-org"><span style="color: #a0522d;">** </span><span style="color: #ff0000; font-weight: bold;">TODO</span><span style="color: #a0522d;"> Pay the rent</span>
+   <span style="color: #a020f0;">DEADLINE:</span> <span style="color: #a020f0; text-decoration: underline;">&lt;2005-10-01 Sat +1m&gt;</span>
+</pre>
+
+
+<p>
+  +1m 是一个中继器；上面的意思是任务有一个截止期限 ~ <span class="timestamp-wrapper"> <span class="timestamp">2005-10-01</span></span>~ ，并从这个日期开始每月都重复出现。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-8-4" class="outline-3">
+<h3 id="sec-8-4"><span class="section-number-3">8.4</span> 记录工作时间</h3>
+<div class="outline-text-3" id="text-8-4">
+
+<p>   使用 Org 可以记录在一个工程中花在某些特定任务上的时间。
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-x C-i</td><td class="left">开始当前条目的计时（clock-in）。这会插入一个 CLOCK 关键字和一个时间戳。加上 C-u 前缀，从当前已经计时的任务中选择任务。</td></tr>
+<tr><td class="left">C-c C-x C-o</td><td class="left">停止计时（clock-out）。这会在开始计时的地方插入另一个时间戳。它会直接计算使用时间并插入到时间段的后面如 “=&gt; HH:MM”。</td></tr>
+<tr><td class="left">C-c C-x C-e</td><td class="left">为当前的计时任务更新进度。</td></tr>
+<tr><td class="left">C-c C-x C-x</td><td class="left">取消当前的计时。当你误操作打开一个计时时，或者转而去做其他事情时，这个命令就很有用。</td></tr>
+<tr><td class="left">C-c C-x C-j</td><td class="left">跳转到包含当前正在运行的计时的任务条目。用 C-uf前缀从当前计时的任务中选择。</td></tr>
+<tr><td class="left">C-c C-x C-r</td><td class="left">在当前文件插入一个包含像 Org 表格一样的计时报告的动态块。当光标正处于一个存在的块上时，更新它。</td></tr>
+<tr><td class="left"></td><td class="left"><code>#+BEGIN: clocktable :maxlevel 2 :emphasize nil :scope file</code></td></tr>
+<tr><td class="left"></td><td class="left"><code>#+END: clocktable</code></td></tr>
+<tr><td class="left"></td><td class="left">如何定制视图，见手册。</td></tr>
+<tr><td class="left">C-c C-c</td><td class="left">在一个已经存在的计时表格之上时，更新它。 更新动态块。光标需要置于动态块 <code>#+BEGIN</code> 这行。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   <i>l</i> 键可能会在时间轴（见第 10.3.4 节）和议程（见第 10.3.1 节）中使用来查看一天中处理和关闭了哪些任务。
+</p>
+<p>
+<b>扩展阅读</b><br>
+手册第 8 章<br>
+Charles Cave’s Date and Time tutorial<br>
+Bernt Hansen’s clocking workflow
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> 捕获——转发——存档</h2>
+<div class="outline-text-2" id="text-9">
+
+<p>  任何组织系统都有一个重要功能，就是能捕获新的灵感或者任务，并将相关的引用材料与之联系起来。Org 提供了一个捕获过程来创建任务。它将与一个任务相关的文件（附件）保存在一个特定的目录下。在系统中，任务和项目经常移动。将整个项目树保存到一个归档文件中可以保持系统简洁快速。
+</p>
+</div>
+
+<div id="outline-container-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> 捕获</h3>
+<div class="outline-text-3" id="text-9-1">
+
+<p>   Org 的获取一个新条目的方法很大程序上受 John Wiegley 的 excellent remem-ber package 的影响。它使得你可以在工作流程中中断一小会儿来存贮一个简短的笔记。Org可以为新条目定义模板，并将它们与不同的目标文件关联起来以保存笔记。
+</p>
+
+<p>
+<b>设定截取位置<sup><a class="footref" name="fnr.8" href="#fn.8">8</a></sup></b>
+</p>
+<p>
+    下面的定制为笔记设置了一个默认的目标<sup><a class="footref" name="fnr.9" href="#fn.9">9</a></sup>文件，并为捕获新的任务定义了一个全局快捷键<sup><a class="footref" name="fnr.10" href="#fn.10">10</a></sup>。
+</p>
+
+
+<pre class="src src-elisp">(setq org-default-notes-file (concat org-directory <span style="color: #8b2252;">"/notes.org"</span>))
+(define-key global-map <span style="color: #8b2252;">"\C-cc"</span> 'org-capture)
+</pre>
+
+
+<p>
+<b>截取的使用</b>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c c</td><td class="left">启动一个捕获过程。进入一个窄的间接缓冲区来编辑条目。</td></tr>
+<tr><td class="left">C-c C-c</td><td class="left">一旦完成捕获信息的输入，可以用 C-c C-c 返回之前的窗口，继续中断的工作。</td></tr>
+<tr><td class="left">C-c C-w</td><td class="left">将条目保存到一个接收地址（见第2节）并结束。</td></tr>
+<tr><td class="left">C-c C-k</td><td class="left">取消捕获过程，返回之前的状态。</td></tr>
+</tbody>
+</table>
+
+
+<p>  
+<b>捕获模板</b>
+</p>
+<p>
+    用可以用不同的模板来做不同的捕获笔记，并将它们保存到不同的地方。例如，你想将新任务保存到文件“TODO.org”的“Tasks”标题下，而将日记项目保存到“journal.org”中一个时间树中。你可以：
+</p>
+
+
+<pre class="src src-elisp">(setq org-capture-templates
+      '((<span style="color: #8b2252;">"t"</span> <span style="color: #8b2252;">"Todo"</span> entry (file+headline <span style="color: #8b2252;">"~/org/gtd.org"</span> <span style="color: #8b2252;">"Tasks"</span>)
+         <span style="color: #8b2252;">"* TODO %?\n %i\n %a"</span>)
+        (<span style="color: #8b2252;">"j"</span> <span style="color: #8b2252;">"Journal"</span> entry (file+datetree <span style="color: #8b2252;">"~/org/journal.org"</span>)
+         <span style="color: #8b2252;">"* %?\nEntered on %U\n %i\n %a"</span>)))
+</pre>
+
+
+<p>
+           其中，第一个字符串是模式的关键字，第二个字符串是简短的描述信息。接着是条目的类型和保存笔记的目标地址。最后是模板本身，它利用%作转义符基于时间和上下文来填充一些信息。
+</p>
+<p>
+           当你调用 M-x org-capture 时，Org 提示输入一个键来选择模板（如果你有多个模板），然后就会给出像这样的内容：
+</p>
+<pre class="example">* TODO
+ [[file:link to where you were when initiating capture]]
+</pre>
+
+
+
+<p>
+    在扩展模板时，可以用%转义符进行动态地插入内容。下面是一些可以使用的项，查看手册获得更多的选项。<sup><a class="footref" name="fnr.11" href="#fn.11">11</a></sup>
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">%a</td><td class="left">注解，通常是由 org-store-link 创建的链接</td></tr>
+<tr><td class="left">%i</td><td class="left">初始化内容，当记忆时区域被C-u调用</td></tr>
+<tr><td class="left">%t</td><td class="left">时间戳，只是日期</td></tr>
+<tr><td class="left">%T</td><td class="left">带有日期和时间的时间戳</td></tr>
+<tr><td class="left">%u，%U</td><td class="left">同上，但是时间戳不激活</td></tr>
+</tbody>
+</table>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9-2" class="outline-3">
+<h3 id="sec-9-2"><span class="section-number-3">9.2</span> 转送笔记</h3>
+<div class="outline-text-3" id="text-9-2">
+
+<p>   当你回顾捕获的数据时，可以想把其中的一些条目转送到另一列表中，比如说到一工程项目。剪切，查找正确的地址，然后再粘贴笔记，这就似乎有些麻烦。为了简化这个过程，可以用专门的命令：
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-w</td><td class="left">转送光标处的条目或者区域。这个命令会提供一些目标地址供选择,你可以通过补全功能选择一个。条目（或者区域中的所有条目）就会作为一个子项填充到目标标题下。</td></tr>
+<tr><td class="left"></td><td class="left">默认情况下，当前缓冲区的一级标题会被作为转送的目标，你可以通过设置给出跨多个文件的复杂的定义。详见变量 org-refile-targets 的描述。</td></tr>
+<tr><td class="left">C-u C-c C-w</td><td class="left">借助于转送功能的接口来跳转到一个标题。</td></tr>
+<tr><td class="left">C-u C-u C-c C-w</td><td class="left">跳转到 org-refile 最后转送子树所到的地方。</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9-3" class="outline-3">
+<h3 id="sec-9-3"><span class="section-number-3">9.3</span> 归档</h3>
+<div class="outline-text-3" id="text-9-3">
+
+<p>   当一个用（子）树表示的工程完成后，你可能想把它移走，不让它再在议程里显示。归档能使你的工作文件变得简洁，并能使议程视图构造等全局搜索保持高效。最常用的归档命令是将工程树移到另一个文件——归档文件。
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-x C-a</td><td class="left">用变量 orgarchive-default-command 指定的命令归档当前的项。</td></tr>
+<tr><td class="left">C-c C-x C-s 或者简化为 C-c $</td><td class="left">将光标处的子树归档至 org-archive-location 指定的位置。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   默认的归档位置是当前文件同目录下，名为当前文件名后加 <code>“_archive”</code> 的文件。例子和设置位置的方法见变量 org-archivelocation 的帮助信息。下面是一个在缓冲区内设置该变量的方法：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+ARCHIVE: %s_done::</span>
+</pre>
+
+
+<p>
+<b>扩展阅读</b><br>
+手册第9章<br>
+Charles Cave’s remember tutorial<br>
+Sebastian Rose’s tutorial for capturing from a web browser
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> 议程视图</h2>
+<div class="outline-text-2" id="text-10">
+
+<p>  根据 Org 的工作方式，TODO 项、时间戳和带标签的标题分散在一个或者多个文件中。为了能够查看某一天的项目或者事件，信息必须收集在一起，以一种的有条理方式排序、显示。有几种不同的视图，见下文。
+</p>
+<p>
+  收集的信息在一个专门的议程缓冲区中显示。这个缓冲区是只读的，但是提供了一些命令可以访问原 Org 文件中对应的条目，并且可以远程地编辑这些文件。从议程缓冲区中远程编辑是说，比如，你可以在议程缓冲区中改变标题和约会的日期。议程缓冲区中使用的命令在第 10.4 节列出。
+</p>
+
+</div>
+
+<div id="outline-container-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> 议程文件</h3>
+<div class="outline-text-3" id="text-10-1">
+
+<p>   显示的信息通常是从各个议程文件中收集来的，这样文件在变量 org-agenda-files 中列出。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c [</td><td class="left">将当前文件加入到议程文件列表中。当前文件会被加到列表的前面。如果文件已经在列表中，会被移到前面。带有前缀时，文件添加/移到到后面。</td></tr>
+<tr><td class="left">C-c ]</td><td class="left">将当前文件从议程文件列表中删除。</td></tr>
+<tr><td class="left">C-,</td><td class="left">遍历议程文件列表，依次访问其中的每一个文件。</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10-2" class="outline-3">
+<h3 id="sec-10-2"><span class="section-number-3">10.2</span> 议程调度器</h3>
+<div class="outline-text-3" id="text-10-2">
+
+<p>   视图是通过议程调试器创建的，通常我们会给它设置一个全局快捷键——比如 C-c a （见第1.2节）。按 C-c a 之后，就会提示再输入一个字母来执行对应的命令：
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">a</td><td class="left">日历式的议程。（见 10.3.1）</td></tr>
+<tr><td class="left">t/T</td><td class="left">TODO 项的列表。（见 10.3.2节）</td></tr>
+<tr><td class="left">m/M</td><td class="left">匹配某个标签表达式的标题的列表。（见 10.3.3）</td></tr>
+<tr><td class="left">L</td><td class="left">当前文件的时间轴视图。（见 10.3.4）</td></tr>
+<tr><td class="left">s</td><td class="left">通过关键字和/或正则表达式选中的条目的列表。</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10-3" class="outline-3">
+<h3 id="sec-10-3"><span class="section-number-3">10.3</span> 内建议程视图</h3>
+<div class="outline-text-3" id="text-10-3">
+
+
+
+</div>
+
+<div id="outline-container-10-3-1" class="outline-4">
+<h4 id="sec-10-3-1"><span class="section-number-4">10.3.1</span> 周/日议程</h4>
+<div class="outline-text-4" id="text-10-3-1">
+
+<p>    周/日议程就像纸质的议程一样，用以显示本周或当天的所有任务。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c a a</td><td class="left">从一列 Org 文件中为本周收集出一个议程。议程显示出每天的条目。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+    Emacs 包含了 Edward M. Reingold 的日历和日记功能。Org 模式能识别日记的语法并允许在 Org 文件中直接使用日记的 sexp 条目：<sup><a class="footref" name="fnr.12" href="#fn.12">12</a></sup>
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* Birthdays and similar stuff</span>
+<span style="color: #b22222;">#+CATEGORY: Holiday</span>
+  %%(org-calendar-holiday) ; special function for holiday names
+<span style="color: #b22222;">#+CATEGORY: Ann</span>
+  %%(diary-anniversary 5 14 1956) Arthur Dent is %d years old
+  %%(diary-anniversary 10 2 1869) Mahatma Gandhi would be %d years old
+</pre>
+
+
+<p>
+  Org 可以跟 Emacs 的约会提醒功能结合。想添加议程文件中的约会提醒，可以使用命令 org-agenda-to-appt。详见帮助文档的描述。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-10-3-2" class="outline-4">
+<h4 id="sec-10-3-2"><span class="section-number-4">10.3.2</span> 全局TODO列表</h4>
+<div class="outline-text-4" id="text-10-3-2">
+
+<p>    全局TODO列表将所有未完成的 TODO 项格式化并集中到一处。TODO 项的远程编辑使得我们只用按一下键就可以改变 TODO 项的状态。TODO 列表中可以使用的命令在第10.4节给出。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c a t</td><td class="left">显示全局 TODO 列表。这会从所有的议程文件（见第10章）中收集 TODO 项到一个缓冲区中。</td></tr>
+<tr><td class="left">C-c a T</td><td class="left">同上，但可以选择 TODO 关键字</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10-3-3" class="outline-4">
+<h4 id="sec-10-3-3"><span class="section-number-4">10.3.3</span> 匹配标签和属性</h4>
+<div class="outline-text-4" id="text-10-3-3">
+
+<p>    如果议程文件中的标题带有标签（见第6章）或者带有属性（见第7章），就可以基于这些元数据筛选标题到议程缓冲区中。这里描述的匹配语法在用 C-c / m 创建稀疏树时也同样适用。在标签列表中可以使用的命令在第10.4节描述。
+</p>
+
+
+
+<pre class="src src-org">C-c a m  将匹配指定的标签集的所有标题生成一个列表。这个命令询问筛选规则，可以是标签的逻辑表达式，如 “+work+urgent-withboss” 或 “work|home” （见第 6 章）。如果你经常使用某个搜索，可以将它定义成一个命令。（见第 10.2 节）
+C-c a M  同 C-c a m，但只复选同时也是 TODO 项的标题。                                                                         
+</pre>
+
+
+
+<p>
+<b>匹配语法</b>
+</p>
+<p>
+搜索字符串可以使用 ‘&amp;’ 作与运算， ‘|’ 作或运算。‘&amp;’ 的约束力比 ‘|’ 的强。括号功能现在还没实现。用以搜索的元素可以是标签 、匹配标签的正则表达式、或者像 PROPERTY OPERATOR VALUE 这样带有比较操作符的用来比较属性值的表达式。第一个元素前面加 ‘-’ 表示不选匹配的项，加 ‘+‘ 表示选择匹配的项。使用 ’+‘ 和 ’-“ 时，与操作符 ‘&amp;’ 就是可选的了。这里有一些只使用标签的例子。
+</p><pre class="example">”+work-boss“               选择标有”:work:“的标题，但去掉同时也标有”:boss:“的标题。。
+”work|laptop“              选择标有”:work:“或者”:laptop:“的行。
+”work|laptop+night“        跟前面相同，但要求标有”:laptop:“和行也要标有”:night:“。
+</pre>
+
+
+<p>
+匹配标签时你也可以尝试同时匹配属性，详细内容见手册。
+</p></div>
+
+</div>
+
+<div id="outline-container-10-3-4" class="outline-4">
+<h4 id="sec-10-3-4"><span class="section-number-4">10.3.4</span> 单文件时间轴</h4>
+<div class="outline-text-4" id="text-10-3-4">
+
+<p>   时间轴用时间排序视图概述单个文件中的所有带有时间戳的条目。这个命令的目的是用来给出一个工程中事件的鸟瞰图。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c a L</td><td class="left">给出 Org 文件中所有带时间戳条目的排序视图。带有 C-u 前缀时，没有完成的 TODO 项（作了安排的以及没作安排的）也列在当前日期下。</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10-3-5" class="outline-4">
+<h4 id="sec-10-3-5"><span class="section-number-4">10.3.5</span> 查找视图</h4>
+<div class="outline-text-4" id="text-10-3-5">
+
+<p>    这个议程视图用来对 Org 模式下的条目进行普通的文本查找。对于查找笔记很有用。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c a s</td><td class="left">这个查找方式可以让你通过匹配子串或者用逻辑表达式指定关键字来选择条目。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+    例如，查找字符串 <b>”computer equipment“</b> 将会查找包含子串 <b>”computer equipment“</b> 的条目。查找视图也可以用布尔逻辑查找条目中的关键字。查找字符串 <b>”+computer +wifi -ethernet-{8\.11[bg]}“</b> 将会搜索包含关键字 <b>computer</b> 和 <b>wifi</b> 但不含 <b>ethernet</b> ，并且不被正则表达式 <b>8\.11[bg]</b> （排除 8.11b 和 8.11g） 匹配的笔记条目。
+</p>
+<p>
+    注意，除了议程文件，这条命令也会搜索 org-agenda-text-search-extra-files 中列出的文件。
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10-4" class="outline-3">
+<h3 id="sec-10-4"><span class="section-number-3">10.4</span> 议程缓冲区的命令</h3>
+<div class="outline-text-3" id="text-10-4">
+
+<p>   议程缓冲区中的条目链接到了它们的源 Org 或者日记文件。有一些命令可以用来显示和跳转到条目的源位置，也可以从视图缓冲区中”远程“编辑源文件。下面只是所有命令的一个选集，浏览 <b>Agenda</b> 菜单和手册获得完整的列表。
+</p>
+<p>
+<b>动作</b>
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">n</td><td class="left">下一行（同 DOWN 和 C-n）。<sup><a class="footref" name="fnr.13" href="#fn.13">13</a></sup></td></tr>
+<tr><td class="left">p</td><td class="left">上一行（同 UP 和 C-p）。<sup><a class="footref" name="fnr.14" href="#fn.14">14</a></sup></td></tr>
+</tbody>
+</table>
+
+
+<p>
+<b>查看/转到 Org 文件</b>
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">mouse-3</td><td class="left"></td></tr>
+<tr><td class="left">SPC</td><td class="left">在另一个窗口中显示条目的源位置。带前缀使得整个条目在大纲中可见，而不只是标题。</td></tr>
+<tr><td class="left">TAB</td><td class="left">在另一个窗口中条目的源位置。在 Emacs 22 之前的版本，mouse-1 也有这个功能。</td></tr>
+<tr><td class="left">RET</td><td class="left">转到条目的源位置并删除其它的窗口。<sup><a class="footref" name="fnr.15" href="#fn.15">15</a></sup></td></tr>
+</tbody>
+</table>
+
+
+<p>   
+<b>改变显示方式</b>
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">o</td><td class="left">删除其他的窗口。</td></tr>
+<tr><td class="left">d / w</td><td class="left">切换到日/周视图。</td></tr>
+<tr><td class="left">f 和 b</td><td class="left">时间前移或者后移来显示随后的 org-agenda-current-span 天。例如，如果显示了一周的内容，切换到下/上一周。</td></tr>
+<tr><td class="left">.</td><td class="left">转到今天。</td></tr>
+<tr><td class="left">j</td><td class="left">询问日期并转到那天。</td></tr>
+<tr><td class="left">v l 或简化为 l</td><td class="left">触发日志模式（Logbook mode）。在日志模式中，当记录功能打开（变量 org-log-done）时标记为 DONE 的条目，以及在那天计时的条目，都会显示在议程中。</td></tr>
+<tr><td class="left">r 或 g</td><td class="left">重新构造议程，以反映最新的状态。</td></tr>
+<tr><td class="left">s</td><td class="left">保存当前 Emacs 会话的所有 Org 缓冲区和ID的地址。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+<b>二级筛选和查询编辑</b>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left"><code>/</code></td><td class="left">根据标签过滤当前的缓冲区。提示你输入一个字母选择一个标签。先按‘-’排除一个标签。</td></tr>
+<tr><td class="left">\</td><td class="left">通过增加条件缩小当前议程的视图。<sup><a class="footref" name="fnr.16" href="#fn.16">16</a></sup></td></tr>
+</tbody>
+</table>
+
+
+
+<p>
+<b>远程编辑（参考手册获得更多命令）</b>
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">0-9</td><td class="left">数字参数。</td></tr>
+<tr><td class="left">t</td><td class="left">修改议程和 org 文件中的条目的TODO状态。</td></tr>
+<tr><td class="left">C-k</td><td class="left">删除当前的议程条目以及源文件中它的整个子树。</td></tr>
+<tr><td class="left">C-c C-w</td><td class="left">传送当前的条目。</td></tr>
+<tr><td class="left">C-c C-x C-a 或简作 a</td><td class="left">用在 org-archive-default-command 中设置的默认归档命令对当前的条目对应的整个树进行归档。</td></tr>
+<tr><td class="left">C-c C-x C-s 或简作 $</td><td class="left">归档当前标题对应的树。</td></tr>
+<tr><td class="left">C-c C-s</td><td class="left">规划（Schedule）一个条目，带有前缀参数时删除规划时间戳。</td></tr>
+<tr><td class="left">C-c C-d</td><td class="left">为条目设置截止期限，带前缀时删除截止期限。</td></tr>
+<tr><td class="left">S-RIGHT 和 S-LEFT</td><td class="left">将与当前行相关的时间戳改变一天。</td></tr>
+<tr><td class="left">I</td><td class="left">对当前条目开始计时。</td></tr>
+<tr><td class="left">O / X</td><td class="left">暂停/取消最近开始的计时。</td></tr>
+<tr><td class="left">J</td><td class="left">在另一个窗口中跳转到正在进行的计时。</td></tr>
+</tbody>
+</table>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10-5" class="outline-3">
+<h3 id="sec-10-5"><span class="section-number-3">10.5</span> 定制议程视图</h3>
+<div class="outline-text-3" id="text-10-5">
+
+<p>   自定义搜索的主要用途是对于频繁使用的搜索进行快捷键绑定，从而快捷地创建议程缓冲区或者稀疏树（当然后者只涵盖当前缓冲区的内容）。自定义的命令是用变量 org-agenda-custom-commands 来配置的。你可以用 C-c a C 来定制这个变量。也可以直接在 ”.emacs“ 中用 Emacs lisp 来设置。下面的例子包含了所有合法的搜索类型：
+</p>
+
+
+<pre class="src src-elisp">(setq org-agenda-custom-commands
+      '((<span style="color: #8b2252;">"w"</span> todo <span style="color: #8b2252;">"WAITING"</span>)
+        (<span style="color: #8b2252;">"u"</span> tags <span style="color: #8b2252;">"+boss-urgent"</span>)
+        (<span style="color: #8b2252;">"v"</span> tags-todo <span style="color: #8b2252;">"+boss-urgent"</span>)))
+</pre>
+
+
+<p>          
+          每个项的首字符串是使用调度器命令 C-c a 之后要给出的键以使用相应的命令。通常都是单个字符。第二个参数是搜索类型，接着是用来进行匹配的字符串或者正则表达式。上面的例子定义了：
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c a w</td><td class="left">对于包含关键字 ”“ 的 TODO 项的全局搜索。</td></tr>
+<tr><td class="left">C-c a u</td><td class="left">对于带有标签 ”:boss:“ 而不含标签 ”:urgent:“ 的标题的全局标签搜索。</td></tr>
+<tr><td class="left">C-c a v</td><td class="left">同搜索 C-c a u，但搜索范围只限于同时也是 TODO 项的标题。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+<b>扩展阅读</b><br>
+手册第 10 章<br>
+Mat Lundin’s tutorial about custom agenda commands<br>
+John Wiegley’s setup
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> 准备导出</h2>
+<div class="outline-text-2" id="text-11">
+
+<p>  当导出 Org 模式的文档时，导出器在后端（backend）尽可能准确地反映出文档的结构。由于所要导出的目标文档像 HTML，LaTeX 和 DocBook 具有丰富的格式，Org 为富导出（rich export）提供了一些规则。这节概述 Org 模式缓冲区中的准备规则。
+</p>
+
+</div>
+
+<div id="outline-container-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> 结构的组成元素</h3>
+<div class="outline-text-3" id="text-11-1">
+
+
+<p>
+<b>文档标题</b>
+</p>
+<p>
+    导出文件的标题在特定行给出：
+</p>
+
+
+<pre class="src src-org"><span style="color: #7f7f7f;">#+TITLE:</span><span style="color: #b22222;"> </span><span style="color: #191970; font-size: 144%; font-weight: bold;">This is the title of the document</span>
+</pre>
+
+
+<p>
+<b>标题和章节</b>
+</p>
+<p>
+    第二章描述的大纲结构确定了导出文档的结构基础。然而由于大纲结构也用于（比如说）列表和任务，因此只有前三个级别用作标题。更深的级别会被看作项目列表。你可以通过变量 org-export-headline-levels 在全局设置这个开关，或者只是在单个文件中设置：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+OPTIONS: H:4</span>
+</pre>
+
+
+<p>
+<b>目录表</b>
+</p>
+<p>
+    目录表通常会直接插入在文档第一个标题之前。
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+OPTIONS: toc:2 (目录中只显示二级标题)</span>
+<span style="color: #b22222;">#+OPTIONS: toc:nil (无目录)</span>
+</pre>
+
+
+<p>
+<b>段落、分行和引用</b>
+</p>
+<p>
+    段落之间至少要有一空行。如果你想实现段内分行，可以在行后加上“\\”。
+</p>
+<p>
+    要想在一个区域内实现分行，而其他地方使用正常格式，你可以使用下面的构造，它也可以用来实现诗歌的格式：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+BEGIN_VERSE</span>
+ Great clouds overhead
+ Tiny black birds rise and fall
+ Snow covers Emacs
+
+     -- AlexSchroeder
+<span style="color: #b22222;">#+END_VERSE</span>
+</pre>
+
+
+<p>
+  当从另外一个文档中引用一段话时通过会让它左右都缩进。在 Org 文档中可以这样作引用：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+BEGIN_QUOTE</span>
+Everything should be made as simple as possible,
+but not any simpler -- Albert Einstein
+<span style="color: #b22222;">#+END_QUOTE</span>
+</pre>
+
+
+<p>
+  如果你想让某些文本居中，可以这样：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+BEGIN_CENTER</span>
+Everything should be made as simple as possible, \\
+but not any simpler
+<span style="color: #b22222;">#+END_CENTER</span>
+</pre>
+
+
+<p>
+<b>强调和等宽</b>
+</p>
+<p>
+你可以让文字 <b>粗体</b> ， <i>斜体</i> ， <span style="text-decoration:underline;">下划线</span>  ， <code>代码</code> ，以及  <code>逐文本</code> ，如果必需，也可以'<del>划掉</del>'。代码和逐文本的字符串不会以Org模式的语法格式来处理，会被逐字输出。想要插入一个水平格尺<sup><a class="footref" name="fnr.17" href="#fn.17">17</a></sup>，用一个只含有破折号的行来实现，要求至少有5个破折号。
+</p>
+<p>
+<b>注释行</b>
+</p>
+<p>
+以‘#‘位于第 0 列的行会被看作注释，不会被导出。如果你想要一个缩进的行也被作为注释，用“#+”开头。另外以关键字 “COMMENT” 开头的子树整个树都不会被导出。最后，被 <code>“#+BEGIN_COMMENT“</code> … <code>”#+END_COMMENT”</code> 包围的整个区域也都不会被导出。
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c ;</td><td class="left">在一个项的开头触发 COMMENT 关键字</td></tr>
+</tbody>
+</table>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11-2" class="outline-3">
+<h3 id="sec-11-2"><span class="section-number-3">11.2</span> 图片和表格</h3>
+<div class="outline-text-3" id="text-11-2">
+
+<p>   对于 Org 模式的表格，以竖直线开头的行会成为表格的首行。你可以在表格前面用下面几行为表格指定标题和标签，以方便交叉引用，在文本中可以用 <code>\ref{tab:basic-data}</code> 来引用它：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+CAPTION: This is the caption for the next table (or link)</span>
+<span style="color: #b22222;">#+LABEL: tbl:basic-data</span>
+   <span style="color: #0000ff;">| ... | ... |</span>
+   <span style="color: #0000ff;">|-----+-----|</span>
+</pre>
+
+
+<p>
+  一些后端（HTML，LaTeX，以及 DocBook）允许直接插入图片到导出的文档中。Org 也可以，只要图片的链接不含有描述部分就行了，例如：
+</p><pre class="example">[[./img/a.jpg]]
+</pre>
+
+<p>  如果你希望为图片定义一个标题，或者一个标签方便内部交叉引用，可以让图片单独一行，在前面加上：
+</p>
+<pre class="example"> #+CAPTION: This is the caption for the next figure link (or table)
+ #+LABEL: fig:SED-HR4049
+ [[./img/a.jpg]]
+</pre>
+
+
+<p>
+  你也可以为图形指定一些其他的特性。但由于这与后端<sup><a class="footref" name="fnr.18" href="#fn.18">18</a></sup>密切相关，可以参考关于特定后端的章节获得详细信息。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-11-3" class="outline-3">
+<h3 id="sec-11-3"><span class="section-number-3">11.3</span> 纯文本的例子</h3>
+<div class="outline-text-3" id="text-11-3">
+
+<p>   你可以包含进来一些纯文本的例子，这不属于准备的范畴。这些例子会等宽排版，所以适用于代码以及其他类似的情况：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+BEGIN_EXAMPLE</span>
+<span style="color: #7f7f7f;">Some example from a text file.</span>
+<span style="color: #b22222;">#+END_EXAMPLE</span>
+</pre>
+
+
+<p>
+  为了简单化，一些小型的例子也可以将各行以冒号开头。冒号前面可以有空格：
+</p>
+
+
+<pre class="src src-org">Here is an example
+   <span style="color: #7f7f7f;">: Some example from a text file.</span>
+</pre>
+
+
+<p>  
+  对于一些程序设计语言的源代码以及一些其他的文本，可以被 Emacs 的字体锁（font-lock）特殊标记，你也可以让它们像在Emacs的缓冲区中那样显示：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+BEGIN_SRC emacs-lisp</span>
+<span style="color: #7f7f7f;">(defun org-xor (a b)</span>
+<span style="color: #7f7f7f;">   "Exclusive or."</span>
+<span style="color: #7f7f7f;">   (if a (not b) b))</span>
+<span style="color: #b22222;">#+END_SRC</span>
+</pre>
+
+
+<p>
+  为了能在支持这种语言的专门的缓冲区中编辑例子，可以用 C-c , 启动和退出编辑缓冲区。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-11-4" class="outline-3">
+<h3 id="sec-11-4"><span class="section-number-3">11.4</span> 包含文件</h3>
+<div class="outline-text-3" id="text-11-4">
+
+<p>   当导出文档时，你可以包含其他文件中的内容。比如，想包含你的“.emacs”文件，你可以用：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+INCLUDE: "~/.emacs" src emacs-lisp</span>
+</pre>
+
+
+<p>
+  可选的第二个第三个参数是组织方式（例如，“quote”，“example”，或者“src”），如果是 “src”，语言用来格式化内容。组织方式是可选的，如果不给出，文本会被当作 Org 模式的正常处理。用 C-c ,可以访问包含的文件。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-11-5" class="outline-3">
+<h3 id="sec-11-5"><span class="section-number-3">11.5</span> 嵌入 LaTex</h3>
+<div class="outline-text-3" id="text-11-5">
+
+<p>   对于需要包含数学符号和特殊方程的科学笔记，Org 模式支持嵌入 LaTeX 代码到文件中。你可以直接使用类 TeX 的宏来输入特殊符号，输入方程，或者整个 LaTeX 环境。
+</p>
+
+
+<pre class="src src-org">Angles are written as Greek letters \alpha, \beta and \gamma. The mass if
+the sun is M_sun = 1.989 x 10^30 kg. The radius of the sun is R_{sun} =
+6.96 x 10^8 m. If $a^2=b$ and $b=2$, then the solution must be either
+$a=+\sqrt{2}$ or $a=-\sqrt{2}$.
+
+\begin{equation}
+x=\sqrt{b}
+\end{equation}
+</pre>
+
+
+<p>
+  特殊设置之后，导出 HTML 时 LaTeX 代码片断会生成图片并包含进来。
+</p>
+<p>
+<b>扩展阅读</b><br>
+手册第11章
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> 导出</h2>
+<div class="outline-text-2" id="text-12">
+
+<p>  Org模式文档可以导出成多种格式：ASCII 用于包含在邮件中；HTML 用来发布到网页上；LaTeX/PDF 用来打印出漂亮的文档；DocBook 通过DocBook工具转换成其他各种各样的格式。也可以导出成 iCalendar 格式，将计划信息并入到桌面日历中。
+</p>
+
+</div>
+
+<div id="outline-container-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> 导出选项</h3>
+<div class="outline-text-3" id="text-12-1">
+
+<p>    导出器能识别缓冲区中提供附加信息的特殊行。这样行可以放在文件中的任何地方。整个集合可以用 C-c C-e t 插入到缓冲区中。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-c t</td><td class="left">插入导出选项模板，见下面的例子</td></tr>
+</tbody>
+</table>
+
+
+
+
+
+<pre class="src src-org"><span style="color: #7f7f7f;">#+TITLE:</span><span style="color: #b22222;">       </span><span style="color: #191970; font-size: 144%; font-weight: bold;">the title to be shown (default is the buffer name)</span>
+<span style="color: #7f7f7f;">#+AUTHOR:</span><span style="color: #b22222;">      </span><span style="color: #191970;">the author (default taken from user-full-name)</span>
+<span style="color: #7f7f7f;">#+DATE:</span><span style="color: #b22222;">        </span><span style="color: #191970;">a date, fixed, of a format string for format-time-string</span>
+<span style="color: #7f7f7f;">#+EMAIL:</span><span style="color: #b22222;">       </span><span style="color: #191970;">his/her email address (default from user-mail-address)</span>
+<span style="color: #b22222;">#+DESCRIPTION: the page description, e.g. for the XHTML meta tag</span>
+<span style="color: #b22222;">#+KEYWORDS:    the page keywords, e.g. for the XHTML meta tag</span>
+<span style="color: #b22222;">#+LANGUAGE:    language for HTML, e.g. ‘en’ (org-export-default-language)</span>
+<span style="color: #b22222;">#+TEXT:        Some descriptive text to be inserted at the beginning.</span>
+<span style="color: #b22222;">#+TEXT:        Several lines may be given.</span>
+<span style="color: #b22222;">#+OPTIONS:     H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t ...</span>
+<span style="color: #b22222;">#+LINK_UP:     the ``up'' link of an exported page</span>
+<span style="color: #b22222;">#+LINK_HOME:   the ``home'' link of an exported page</span>
+<span style="color: #b22222;">#+LATEX_HEADER: extra line(s) for the LaTeX header, like \usepackage{xyz}</span>
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-12-2" class="outline-3">
+<h3 id="sec-12-2"><span class="section-number-3">12.2</span> 导出调度器</h3>
+<div class="outline-text-3" id="text-12-2">
+
+<p>   所有的导出命令都可以通过导出调度器来使用，调度器是一个前缀快捷键，它会提示输入一个字母来指定命令。通常整个文件都会被导出，但是如果选中区域包含大纲树，就会导出大纲树，并以第一个标题作为文件标题。
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-e</td><td class="left">用来导出和发布的调度器</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-12-3" class="outline-3">
+<h3 id="sec-12-3"><span class="section-number-3">12.3</span> ASCII/Latin-1/UTF-8 的导出</h3>
+<div class="outline-text-3" id="text-12-3">
+
+<p>   ASCII导出功能能给 Org 文件提供的一个简单易读的版本，它只包含纯 ASCII 文本。Latin-1 和 UTF-8 导出用它们能编码的特殊字符扩展了文件的功能。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-e a</td><td class="left">导出 ASCII 文件</td></tr>
+<tr><td class="left">C-c C-e n 和 C-c C-e N</td><td class="left">和上面的命令一样，但是用 Latin-1 编码<sup><a class="footref" name="fnr.19" href="#fn.19">19</a></sup></td></tr>
+<tr><td class="left">C-c C-e u 和 C-c C-e U</td><td class="left">和上面的命令一样，但是用 UTF-8 编码</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-12-4" class="outline-3">
+<h3 id="sec-12-4"><span class="section-number-3">12.4</span> HTML的导出</h3>
+<div class="outline-text-3" id="text-12-4">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-e h</td><td class="left">导出 HTML 文件</td></tr>
+<tr><td class="left">C-c C-e b</td><td class="left">导出 HTML 文件并用浏览器打开</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   想要将 HTML 以纯文本方式复制到导出文件，可以：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+HTML:</span><span style="color: #b22222;"> </span><span style="color: #7f7f7f;">Literal HTML code for export</span>
+</pre>
+
+<p>
+或者
+</p><pre class="example"> #+BEGIN_HTML
+ All lines between these markers are exported literally
+ #+END_HTML
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-12-5" class="outline-3">
+<h3 id="sec-12-5"><span class="section-number-3">12.5</span> LaTeX和PDF的导出</h3>
+<div class="outline-text-3" id="text-12-5">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-e l</td><td class="left">导出 LaTeX 文件</td></tr>
+<tr><td class="left">C-c C-e p</td><td class="left">导出 LaTeX 文件，并处理成 PDF 文件</td></tr>
+<tr><td class="left">C-c C-e d</td><td class="left">导出 LaTeX 文件，处理成 PDF 文件，并打开</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   默认，LaTeX输出是使用article类型。但你可以在文件中通过选项 <code>#+LaTeX_CLASS: myclass</code> 来改变，但类型必须是 org-export-latex-classes 中列出的。
+</p>
+<p>
+   第 11.5 节撰述的内嵌的 LaTeX 可以正确地插入到 LaTeX 文件中。跟 HTML 导出器相似，也可以通过 <code>#+LaTeX:</code> 和 <code>#+BEGIN_LaTeX ... #+END_LaTeX</code> 来加入纯文本的 LaTex 代码。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-12-6" class="outline-3">
+<h3 id="sec-12-6"><span class="section-number-3">12.6</span> DocBook的导出</h3>
+<div class="outline-text-3" id="text-12-6">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-e D</td><td class="left">导出 DocBook 文件</td></tr>
+</tbody>
+</table>
+
+
+<p>
+   跟 HTML 导出器相似，也可以通过 <code>#+DocBook:</code> 和 <code>#+BEGIN_DocBook ... #+END_DocBook</code> 结构来加入纯文本的 DocBook 代码。<sup><a class="footref" name="fnr.20" href="#fn.20">20</a></sup>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-12-7" class="outline-3">
+<h3 id="sec-12-7"><span class="section-number-3">12.7</span> iCalendar的导出</h3>
+<div class="outline-text-3" id="text-12-7">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-e i</td><td class="left">在一个 “.ice” 文件中为当前文件创建 iCalendar 项。</td></tr>
+<tr><td class="left">C-c C-e c</td><td class="left">从 org-agenda-files 中的所有文件创建一个较大的 iCalendar 文件，并写入到 org-combined-agenda-icalendar-file 指定的文件中。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+<b>扩展阅读</b><br>
+手册第12章<br>
+Sebastian Rose’s image handling tutorial<br>
+Thomas Dye’s LaTeX export tutorial Eric Fraga’s BEAMER presentation tutorial
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> 发布</h2>
+<div class="outline-text-2" id="text-13">
+
+<p>  Org 包含一个发布管理系统，可以配置一个由相互链接的 Org 文件组成的工程项目的自动向 HTML 转换。你也可以设置 Org，将导出的 HTML 页面和相应的附件如图片，源代码文件等自动上传到服务器。如何设置，详见手册。
+</p>
+<p>  
+  下面是一个例子：
+</p>
+
+
+<pre class="src src-elisp">(setq org-publish-project-alist
+      '((<span style="color: #8b2252;">"org"</span>
+         <span style="color: #483d8b;">:base-directory</span> <span style="color: #8b2252;">"~/org/"</span>
+         <span style="color: #483d8b;">:publishing-directory</span> <span style="color: #8b2252;">"~/public_html"</span>
+         <span style="color: #483d8b;">:section-numbers</span> nil
+         <span style="color: #483d8b;">:table-of-contents</span> nil
+         <span style="color: #483d8b;">:style</span> <span style="color: #8b2252;">"&lt;link rel=\"stylesheet\"</span>
+<span style="color: #8b2252;">                href=\"../other/mystyle.css\"</span>
+<span style="color: #8b2252;">                type=\"text/css\"/&gt;"</span>)))
+</pre>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">C-c C-e C</td><td class="left">提示指明一个项目，将所有的文件发布。</td></tr>
+<tr><td class="left">C-c C-e P</td><td class="left">发布包含当前文件的项目。</td></tr>
+<tr><td class="left">C-c C-e F</td><td class="left">只发布当前文件。</td></tr>
+<tr><td class="left">C-c C-e E</td><td class="left">发布所有项目。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Org 用时间戳来查看文件是否改变。上面的命令只发布修改过的文件。你可以给它们加上前缀来强制重新发布所有的文件。              
+</p>
+<p>
+<b>扩展阅读</b><br>
+手册第 1 章<br>
+Sebastian Rose’s publishing tutorial<br>
+Ian Barton’s Jekyll/blogging setup
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> 处理源代码</h2>
+<div class="outline-text-2" id="text-14">
+
+<p>  Org模式提供了一系列功能来处理源代码，包括源代码块的本地主模式编辑，代码块的运行(evaluation)，代码块的混合，以及以多种方式导出代码块和它们的结果。
+</p>
+<p>
+<b>代码块的结构</b>
+</p>
+<p>
+   代码块的结构就像下面这样：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+srcname: &lt;name&gt;</span>
+<span style="color: #b22222;">#+begin_src &lt;language&gt; &lt;switches&gt; &lt;header arguments&gt;</span>
+<span style="color: #7f7f7f;">  &lt;body&gt;</span>
+<span style="color: #b22222;">#+end_src</span>
+</pre>
+
+
+<p>
+  其中&lt;name&gt;是代码块的名称，&lt;language&gt;指定代码块的语言（例如，emacs-lisp，shell，R，python，等等），&lt;switches&gt;用以控制代码块的导出，&lt;header arguments&gt;用来从多个方面控制代码块的行为，下面会详述，最后&lt;body&gt;是我们要写的代码。
+</p>
+<p>
+<b>编辑源代码</b>
+</p>
+<p>
+   使用C-c ,<sup><a class="footref" name="fnr.21" href="#fn.21">21</a></sup> 来编辑当前代码块。这个命令会新开一个以代码语言为主模式并包含代码的缓冲区（buffer）。保存这个缓冲区，会将新的内容写回Org缓冲区。再次使用C-c , 退出这个缓冲区。
+</p>
+<p>
+<b>运行代码块</b>
+</p>
+<p>
+   用 C-c C-c 运行当前代码块并将它们的结果插入 Org 缓冲区中。默认情况下，运行功能只对 emacs-lisp 代码块开启，但支持多种语言。所支持语言的完整列表见手册。下面是一个代码块和它的结果。
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+begin_src emacs-lisp</span>
+<span style="color: #7f7f7f;">  (+ 1 2 3 4)</span>
+<span style="color: #b22222;">#+end_src</span>
+
+<span style="color: #b22222;">#+results:</span>
+<span style="color: #7f7f7f;">: 10</span>
+</pre>
+
+
+<p>
+<b>抽取源代码</b>
+</p>
+<p>
+   用 C-c C-v 将代码块从一个 Org 模式的文件中抽取到“杂货库”（Library of Babel）中，这样在所有的 Org 模式的缓冲区中都可以运行该代码。一个常用的代码块集合在 contrib/library-of-babel.org 中随 Org 一直发布。
+</p>
+<p>
+<b>头参数</b>
+</p>
+<p>
+   运行和导出代码时的很多选项都通过头参数来设置。选项可以指定为全局的，文件级别的，大纲子树级别的，或者只是用于一个代码块。下面解释部分头参数。
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left"><col class="left">
+</colgroup>
+<tbody>
+<tr><td class="left">:var</td><td class="left">:var头参数用来将参数传递给代码块。能用来传递给参数的值可以是直接量，org模式表格中的值，文字实例块(literal example blocks)中的值，或者一个已命名代码块的结果。</td></tr>
+<tr><td class="left">:results</td><td class="left">:result头参数控制代码块结果的收集、类型和处理。output和value（默认）的值指定怎样在运行代码块时收集结果。vector，scalar，file， raw， html， latex 和 code的值指定代码块结果的类型并以此确定将结果并入Org缓冲区的方式。silent， replace， prepend和 append指定处理代码块结果的方式，明确是否以及如何将结果插入Org缓冲区中。</td></tr>
+<tr><td class="left">:session</td><td class="left">:session头参数将会使代码块在Emacs的一个持续交互的底层进程（persistent interactive inferior process）中执行。这考虑到了代码运行的持续状态和运行结果的人工检查。</td></tr>
+<tr><td class="left">:exports</td><td class="left">代码和块结果的任何组合在导出时都可以保持，这可以通过设置:results头参数为code results none或者both来指定。</td></tr>
+<tr><td class="left">:tangle</td><td class="left">头参数:tangle yes将使代码块的内容到保存到一个以Org模式缓冲区命名的文件中。也可以通过:tangle filename指明文件名。</td></tr>
+<tr><td class="left">:cache</td><td class="left">头参数:cache yes将使繁杂的代码块和结果关联，确保输入改变时代码块重运行。</td></tr>
+<tr><td class="left">:noweb</td><td class="left">头参数:noweb将扩展运行和混合时的”noweb“样式的引用。</td></tr>
+<tr><td class="left">:file</td><td class="left">将代码块结果输出到文件时（比如，图形，表格，图表）可以用头参数:file filename，结果会被保存至指定的文件中，在Org缓冲区中插入一个到该文件的链接。</td></tr>
+</tbody>
+</table>
+
+
+<p>
+<b>扩展阅读</b><br>
+手册第 11.3 节<br>
+The Babel site on Worg
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> 杂项</h2>
+<div class="outline-text-2" id="text-15">
+
+
+</div>
+
+<div id="outline-container-15-1" class="outline-3">
+<h3 id="sec-15-1"><span class="section-number-3">15.1</span> 补全</h3>
+<div class="outline-text-3" id="text-15-1">
+
+<p>   Org 支持用 M-TAB 进行缓冲区内部的补全。这种补全不需要利用 minibuffer。你只需要键入几个字母然后用快捷键在原位补全。例如，这个命令可以在‘\’后面补全 TeX 符号，在标题的开头补全 TODO 关键字，在‘:’之后补全标签。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-15-2" class="outline-3">
+<h3 id="sec-15-2"><span class="section-number-3">15.2</span> 一个更清晰的大纲视图</h3>
+<div class="outline-text-3" id="text-15-2">
+
+<p>   当 Org 标题含有很多星号并且标题下面的文字不缩进时，就会显得杂乱无章。当写一个图书结构的文件时，大纲标题就是实际章节的标题，基于列表机大纲，上面的问题就不会再有，缩进的结构也会更清晰：
+</p>
+
+
+<pre class="src src-org"><span style="color: #0000ff;">* Top level headline </span>
+<span style="color: #a0522d;">** Second level </span>
+<span style="color: #a020f0;">*** 3rd level</span>
+some text 
+<span style="color: #a020f0;">*** 3rd level</span>
+more text 
+<span style="color: #0000ff;">* Another top level headline</span>
+</pre>
+
+
+<p>
+   如果你用的 Emacs 23.1.50.3 和 Org 6.29 的更高版本，这种视图可以用 org-indent-mode 模式动态地实现，它会在每行前面加上一些前导空格。你可以通过设置变量 org-startup-indented 为所有的文件打开 org-indent-mode 模式，或者用
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+STARTUP: indent</span>
+</pre>
+
+
+<p>
+   为单个文件打开缩进。
+   如果你想在 Emacs 或者 Org 的早期版本中实现同样的效果，或者想让缩进用硬空格符号，以使得纯文本文件看起来一样。Org 可以缩进标题下面的文本（用TAB）;隐藏标题中的星号;只使用一级、三级等标题来为每级实现两个字符的缩进，从而实现这个功能。为了使这个特性在文件中支持，用：
+</p>
+
+
+<pre class="src src-org"><span style="color: #b22222;">#+STARTUP: hidestars odd</span>
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-15-3" class="outline-3">
+<h3 id="sec-15-3"><span class="section-number-3">15.3</span> MobileOrg</h3>
+<div class="outline-text-3" id="text-15-3">
+
+<p>  MobileOrg 最初是由 Richard Moreland 为 iPhone/iPod Touch 系列设备开发的应用程序。Matt Jones也为Android设备独立实现了一个版本。详见Org手册。  
+</p>
+
+<hr>
+
+<p>
+<a name="note" class="target">note</a> 本文的英文原文是 Org 主页上的一篇简短手册（ <a href="http://orgmode.org/guide/index.html">The compact Org-mode Guide</a> ）。另外：
+</p><ul>
+<li>本文的脚注是双向链接的，你可以大胆地查看脚注而不用担心如何再定位到原文。
+</li>
+<li>我不知道如何在引用的源代码中加脚注，如果你知道，希望你能告诉我。
+</li>
+<li>我不知道如果在表格中正确显示‘|’，如果你知道，希望你能告诉我。
+</li>
+<li>本文可能有错误，如果发现错误，请在评论中给出。
+</li>
+</ul>
+
+
+<p>          
+<a href="#fnr-.1">返回</a>
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+<p class="footnote"><sup><a class="footnum" name="fn.1" href="#fnr.1">1</a></sup> 见<a href="#note">说明</a>。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.2" href="#fnr.2">2</a></sup> 当然你也可以专门用一个文件来记录待办事项，但这不是必需的。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.3" href="#fnr.3">3</a></sup> 对应的buffer中的设置是：#+STARTUP: logdone
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.4" href="#fnr.4">4</a></sup> 对应的buffer中的设置是：#+STARTUP: lognotedone
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.5" href="#fnr.5">5</a></sup> 跟所有的缓冲区内设置一样，用C-c C-c 使行中的改变生效。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.6" href="#fnr.6">6</a></sup> 这跟通常意义上的 <i>安排一个会议</i> （ <i>scheduling a meeting</i> ）不同，后者只要在Org模式中插入一个不带关键字的时间戳就行了。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.7" href="#fnr.7">7</a></sup> 即使被标记为 DONE，在指定日期它依然会列在议程中。如果你不希望这样可以用变量 org-agenda-skip-scheduled-if-done 来设置。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.8" href="#fnr.8">8</a></sup> 截取位置是指保存截取信息的文件地址。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.9" href="#fnr.9">9</a></sup> 使用捕获模板，可以定义更细致的捕获地址，见[Capture templates]。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.10" href="#fnr.10">10</a></sup> 请设置你自己的快捷键，C-c c 只是一个建议。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.11" href="#fnr.11">11</a></sup> 这个表格实在翻译不通，以后再说吧。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.12" href="#fnr.12">12</a></sup> 注意，后两行中参数的顺序（月，日，年）依赖于 calendar-date-style 的设置。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.13" href="#fnr.13">13</a></sup> 原文是 C-p 有误。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.14" href="#fnr.14">14</a></sup> 原文是 C-n，有误。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.15" href="#fnr.15">15</a></sup> 在视图缓冲区的位置直接打开源位置，可能是版本的问题，并不删除其他的窗口。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.16" href="#fnr.16">16</a></sup> 不知道为什么我的版本不识别这个命令。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.17" href="#fnr.17">17</a></sup> 分隔线
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.18" href="#fnr.18">18</a></sup> （backend，导出目标）
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.19" href="#fnr.19">19</a></sup> 可能是版本的问题，这个命令和下面的命令在我的机器上没有。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.20" href="#fnr.20">20</a></sup> 原文说是 LaTeX 代码，有误。
+</p>
+
+
+<p class="footnote"><sup><a class="footnum" name="fn.21" href="#fnr.21">21</a></sup> 前面的逗号是命令的一部分，下同。
+</p>
+
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
