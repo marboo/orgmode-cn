@@ -28,11 +28,11 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 
 - [[file:features][新特性列表]]
 - [[file:#docs][手册和教程]]
-- [[file:worg/org-tools/index][Org工具(可能和Emacs毫无瓜葛)]]
-- [[file:worg/][Worg: 社区文档]]
+- [[file:worg/org-tools/index.org][Org工具(可能和Emacs毫无瓜葛)]]
+- [[file:worg/index.org][Worg: 社区文档]]
 - [[file:worg/org-contribute][如何向Org贡献？]]
 - [[file:org.html][历史和鸣谢]]
-- [[file:talks][谈谈Org mode]]
+- [[file:talks.html][谈谈Org mode]]
 - [[file:community.html#gsoc][谷歌2012编程之夏]]
 - [[file:community.html][邮件列表和涂鸦]]
 

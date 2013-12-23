@@ -59,13 +59,12 @@ Worg贡献者小组的Matthew Lundin维护，下一个可能就是你噢。
 - [[file:orgcard.org][Org-mode reference card]]          : check the [[file:orgcard.org][HTML]], [[http://orgmode.org/orgcard.pdf][pdf]] and [[http://orgmode.org/orgcard.txt][ASCII]] versions.
   - French translation of the orgcard ([[file:code/latex/fr-orgcard.tex][tex]] - [[file:images/bzg/fr-orgcard.pdf][pdf]])
 - [[file:exporters/index.org][New exporter]]            : Preliminary documentation for the new exporter.
-** Get Help with Org-Mode
+** 通过Org-Mode获取帮助
 
-- [[file:org-faq.org][Org-mode FAQ]]      : Check here before writing to the mailing list
-- [[file:org-mailing-list.org][Org-mode Mailing List]]   : For unanswered questions, suggestions, and
-  discussion
-- Org-mode IRC Channel    : For live Q&A, go to =#org-mode= on [[http://freenode.net/][Freenode]]
-** Use Org-Mode Effectively
+- [[file:org-faq.org][Org-mode FAQ]]      : 发邮件列表之前看看这里
+- [[file:org-mailing-list.org][Org-mode邮件列表]]  : 疑难问题、建议和讨论
+- Org-mode IRC频道  : 若要实时问答, 可以上[[http://freenode.net/][ Freenode]] 的 =#org-mode=
+** 有效使用Org-Mode
 
 - Use Org-mode as a [[file:org-gtd-etc.org][task management system]] (perfect for GTD and the
   Pomodoro Technique)
