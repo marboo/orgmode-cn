@@ -7,6 +7,9 @@
 defualt:
 	find . -type f -name \*.org | xargs touch
 
+clean:
+	find . |grep ~$$ | xargs rm -f
+
 html:
 	#mkdir html/worg/guide
 	#mkdir html/worg/org-tutorials
