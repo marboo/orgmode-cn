@@ -13,10 +13,13 @@ clean:
 html:
 	#mkdir html/worg/guide
 	#mkdir html/worg/org-tutorials
-	cp {,html/}worg/guide/index.html
+	cp {,html/}guide/index.html
 	cp {,html/}worg/org-tutorials/OrgTutorial.cn.html
 
 gen:
 	./generate.el
+
+server:
+	cd html;python -m SimpleHTTPServer
 
 .PHONY: gen html

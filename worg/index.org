@@ -52,7 +52,7 @@ Worg贡献者小组的Matthew Lundin维护，下一个可能就是你噢。
 - [[file:org-tutorials/index.org][Org-mode 向导]]              : 学习Org-mode的完美起点
 - [[file:org-glossary.org][Org-mode 术语表]]               : org-mode技术详解
 - [[http://orgmode.org/manual/index.html][Org-mode 手册]]            : 广而全的文档
-- [[file:/guide/index.html][Org-mode 指南]]                 : Not extensive, but complete documentation
+- [[file:../guide/index.html][Org-mode 指南]]                 : Not extensive, but complete documentation
   - org ([[file:orgguide/orgguide.es.texi][texi]] - [[http://www.davidam.com/docu/orgguide.es.html][html]])
 - [[file:org-configs/index.org][Org-mode configuration]]           : Beginner's customization guide, examples, survey,
   and a list of all hooks
