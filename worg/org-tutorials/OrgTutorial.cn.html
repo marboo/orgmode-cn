@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 lang="cn" xml:lang="cn">
 <head>
-<title>Org-Mode Tutorial(English-Chinese)  Org-Mode¼òÃ÷½Ì³Ì£¨ÖĞÓ¢ÎÄ¶ÔÕÕ£©</title>
+<title>Org-Mode Tutorial(English-Chinese)  Org-Modeç®€æ˜æ•™ç¨‹ï¼ˆä¸­è‹±æ–‡å¯¹ç…§ï¼‰</title>
 <meta http-equiv="Content-Type" content="text/html;charset=gbk"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2007/01/01 12Ê±15·Ö30Ãë"/>
+<meta name="generated" content="2007/01/01 12æ—¶15åˆ†30ç§’"/>
 <meta name="author" content="Original Version: David O'Toole   Translate by: Hokmen Chan"/>
 <style type="text/css">
   html {
@@ -33,44 +33,44 @@ lang="cn" xml:lang="cn">
   }
 </style>
 </head><body>
-<h1 class="title">Org-Mode Tutorial(English-Chinese)  Org-Mode¼òÃ÷½Ì³Ì£¨ÖĞÓ¢ÎÄ¶ÔÕÕ£©</h1>
+<h1 class="title">Org-Mode Tutorial(English-Chinese)  Org-Modeç®€æ˜æ•™ç¨‹ï¼ˆä¸­è‹±æ–‡å¯¹ç…§ï¼‰</h1>
 <p>
 Original Version: http://dto.freeshell.org/notebook/OrgTutorial.html
-ÔÚÎÒ·­Òë±¾ÎÄµµµÄ¹ı³ÌÖĞ£¬Zhang YunfengÔÚ12ÔÂ23ÈÕÊ×ÏÈ·¢²¼ÁË±¾ÎÄµµµÄÖĞÎÄ
-·­Òë(http://files.myopera.com/zhangyunfeng/org_mode_tutorial/
-OrgTutorial-cn.html)¡£¾­¹ıÔÙÈı¿¼ÂÇ£¬ÎÒÈÔÈ»¾õµÃÓ¦¸Ã°ÑÎÒ×Ô¼º·­ÒëµÄÖĞÎÄ
-°æ±¾·¢³öÀ´¡£ÁíÍâ£¬ÔÚ´Ë°æ±¾Àï£¬ÎªÁËÕÕ¹Ë³õÑ§Õß£¬¿ì½İ¼üÖĞµÄCtrlÃ»ÓĞÕÕEmacs
-µÄ´«Í³¼ò»¯³ÉC¡£ÌØ±ğµØ£¬¶Ô"Adding notes to a task"Ò»½ÚµÄµÚ¶ş¶ÎµÄ
-µÚ¶ş¾ä¡¢µÚÈı¾äµÄ·­Òë£¬gilot@argo.zsuÓĞÖØÒª¹±Ï×£¬½÷´ËÖÂĞ»¡£</p><h2>Org-Mode¼òÃ÷½Ì³Ì</h2>
+åœ¨æˆ‘ç¿»è¯‘æœ¬æ–‡æ¡£çš„è¿‡ç¨‹ä¸­ï¼ŒZhang Yunfengåœ¨12æœˆ23æ—¥é¦–å…ˆå‘å¸ƒäº†æœ¬æ–‡æ¡£çš„ä¸­æ–‡
+ç¿»è¯‘(http://files.myopera.com/zhangyunfeng/org_mode_tutorial/
+OrgTutorial-cn.html)ã€‚ç»è¿‡å†ä¸‰è€ƒè™‘ï¼Œæˆ‘ä»ç„¶è§‰å¾—åº”è¯¥æŠŠæˆ‘è‡ªå·±ç¿»è¯‘çš„ä¸­æ–‡
+ç‰ˆæœ¬å‘å‡ºæ¥ã€‚å¦å¤–ï¼Œåœ¨æ­¤ç‰ˆæœ¬é‡Œï¼Œä¸ºäº†ç…§é¡¾åˆå­¦è€…ï¼Œå¿«æ·é”®ä¸­çš„Ctrlæ²¡æœ‰ç…§Emacs
+çš„ä¼ ç»Ÿç®€åŒ–æˆCã€‚ç‰¹åˆ«åœ°ï¼Œå¯¹"Adding notes to a task"ä¸€èŠ‚çš„ç¬¬äºŒæ®µçš„
+ç¬¬äºŒå¥ã€ç¬¬ä¸‰å¥çš„ç¿»è¯‘ï¼Œgilot@argo.zsuæœ‰é‡è¦è´¡çŒ®ï¼Œè°¨æ­¤è‡´è°¢ã€‚</p><h2>Org-Modeç®€æ˜æ•™ç¨‹</h2>
 <ul>
-<li><a href="#sec-1">1 ¼ò½é</a>
+<li><a href="#sec-1">1 ç®€ä»‹</a>
 <ul>
-<li><a href="#sec-2">1.1 ÏÂÔØOrg-Mode</a></li>
-<li><a href="#sec-3">1.2 °²×°</a></li>
+<li><a href="#sec-2">1.1 ä¸‹è½½Org-Mode</a></li>
+<li><a href="#sec-3">1.2 å®‰è£…</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">2 »ù±¾Ó¦ÓÃ</a>
+<li><a href="#sec-4">2 åŸºæœ¬åº”ç”¨</a>
 <ul>
-<li><a href="#sec-5">2.1 ĞÂ½¨Ò»¸öÎÄ¼ş</a></li>
-<li><a href="#sec-6">2.2 ¼òµ¥ÈÎÎñÁĞ±í</a></li>
-<li><a href="#sec-7">2.3 Ê¹ÓÃ¡°±êÌâ¡±¹¦ÄÜ½¨¹¹Ò»ÆªÎÄµµ</a></li>
-<li><a href="#sec-8">2.4 ÔÚ¸÷ÕÂ½Ú¼äÌî³ä</a></li>
-<li><a href="#sec-9">2.5 µ½ÆäËûµØ·½µÄÁ´½Ó</a></li>
-<li><a href="#sec-10">2.6 ÎÄµµµÄÌá¸Ù</a></li>
-<li><a href="#sec-11">2.7 ¸øÈÎÎñ¼Ó×¢ËµÃ÷</a></li>
+<li><a href="#sec-5">2.1 æ–°å»ºä¸€ä¸ªæ–‡ä»¶</a></li>
+<li><a href="#sec-6">2.2 ç®€å•ä»»åŠ¡åˆ—è¡¨</a></li>
+<li><a href="#sec-7">2.3 ä½¿ç”¨â€œæ ‡é¢˜â€åŠŸèƒ½å»ºæ„ä¸€ç¯‡æ–‡æ¡£</a></li>
+<li><a href="#sec-8">2.4 åœ¨å„ç« èŠ‚é—´å¡«å……</a></li>
+<li><a href="#sec-9">2.5 åˆ°å…¶ä»–åœ°æ–¹çš„é“¾æ¥</a></li>
+<li><a href="#sec-10">2.6 æ–‡æ¡£çš„æçº²</a></li>
+<li><a href="#sec-11">2.7 ç»™ä»»åŠ¡åŠ æ³¨è¯´æ˜</a></li>
 </ul>
 </li>
-<li><a href="#sec-12">3 ¸ß¼¶¹¦ÄÜ¼òÊö</a>
+<li><a href="#sec-12">3 é«˜çº§åŠŸèƒ½ç®€è¿°</a>
 <ul>
-<li><a href="#sec-13">3.1 ÉèÖÃ</a></li>
-<li><a href="#sec-14">3.2 È«¾ÖTODOÁĞ±í</a></li>
-<li><a href="#sec-15">3.3 ÈÎÎñ¼Æ»®ºÍÊ¹ÓÃÈÕ³Ì±í(agenda)</a></li>
+<li><a href="#sec-13">3.1 è®¾ç½®</a></li>
+<li><a href="#sec-14">3.2 å…¨å±€TODOåˆ—è¡¨</a></li>
+<li><a href="#sec-15">3.3 ä»»åŠ¡è®¡åˆ’å’Œä½¿ç”¨æ—¥ç¨‹è¡¨(agenda)</a></li>
 </ul>
 </li>
-<li><a href="#sec-16">4 ÔÙ»á</a></li>
+<li><a href="#sec-16">4 å†ä¼š</a></li>
 </ul>
 
-<h2><a name="sec-1">1 ¼ò½é</a></h2>
+<h2><a name="sec-1">1 ç®€ä»‹</a></h2>
 
 <p>Introduction
 </p>
@@ -86,15 +86,15 @@ as only a subset of org-mode's features are covered.
 Mr. T. Okano. Special thanks to Mr. Okano for doing this.
 </p>
 <p>
-Org-ModeÊÇÎªEmacs±àĞ´µÄ¸öÈËĞÅÏ¢¹ÜÀíÒÔ¼°±àĞ´´ó¸ÙµÄ¹¤¾ß¡£±¾ÎÄµµ½«Ê¹ÓÃÖğ²½µÄÓÃ·¨
-ËµÃ÷ºÍ·á¸»µÄ½ØÍ¼£¬½Ì¸ø¶ÁÕßOrg-Mode»ù±¾µÄÓ¦ÓÃ£¬ÈÃ¶ÁÕß¶ÔËüÓĞ»ù±¾µÄÈÏÊ¶¡£±¾ÎÄ²»ÊÇ
-¹Ù·½ÊÖ²áµÄÌæ´úÆ·£¬Ö»º­¸ÇÁËOrg-ModeµÄÌØĞÔµÄÒ»¸ö×Ó¼¯¡£
+Org-Modeæ˜¯ä¸ºEmacsç¼–å†™çš„ä¸ªäººä¿¡æ¯ç®¡ç†ä»¥åŠç¼–å†™å¤§çº²çš„å·¥å…·ã€‚æœ¬æ–‡æ¡£å°†ä½¿ç”¨é€æ­¥çš„ç”¨æ³•
+è¯´æ˜å’Œä¸°å¯Œçš„æˆªå›¾ï¼Œæ•™ç»™è¯»è€…Org-ModeåŸºæœ¬çš„åº”ç”¨ï¼Œè®©è¯»è€…å¯¹å®ƒæœ‰åŸºæœ¬çš„è®¤è¯†ã€‚æœ¬æ–‡ä¸æ˜¯
+å®˜æ–¹æ‰‹å†Œçš„æ›¿ä»£å“ï¼Œåªæ¶µç›–äº†Org-Modeçš„ç‰¹æ€§çš„ä¸€ä¸ªå­é›†ã€‚
 </p>
 <p>
-*¸üĞÂÇé¿ö*£º±¾ÎÄµµÒÑ¾­±»OkanoÏÈÉú·­Òë³É<a href="http://hpcgi1.nifty.com/spen/index.cgi?OrgTutorial">ÈÕÎÄ</a>¡£ÔÚ´ËÏòËûÖÂĞ»¡£
+*æ›´æ–°æƒ…å†µ*ï¼šæœ¬æ–‡æ¡£å·²ç»è¢«Okanoå…ˆç”Ÿç¿»è¯‘æˆ<a href="http://hpcgi1.nifty.com/spen/index.cgi?OrgTutorial">æ—¥æ–‡</a>ã€‚åœ¨æ­¤å‘ä»–è‡´è°¢ã€‚
 </p>
 
-<h3><a name="sec-2">1.1 ÏÂÔØOrg-Mode</a></h3>
+<h3><a name="sec-2">1.1 ä¸‹è½½Org-Mode</a></h3>
 
 <p>Obtaining org-mode
 </p>
@@ -104,10 +104,10 @@ download at least <a href="http://staff.science.uva.nl/~dominik/Tools/org/org.zi
 tutorial. 
 </p>
 <p>
-ÄãÄÜ´Ó<a href="http://staff.science.uva.nl/~dominik/Tools/org/">Org-ModeµÄ¹Ù·½ÍøÒ³</a>ÉÏÏÂÔØµ½Ëü¡£±¾½Ì³ÌÍÆ¼öÊ¹ÓÃ<a href="http://staff.science.uva.nl/~dominik/Tools/org/org.zip">×îĞÂ°æ±¾µÄOrg-Mode</a>¡£
+ä½ èƒ½ä»<a href="http://staff.science.uva.nl/~dominik/Tools/org/">Org-Modeçš„å®˜æ–¹ç½‘é¡µ</a>ä¸Šä¸‹è½½åˆ°å®ƒã€‚æœ¬æ•™ç¨‹æ¨èä½¿ç”¨<a href="http://staff.science.uva.nl/~dominik/Tools/org/org.zip">æœ€æ–°ç‰ˆæœ¬çš„Org-Mode</a>ã€‚
 </p>
 
-<h3><a name="sec-3">1.2 °²×°</a></h3>
+<h3><a name="sec-3">1.2 å®‰è£…</a></h3>
 
 <p>Installation
 </p>
@@ -115,7 +115,7 @@ tutorial.
 Add the following to your .emacs: 
 </p>
 <p>
-ÔÚÄãµÄ.emacsÎÄ¼şÖĞ¼ÓÈëÈçÏÂ¼¸ĞĞ£º
+åœ¨ä½ çš„.emacsæ–‡ä»¶ä¸­åŠ å…¥å¦‚ä¸‹å‡ è¡Œï¼š
 </p>
 <p>
 <pre>
@@ -133,18 +133,18 @@ combinations are defined. We'll go over what "org-store-link"
 and "org-agenda" do later in this document.
 </p>
 <p>
-ÕâÑù£¬¾ÍÄÜ¼ÓÔØOrg-Mode²¢ÇÒ¶¨ÒåÁËËüµÄ¿ì½İ¼ü¡£ÎÒÃÇ½«ÔÚ±¾ÎÄµµ½²Êöorg-store-link
-ºÍorg-agendaÁ½ÖÖÄ£Ê½¡£
+è¿™æ ·ï¼Œå°±èƒ½åŠ è½½Org-Modeå¹¶ä¸”å®šä¹‰äº†å®ƒçš„å¿«æ·é”®ã€‚æˆ‘ä»¬å°†åœ¨æœ¬æ–‡æ¡£è®²è¿°org-store-link
+å’Œorg-agendaä¸¤ç§æ¨¡å¼ã€‚
 </p>
 <p>
 One more thing---it's best to set aside a separate directory 
 where your org files will be kept. I recommend using ~/org. 
 </p>
 <p>
-ÁíÍâ£¬×îºÃÓÃÒ»¸ö¶ÀÁ¢µÄÄ¿Â¼À´·ÅÄãµÄorgÎÄ¼ş¡£ÎÒÍÆ¼öÓÃ~/orgÄ¿Â¼¡£
+å¦å¤–ï¼Œæœ€å¥½ç”¨ä¸€ä¸ªç‹¬ç«‹çš„ç›®å½•æ¥æ”¾ä½ çš„orgæ–‡ä»¶ã€‚æˆ‘æ¨èç”¨~/orgç›®å½•ã€‚
 </p>
 
-<h2><a name="sec-4">2 »ù±¾Ó¦ÓÃ</a></h2>
+<h2><a name="sec-4">2 åŸºæœ¬åº”ç”¨</a></h2>
 
 <p>The basics
 </p>
@@ -153,10 +153,10 @@ This section illustrates basic org-mode usage by showing how I
 used org-mode to create this document. 
 </p>
 <p>
-±¾ÕÂ½«Í¨¹ıÃèÊöÊ¹ÓÃOrg-Mode´´½¨±¾ÎÄµµµÄ¹ı³Ì£¬½²½â»ù±¾µÄOrg-ModeÓ¦ÓÃ¡£
+æœ¬ç« å°†é€šè¿‡æè¿°ä½¿ç”¨Org-Modeåˆ›å»ºæœ¬æ–‡æ¡£çš„è¿‡ç¨‹ï¼Œè®²è§£åŸºæœ¬çš„Org-Modeåº”ç”¨ã€‚
 </p>
 
-<h3><a name="sec-5">2.1 ĞÂ½¨Ò»¸öÎÄ¼ş</a></h3>
+<h3><a name="sec-5">2.1 æ–°å»ºä¸€ä¸ªæ–‡ä»¶</a></h3>
 
 <p>Creating a new file
 </p>
@@ -166,19 +166,19 @@ above, Emacs should enter org-mode whenever you visit or create
 a file with the extension ".org".
 </p>
 <p>
-Èç¹ûÄãÒÑ¾­ÕÕÇ°ÃæµÄ½¨ÒéÅäÖÃºÃÁËÄãµÄEmacs³õÊ¼»¯ÎÄ¼ş(.emacs)£¬ÄÇÃ´µ±Äã´ò¿ª»òÕß
-´´½¨Ò»¸ö.orgºó×ºµÄÎÄ¼şÊ±£¬Emacs¾Í½øÈëÁËOrg-Mode¡£
+å¦‚æœä½ å·²ç»ç…§å‰é¢çš„å»ºè®®é…ç½®å¥½äº†ä½ çš„Emacsåˆå§‹åŒ–æ–‡ä»¶(.emacs)ï¼Œé‚£ä¹ˆå½“ä½ æ‰“å¼€æˆ–è€…
+åˆ›å»ºä¸€ä¸ª.orgåç¼€çš„æ–‡ä»¶æ—¶ï¼ŒEmacså°±è¿›å…¥äº†Org-Modeã€‚
 </p>
 <p>
 I created a new file called "OrgTutorial.org" and saw the "Org" 
 indicator in the modeline, showing that we've entered org-mode.
 </p>
 <p>
-ÎÒ´´½¨ÁËÒ»¸öÎÄ¼şÃûÎª"OrgTutorial.org"µÄĞÂÎÄ¼ş£¬EmacsµÄÄ£Ê½À¸ÉÏ³öÏÖÁË"Org"£¬
-±íÊ¾ÎÒÃÇ½øÈëÁËOrg-Mode¡£
+æˆ‘åˆ›å»ºäº†ä¸€ä¸ªæ–‡ä»¶åä¸º"OrgTutorial.org"çš„æ–°æ–‡ä»¶ï¼ŒEmacsçš„æ¨¡å¼æ ä¸Šå‡ºç°äº†"Org"ï¼Œ
+è¡¨ç¤ºæˆ‘ä»¬è¿›å…¥äº†Org-Modeã€‚
 </p>
 
-<h3><a name="sec-6">2.2 ¼òµ¥ÈÎÎñÁĞ±í</a></h3>
+<h3><a name="sec-6">2.2 ç®€å•ä»»åŠ¡åˆ—è¡¨</a></h3>
 
 <p>Simple task list
 </p>
@@ -189,26 +189,26 @@ you want to keep tasks separate from the body of a document
 you're writing.
 </p>
 <p>
-Ê×ÏÈ£¬ÎÒÊäÈëÒ»¸öÃûÎª"Task"µÄ±êÌâ¡£ËäÈ»²»Ò»¶¨ÒªÕâÃ´×ö£¬µ«³£³£»áÈÃÊÂÇé·½±ãÒ»µã£¬
-ÓÈÆäÊÇµ±ÄãÏë°ÑÈÎÎñÁĞ±íºÍÄãÕı±à¼­µÄÎÄµµµÄÕıÎÄ·Ö¿ªµÄÊ±ºò¡£
+é¦–å…ˆï¼Œæˆ‘è¾“å…¥ä¸€ä¸ªåä¸º"Task"çš„æ ‡é¢˜ã€‚è™½ç„¶ä¸ä¸€å®šè¦è¿™ä¹ˆåšï¼Œä½†å¸¸å¸¸ä¼šè®©äº‹æƒ…æ–¹ä¾¿ä¸€ç‚¹ï¼Œ
+å°¤å…¶æ˜¯å½“ä½ æƒ³æŠŠä»»åŠ¡åˆ—è¡¨å’Œä½ æ­£ç¼–è¾‘çš„æ–‡æ¡£çš„æ­£æ–‡åˆ†å¼€çš„æ—¶å€™ã€‚
 </p>
 <p>
 First-level headlines begin with one star; second-level headlines 
 begin with two stars, and so on.
 </p>
 <p>
-µÚÒ»¼¶µÄ±êÌâÒÔÒ»¸ö"*"ºÅ¿ªÍ·£¬µÚ¶ş¼¶µÄ±êÌâÓÃÁ½¸ö"*"ºÅ¿ªÍ·£¬ÒÔ´ËÀàÍÆ¡£
+ç¬¬ä¸€çº§çš„æ ‡é¢˜ä»¥ä¸€ä¸ª"*"å·å¼€å¤´ï¼Œç¬¬äºŒçº§çš„æ ‡é¢˜ç”¨ä¸¤ä¸ª"*"å·å¼€å¤´ï¼Œä»¥æ­¤ç±»æ¨ã€‚
 </p>
 <p>
 In org-mode, TODO items are always headlines. I entered a TODO 
 item for "Start new org file for tutorial." 
 </p>
 <p>
-ÔÚOrg-ModeÀï£¬ËùÓĞµÄTODOÏîÄ¿¶¼ÊÇÒÔ±êÌâĞÎÊ½´æÔÚ¡£ÎÒÏÖÔÚÊäÈëÒ»¸öTODOÏîÄ¿£º
+åœ¨Org-Modeé‡Œï¼Œæ‰€æœ‰çš„TODOé¡¹ç›®éƒ½æ˜¯ä»¥æ ‡é¢˜å½¢å¼å­˜åœ¨ã€‚æˆ‘ç°åœ¨è¾“å…¥ä¸€ä¸ªTODOé¡¹ç›®ï¼š
 "Start new org file for tutorial."
 </p>
 <p>
-<img src="http://dto.freeshell.org/images/tutorial-1.png"/>
+<img src="../images/tutorial-1.png"/>
 </p>
 <p>
 This is a bit silly, because we've already started a new file. 
@@ -216,22 +216,22 @@ So, let's mark the TODO item DONE by moving the cursor onto that
 line and hitting C-c C-t, which runs the command org-todo.
 </p>
 <p>
-ÕâÓĞµãÎŞÁÄ£¬ÒòÎªÎÒÃÇÒÑ¾­´´½¨ÁËÒ»¸öĞÂÎÄ¼ş¡£ÕâÑù£¬ÈÃÎÒÃÇ°Ñ¹â±êÒÆµ½ÕâÒ»ĞĞTODOÏîÄ¿ÉÏ
-²¢°´Ctrl-cºÍCtrl-t£¬°ÑËü±ê¼ÇÎª"DONE"¡£
+è¿™æœ‰ç‚¹æ— èŠï¼Œå› ä¸ºæˆ‘ä»¬å·²ç»åˆ›å»ºäº†ä¸€ä¸ªæ–°æ–‡ä»¶ã€‚è¿™æ ·ï¼Œè®©æˆ‘ä»¬æŠŠå…‰æ ‡ç§»åˆ°è¿™ä¸€è¡ŒTODOé¡¹ç›®ä¸Š
+å¹¶æŒ‰Ctrl-cå’ŒCtrl-tï¼ŒæŠŠå®ƒæ ‡è®°ä¸º"DONE"ã€‚
 </p>
 <p>
 Here is the result: 
 </p>
 <p>
-ÕâÀïÊÇ½á¹û£º
-<img src="http://dto.freeshell.org/images/tutorial-2.png"/>
+è¿™é‡Œæ˜¯ç»“æœï¼š
+<img src="../images/tutorial-2.png"/>
 </p>
 <p>
 Notice how org-mode uses a timestamp to record when a TODO item 
 was closed.
 </p>
 <p>
-Org-ModeÓÃÁËÒ»¸öÊ±¼ä´ÁÀ´¼ÇÂ¼Ò»¸öTODOÏîÄ¿ÔÚÊ²Ã´Ê±ºò½áÊø¡£
+Org-Modeç”¨äº†ä¸€ä¸ªæ—¶é—´æˆ³æ¥è®°å½•ä¸€ä¸ªTODOé¡¹ç›®åœ¨ä»€ä¹ˆæ—¶å€™ç»“æŸã€‚
 </p>
 <p>
 Let's add some more TODO items. Position the cursor on the next 
@@ -239,12 +239,12 @@ line, and hit M-shift-RET to call org-insert-todo-heading. You
 can hit it several times to add several TODOs. 
 </p>
 <p>
-ÈÃÎÒÃÇÊäÈë¸ü¶àµÄTODOÏîÄ¿¡£¹â±êÒÆµ½ÏÂÒ»ĞĞ£¬°´Meta-Shift-Enter£¬µ÷³ö
-org-insert-todo-heading£¬°´¶àÈô¸É´Î£¬¾ÍÄÜ¼ÓÈëÈô¸É¸öTODOÏîÄ¿ÁË¡£
-<img src="http://dto.freeshell.org/images/tutorial-3.png"/>
+è®©æˆ‘ä»¬è¾“å…¥æ›´å¤šçš„TODOé¡¹ç›®ã€‚å…‰æ ‡ç§»åˆ°ä¸‹ä¸€è¡Œï¼ŒæŒ‰Meta-Shift-Enterï¼Œè°ƒå‡º
+org-insert-todo-headingï¼ŒæŒ‰å¤šè‹¥å¹²æ¬¡ï¼Œå°±èƒ½åŠ å…¥è‹¥å¹²ä¸ªTODOé¡¹ç›®äº†ã€‚
+<img src="../images/tutorial-3.png"/>
 </p>
 
-<h3><a name="sec-7">2.3 Ê¹ÓÃ¡°±êÌâ¡±¹¦ÄÜ½¨¹¹Ò»ÆªÎÄµµ</a></h3>
+<h3><a name="sec-7">2.3 ä½¿ç”¨â€œæ ‡é¢˜â€åŠŸèƒ½å»ºæ„ä¸€ç¯‡æ–‡æ¡£</a></h3>
 
 <p>Using headlines to structure a document
 </p>
@@ -256,8 +256,8 @@ less-intimidating smaller chunks. Then it becomes easier to fill
 them in.
 </p>
 <p>
-Í¨³££¬Ê¹ÓÃ´ó¸ÙÊÇ×îºÃµÄ×éÖ¯ÄãµÄ¹ÛµãµÄ·½·¨¡£ÏÂÒ»²½£¬ÎÒ°Ñ±¾½Ì³ÌµÄ²»Í¬Ö÷Ìâ·Å½ø´ó¸Ù¡£
-ÕâÑù£¬Õû¸ö¿Õ°×Ò³Ãæ¾ÍÄÜ·Ö³ÉÒ»¸ö¸öĞ¡¿é£¬ÈÃÎÒÄÜ¸üÈİÒ×µØÌîÈëÄÚÈİ¡£
+é€šå¸¸ï¼Œä½¿ç”¨å¤§çº²æ˜¯æœ€å¥½çš„ç»„ç»‡ä½ çš„è§‚ç‚¹çš„æ–¹æ³•ã€‚ä¸‹ä¸€æ­¥ï¼Œæˆ‘æŠŠæœ¬æ•™ç¨‹çš„ä¸åŒä¸»é¢˜æ”¾è¿›å¤§çº²ã€‚
+è¿™æ ·ï¼Œæ•´ä¸ªç©ºç™½é¡µé¢å°±èƒ½åˆ†æˆä¸€ä¸ªä¸ªå°å—ï¼Œè®©æˆ‘èƒ½æ›´å®¹æ˜“åœ°å¡«å…¥å†…å®¹ã€‚
 </p>
 <p>
 Remember that one star begins a first-level heading, and two stars 
@@ -265,24 +265,24 @@ begin a second-level heading. If you need deeper nesting, go ahead
 and use three or more stars!
 </p>
 <p>
-Ò»¿Å"*"±íÊ¾µÚÒ»¼¶±êÌâ£¬Á½¿Å"*"±íÊ¾µÚ¶ş¼¶±êÌâ£¬Èç¹ûÄãĞèÒª¸ü¶àµÄ²ã´Î£¬¾ÍÓÃ¸ü¶àµÄ
-"*"ºÅ¡£
+ä¸€é¢—"*"è¡¨ç¤ºç¬¬ä¸€çº§æ ‡é¢˜ï¼Œä¸¤é¢—"*"è¡¨ç¤ºç¬¬äºŒçº§æ ‡é¢˜ï¼Œå¦‚æœä½ éœ€è¦æ›´å¤šçš„å±‚æ¬¡ï¼Œå°±ç”¨æ›´å¤šçš„
+"*"å·ã€‚
 </p>
 <p>
 Here is what it looked like after I finished outlining the document:
 </p>
 <p>
-ÎÒÍê³É±¾ÎÄµµµÄ´ó¸Ùºó£¬Ğ§¹ûÈçÏÂÍ¼£º
-<img src="http://dto.freeshell.org/images/tutorial-4.png"/>
+æˆ‘å®Œæˆæœ¬æ–‡æ¡£çš„å¤§çº²åï¼Œæ•ˆæœå¦‚ä¸‹å›¾ï¼š
+<img src="../images/tutorial-4.png"/>
 </p>
 <p>
 Notice I marked "Outline document" as DONE after I finished.
 </p>
 <p>
-ÈçÉÏÍ¼£¬ÎÒÍê³É´ó¸Ùºó£¬°Ñ"Outline document"±ê³ÉÁË"DONE"¡£
+å¦‚ä¸Šå›¾ï¼Œæˆ‘å®Œæˆå¤§çº²åï¼ŒæŠŠ"Outline document"æ ‡æˆäº†"DONE"ã€‚
 </p>
 
-<h3><a name="sec-8">2.4 ÔÚ¸÷ÕÂ½Ú¼äÌî³ä</a></h3>
+<h3><a name="sec-8">2.4 åœ¨å„ç« èŠ‚é—´å¡«å……</a></h3>
 
 <p>Filling in the sections
 </p>
@@ -290,11 +290,11 @@ Notice I marked "Outline document" as DONE after I finished.
 You can easily add body text underneath any headline. 
 </p>
 <p>
-ÄãÄÜÔÚÈÎºÎ±êÌâµÄÏÂÃæ¼ÓÈëÕıÎÄ¡£
-<img src="http://dto.freeshell.org/images/tutorial-5.png"/>
+ä½ èƒ½åœ¨ä»»ä½•æ ‡é¢˜çš„ä¸‹é¢åŠ å…¥æ­£æ–‡ã€‚
+<img src="../images/tutorial-5.png"/>
 </p>
 
-<h3><a name="sec-9">2.5 µ½ÆäËûµØ·½µÄÁ´½Ó</a></h3>
+<h3><a name="sec-9">2.5 åˆ°å…¶ä»–åœ°æ–¹çš„é“¾æ¥</a></h3>
 
 <p>Links to other places
 </p>
@@ -304,8 +304,8 @@ to the org-mode website. A special bracket syntax is used when
 linking:
 </p>
 <p>
-ÔÚ¡°ÏÂÔØOrg-Mode¡±Ò»½ÚÖĞÎÒĞèÒªÌá¹©Ò»¸öOrg-Mode¹Ù·½ÍøÒ³µÄÁ´½Ó¡£ÎÒÊ¹ÓÃÁËÒ»¸ö
-ÌØÊâµÄº¬ÓĞ·½À¨ºÅµÄÓï·¨À´±íÊ¾Õâ¸öÁ´½Ó£º
+åœ¨â€œä¸‹è½½Org-Modeâ€ä¸€èŠ‚ä¸­æˆ‘éœ€è¦æä¾›ä¸€ä¸ªOrg-Modeå®˜æ–¹ç½‘é¡µçš„é“¾æ¥ã€‚æˆ‘ä½¿ç”¨äº†ä¸€ä¸ª
+ç‰¹æ®Šçš„å«æœ‰æ–¹æ‹¬å·çš„è¯­æ³•æ¥è¡¨ç¤ºè¿™ä¸ªé“¾æ¥ï¼š
 <pre>
  [[link][ description ]]
 </pre>
@@ -315,23 +315,23 @@ Watch how I first type the link and description, leaving open
 the last bracket:
 </p>
 <p>
-¿´ÎÒÊÇÔõÑùÊäÈëÕâ¸öÁ´½ÓºÍËüµÄÃèÊö£¬²»ÊäÈë×îºóµÄ°ë±ß·½À¨ºÅ£º
-<img src="http://dto.freeshell.org/images/tutorial-6.png"/>
+çœ‹æˆ‘æ˜¯æ€æ ·è¾“å…¥è¿™ä¸ªé“¾æ¥å’Œå®ƒçš„æè¿°ï¼Œä¸è¾“å…¥æœ€åçš„åŠè¾¹æ–¹æ‹¬å·ï¼š
+<img src="../images/tutorial-6.png"/>
 </p>
 <p>
 Then when I type the last bracket, the link "collapses" and 
 simply shows the description.
 </p>
 <p>
-È»ºóÎÒÊäÈëÕâ°ë±ß·½À¨ºÅ£¬¸ÃÁ´½ÓÏûÊ§£¬Ö»ÏÔÊ¾ËüµÄÃèÊö¡£
-<img src="http://dto.freeshell.org/images/tutorial-7.png"/>
+ç„¶åæˆ‘è¾“å…¥è¿™åŠè¾¹æ–¹æ‹¬å·ï¼Œè¯¥é“¾æ¥æ¶ˆå¤±ï¼Œåªæ˜¾ç¤ºå®ƒçš„æè¿°ã€‚
+<img src="../images/tutorial-7.png"/>
 </p>
 <p>
 Try moving the cursor over the link and press C-c C-o for 
 org-open-at-point.
 </p>
 <p>
-ÒÆ¶¯¹â±êµ½¸ÃÁ´½ÓÉÏ£¬°´Ctrl-cºÍCtrl-o£¬µ÷ÓÃorg-open-at-point¡£
+ç§»åŠ¨å…‰æ ‡åˆ°è¯¥é“¾æ¥ä¸Šï¼ŒæŒ‰Ctrl-cå’ŒCtrl-oï¼Œè°ƒç”¨org-open-at-pointã€‚
 </p>
 <p>
 You can also link to local files. Try visiting another file
@@ -340,9 +340,9 @@ to call org-store-link. You'll see a message that a link was
 stored to the current location in the file you're visiting.
 </p>
 <p>
-ÄãÒ²ÄÜÁ´½Óµ½±¾µØÎÄ¼ş¡£ÊÔÊÔ¿´ä¯ÀÀÁíÍâÒ»¸öÎÄ¼ş£¬±ÈÈçËµÄãµÄemacs³õÊ¼»¯ÎÄ¼ş
-(.emacs)£¬È»ºóÁ¬Ğø°´Ctrl-cºÍl¼üµ÷ÓÃorg-store-link¡£Äã»á¿´µ½Ò»ÌõĞÅÏ¢£¬
-ËµÒÑ¾­°ÑÄãÕıÔÚä¯ÀÀµÄÎÄ¼şÖĞµÄÎ»ÖÃ´æÎªÒ»¸öÁ´½Ó¡£
+ä½ ä¹Ÿèƒ½é“¾æ¥åˆ°æœ¬åœ°æ–‡ä»¶ã€‚è¯•è¯•çœ‹æµè§ˆå¦å¤–ä¸€ä¸ªæ–‡ä»¶ï¼Œæ¯”å¦‚è¯´ä½ çš„emacsåˆå§‹åŒ–æ–‡ä»¶
+(.emacs)ï¼Œç„¶åè¿ç»­æŒ‰Ctrl-cå’Œlé”®è°ƒç”¨org-store-linkã€‚ä½ ä¼šçœ‹åˆ°ä¸€æ¡ä¿¡æ¯ï¼Œ
+è¯´å·²ç»æŠŠä½ æ­£åœ¨æµè§ˆçš„æ–‡ä»¶ä¸­çš„ä½ç½®å­˜ä¸ºä¸€ä¸ªé“¾æ¥ã€‚
 </p>
 <p>
 Then switch back to your org-mode buffer and paste the link 
@@ -351,11 +351,11 @@ the arrow keys to scroll through and find the link you just
 recorded.) 
 </p>
 <p>
-È»ºó»Øµ½ÄãµÄOrg-ModeµÄbuffer£¬ÓÃCtrl-cºÍCtrl-lÀ´µ÷³öorg-insert-link
-À´²åÈë¸ÃÁ´½Ó¡£(Äã¿ÉÒÔÓÃ·½Ïò¼üÀ´·­²éµ½Äã¸Õ²Å¼ÇÂ¼µÄÁ´½Ó¡£)
+ç„¶åå›åˆ°ä½ çš„Org-Modeçš„bufferï¼Œç”¨Ctrl-cå’ŒCtrl-læ¥è°ƒå‡ºorg-insert-link
+æ¥æ’å…¥è¯¥é“¾æ¥ã€‚(ä½ å¯ä»¥ç”¨æ–¹å‘é”®æ¥ç¿»æŸ¥åˆ°ä½ åˆšæ‰è®°å½•çš„é“¾æ¥ã€‚)
 </p>
 
-<h3><a name="sec-10">2.6 ÎÄµµµÄÌá¸Ù</a></h3>
+<h3><a name="sec-10">2.6 æ–‡æ¡£çš„æçº²</a></h3>
 
 <p>Overviews of a document
 </p>
@@ -365,29 +365,29 @@ fit it all on one screen. Org-mode makes it easy to get an
 overview of your document by pressing shift-TAB. 
 </p>
 <p>
-ÕâÊ±£¬ÎÒµÄÎÄµµ¸ü³¤ÁË£¬Ò»¸öÆÁÄ»ÈİÄÉ²»ÏÂËüµÄÈ«²¿ÄÚÈİ¡£Ê¹ÓÃshift-tabÕâ¸ö×éºÏ¼ü£¬
-Org-ModeÄÜÈÃÄã¸üÈİÒ×ÁË½âÄãµÄÎÄµµµÄ¸ÅÒª¡£
-<img src="http://dto.freeshell.org/images/tutorial-9.png"/>
+è¿™æ—¶ï¼Œæˆ‘çš„æ–‡æ¡£æ›´é•¿äº†ï¼Œä¸€ä¸ªå±å¹•å®¹çº³ä¸ä¸‹å®ƒçš„å…¨éƒ¨å†…å®¹ã€‚ä½¿ç”¨shift-tabè¿™ä¸ªç»„åˆé”®ï¼Œ
+Org-Modeèƒ½è®©ä½ æ›´å®¹æ˜“äº†è§£ä½ çš„æ–‡æ¡£çš„æ¦‚è¦ã€‚
+<img src="../images/tutorial-9.png"/>
 </p>
 <p>
 Notice that just the top-level headings are shown. You can hit 
 shift-TAB again to show all headings, including TODO items:
 </p>
 <p>
-ĞèÒª×¢ÒâµÄÊÇÖ»»áÏÔÊ¾×î¸ß²ãµÄ±êÌâ¡£ÔÙ´Î°´ÏÂshift-tabµÄ×éºÏ¼ü£¬ËùÓĞµÄ±êÌâºÍ
-TODOÏîÄ¿¾Í»áÏÔÊ¾³öÀ´£º
-<img src="http://dto.freeshell.org/images/tutorial-10.png"/>
+éœ€è¦æ³¨æ„çš„æ˜¯åªä¼šæ˜¾ç¤ºæœ€é«˜å±‚çš„æ ‡é¢˜ã€‚å†æ¬¡æŒ‰ä¸‹shift-tabçš„ç»„åˆé”®ï¼Œæ‰€æœ‰çš„æ ‡é¢˜å’Œ
+TODOé¡¹ç›®å°±ä¼šæ˜¾ç¤ºå‡ºæ¥ï¼š
+<img src="../images/tutorial-10.png"/>
 </p>
 <p>
 Then hit it again to show a normal view of the document, with 
 section bodies shown:
 </p>
 <p>
-È»ºó£¬ÔÙ°´Õâ¸ö×éºÏ¼ü£¬ÏÔÊ¾Õı³£Çé¿öµÄ£¬°üº¬¸÷¸öÕÂ½ÚµÄÕû¸öÎÄµµ£º
-<img src="http://dto.freeshell.org/images/tutorial-11.png"/>
+ç„¶åï¼Œå†æŒ‰è¿™ä¸ªç»„åˆé”®ï¼Œæ˜¾ç¤ºæ­£å¸¸æƒ…å†µçš„ï¼ŒåŒ…å«å„ä¸ªç« èŠ‚çš„æ•´ä¸ªæ–‡æ¡£ï¼š
+<img src="../images/tutorial-11.png"/>
 </p>
 
-<h3><a name="sec-11">2.7 ¸øÈÎÎñ¼Ó×¢ËµÃ÷</a></h3>
+<h3><a name="sec-11">2.7 ç»™ä»»åŠ¡åŠ æ³¨è¯´æ˜</a></h3>
 
 <p>Adding notes to a task
 </p>
@@ -397,8 +397,8 @@ heading. In fact, you can even have subheadings under a TODO,
 and TODOs within TODOs!
 </p>
 <p>
-ÄãÄÜ°ÑÄãËùĞèÒªµÄ¾¡¿ÉÄÜ¶àµÄÎÄ×Ö·ÅÔÚÒ»¸öTODOÏîÄ¿µÄ±êÌâÖ®ºó¡£ÉõÖÁ£¬ÄãÄÜ°Ñ¸±±êÌâ
-·ÅÔÚÒ»¸öTODOÏîÄ¿µÄÏÂÃæ£¬°ÑTODOÏîÄ¿Ç¶Ì×ÆğÀ´¡£
+ä½ èƒ½æŠŠä½ æ‰€éœ€è¦çš„å°½å¯èƒ½å¤šçš„æ–‡å­—æ”¾åœ¨ä¸€ä¸ªTODOé¡¹ç›®çš„æ ‡é¢˜ä¹‹åã€‚ç”šè‡³ï¼Œä½ èƒ½æŠŠå‰¯æ ‡é¢˜
+æ”¾åœ¨ä¸€ä¸ªTODOé¡¹ç›®çš„ä¸‹é¢ï¼ŒæŠŠTODOé¡¹ç›®åµŒå¥—èµ·æ¥ã€‚
 </p>
 <p>
 Being able to annotate tasks makes it easy to collect related 
@@ -408,13 +408,13 @@ broken into smaller subtasks you want to check off as you do
 them.
 </p>
 <p>
-¶ÔÈÎÎñ½øĞĞ×¢ÊÍ£¬ÈÃÊÕ¼¯ºÍ´¦ÀíºÍÄ³¸öÈÎÎñÏà¹ØµÄÁ´½ÓºÍÏë·¨¸üÈİÒ×¡£ÈÎÎñµÄ²ã´Î»¯Ç¶Ì×
-¶Ô¹¤×÷Á÷³ÌµÄÄ£Ê½»¯ºÜÓĞ°ïÖú¡ª¡ªÍ¨³££¬Ò»¸ö´óµÄÈÎÎñ»áÏ¸·ÖÎª¸üĞ¡µÄ£¬¿ÉÒÔÖğÏîÍê³ÉµÄ
-×ÓÈÎÎñ¹©Äã²ì¿´¡£
+å¯¹ä»»åŠ¡è¿›è¡Œæ³¨é‡Šï¼Œè®©æ”¶é›†å’Œå¤„ç†å’ŒæŸä¸ªä»»åŠ¡ç›¸å…³çš„é“¾æ¥å’Œæƒ³æ³•æ›´å®¹æ˜“ã€‚ä»»åŠ¡çš„å±‚æ¬¡åŒ–åµŒå¥—
+å¯¹å·¥ä½œæµç¨‹çš„æ¨¡å¼åŒ–å¾ˆæœ‰å¸®åŠ©â€”â€”é€šå¸¸ï¼Œä¸€ä¸ªå¤§çš„ä»»åŠ¡ä¼šç»†åˆ†ä¸ºæ›´å°çš„ï¼Œå¯ä»¥é€é¡¹å®Œæˆçš„
+å­ä»»åŠ¡ä¾›ä½ å¯Ÿçœ‹ã€‚
 </p>
 
 
-<h2><a name="sec-12">3 ¸ß¼¶¹¦ÄÜ¼òÊö</a></h2>
+<h2><a name="sec-12">3 é«˜çº§åŠŸèƒ½ç®€è¿°</a></h2>
 
 <p>A taste of advanced features
 </p>
@@ -426,13 +426,13 @@ chronological display. You can also use it to see which tasks
 were completed, and when. 
 </p>
 <p>
-ÔÚ±¾Æª¼òÃ÷½Ì³Ì½áÊøÇ°£¬ÎÒÃÇ½«½éÉÜOrg-ModeµÄÈ«¾ÖTODOÁĞ±í¡¢¼Æ»®ÈÎÎñºÍÈÕ³Ì±í
-(agenda)¹¦ÄÜ¡£ÕâĞ©¹¦ÄÜÓÃÓÚ´Ó²»Í¬µÄorgÎÄ¼şÖĞ°ÑÏà¹ØµÄTODOÏîÄ¿ºÏ²¢³ÉÒÔÖØÒªĞÔ
-ºÍ·¢ÉúµÄÊ±¼äÎªË³Ğò³ÂÁĞµÄÏîÄ¿ÁĞ±í¡£ÄãÒ²ÄÜÓÃÕâĞ©¹¦ÄÜÀ´ÖªµÀÄÄĞ©ÈÎÎñÊÇÒÑ¾­Íê³ÉµÄ£¬
-ÒÔ¼°ËüÃÇÊÇÊ²Ã´Ê±ºòÍê³ÉµÄ¡£
+åœ¨æœ¬ç¯‡ç®€æ˜æ•™ç¨‹ç»“æŸå‰ï¼Œæˆ‘ä»¬å°†ä»‹ç»Org-Modeçš„å…¨å±€TODOåˆ—è¡¨ã€è®¡åˆ’ä»»åŠ¡å’Œæ—¥ç¨‹è¡¨
+(agenda)åŠŸèƒ½ã€‚è¿™äº›åŠŸèƒ½ç”¨äºä»ä¸åŒçš„orgæ–‡ä»¶ä¸­æŠŠç›¸å…³çš„TODOé¡¹ç›®åˆå¹¶æˆä»¥é‡è¦æ€§
+å’Œå‘ç”Ÿçš„æ—¶é—´ä¸ºé¡ºåºé™ˆåˆ—çš„é¡¹ç›®åˆ—è¡¨ã€‚ä½ ä¹Ÿèƒ½ç”¨è¿™äº›åŠŸèƒ½æ¥çŸ¥é“å“ªäº›ä»»åŠ¡æ˜¯å·²ç»å®Œæˆçš„ï¼Œ
+ä»¥åŠå®ƒä»¬æ˜¯ä»€ä¹ˆæ—¶å€™å®Œæˆçš„ã€‚
 </p>
 
-<h3><a name="sec-13">3.1 ÉèÖÃ</a></h3>
+<h3><a name="sec-13">3.1 è®¾ç½®</a></h3>
 
 <p>Setup
 </p>
@@ -442,23 +442,23 @@ org-mode will know which files to search for TODOs and
 scheduled items.
 </p>
 <p>
-Ê×ÏÈ£¬Äã±ØĞëÉèÖÃ±äÁ¿org-agenda-files£¬ÒÔ±ãÈÃOrg-ModeÖªµÀÔÚÄÄĞ©ÎÄ¼ş
-ÀïËÑÑ°TODOºÍ¼Æ»®ÏîÄ¿¡£
+é¦–å…ˆï¼Œä½ å¿…é¡»è®¾ç½®å˜é‡org-agenda-filesï¼Œä»¥ä¾¿è®©Org-ModeçŸ¥é“åœ¨å“ªäº›æ–‡ä»¶
+é‡Œæœå¯»TODOå’Œè®¡åˆ’é¡¹ç›®ã€‚
 </p>
 <p>
 Let's imagine you already have several org files---say, one 
 for work, one for home, and one for school.
 </p>
 <p>
-¼ÙÉè£¬ÄãÒÑ¾­ÓĞÁË¼¸¸öorgÎÄ¼ş£¬±ÈÈçËµ£¬Ò»¸ö¹¤×÷ÓÃµÄorgÎÄ¼ş£¬Ò»¸ö¼ÒÎñÓÃµÄ
-orgÎÄ¼ş£¬Ò»¸öÑ§Ğ£ÓÃµÄorgÎÄ¼ş¡£
+å‡è®¾ï¼Œä½ å·²ç»æœ‰äº†å‡ ä¸ªorgæ–‡ä»¶ï¼Œæ¯”å¦‚è¯´ï¼Œä¸€ä¸ªå·¥ä½œç”¨çš„orgæ–‡ä»¶ï¼Œä¸€ä¸ªå®¶åŠ¡ç”¨çš„
+orgæ–‡ä»¶ï¼Œä¸€ä¸ªå­¦æ ¡ç”¨çš„orgæ–‡ä»¶ã€‚
 </p>
 <p>
 Then you'd add the following to your emacs initialization 
 file: 
 </p>
 <p>
-ÕâÑùµÄ»°£¬Äã¿ÉÒÔÔÚÄãµÄemacs³õÊ¼»¯ÎÄ¼ş(.emacs)Àï¼ÓÈëÈçÏÂ¼¸ĞĞ£º
+è¿™æ ·çš„è¯ï¼Œä½ å¯ä»¥åœ¨ä½ çš„emacsåˆå§‹åŒ–æ–‡ä»¶(.emacs)é‡ŒåŠ å…¥å¦‚ä¸‹å‡ è¡Œï¼š
 </p>
 <p>
 <pre>
@@ -471,7 +471,7 @@ file:
 
 
 
-<h3><a name="sec-14">3.2 È«¾ÖTODOÁĞ±í</a></h3>
+<h3><a name="sec-14">3.2 å…¨å±€TODOåˆ—è¡¨</a></h3>
 
 <p>The global TODO list
 </p>
@@ -481,9 +481,9 @@ scan the files in org-agenda-files and present a listing of all
 the open TODO items: 
 </p>
 <p>
-°´Ctrl-c¡¢a¡¢t½øÈëÈ«¾ÖTODOÁĞ±í¡£Org-Mode½«ÔÚorg-agenda-filesÀïµÄÎÄ¼şÖĞ
-ËÑË÷¿ª·ÅµÄTODOÏîÄ¿£¬²¢ÁĞ³öÏîÄ¿µÄÁĞ±í£º
-<img src="http://dto.freeshell.org/images/tutorial-16.png"/>
+æŒ‰Ctrl-cã€aã€tè¿›å…¥å…¨å±€TODOåˆ—è¡¨ã€‚Org-Modeå°†åœ¨org-agenda-filesé‡Œçš„æ–‡ä»¶ä¸­
+æœç´¢å¼€æ”¾çš„TODOé¡¹ç›®ï¼Œå¹¶åˆ—å‡ºé¡¹ç›®çš„åˆ—è¡¨ï¼š
+<img src="../images/tutorial-16.png"/>
 </p>
 <p>
 You can move the cursor around to the different todo items, and 
@@ -491,11 +491,11 @@ hit "t" to mark an item DONE, or hit RET to jump to the source
 file where the TODO is located.
 </p>
 <p>
-ÄãÄÜÔÚ²»Í¬µÄTODOÏîÄ¿ÖĞÒÆ¶¯¹â±ê£¬²¢ÓÃt¼ü°ÑÏîÄ¿±ê×¢³É¡°DONE¡±£¨ÒÑÍê³É£©£»»òÕß
-ÔÚTODOÏîÄ¿ÉÏ°´»Ø³µÌøµ½¸ÃÏîÄ¿ËùÔÚµÄÔ´ÎÄ¼ş¡£
+ä½ èƒ½åœ¨ä¸åŒçš„TODOé¡¹ç›®ä¸­ç§»åŠ¨å…‰æ ‡ï¼Œå¹¶ç”¨té”®æŠŠé¡¹ç›®æ ‡æ³¨æˆâ€œDONEâ€ï¼ˆå·²å®Œæˆï¼‰ï¼›æˆ–è€…
+åœ¨TODOé¡¹ç›®ä¸ŠæŒ‰å›è½¦è·³åˆ°è¯¥é¡¹ç›®æ‰€åœ¨çš„æºæ–‡ä»¶ã€‚
 </p>
 
-<h3><a name="sec-15">3.3 ÈÎÎñ¼Æ»®ºÍÊ¹ÓÃÈÕ³Ì±í(agenda)</a></h3>
+<h3><a name="sec-15">3.3 ä»»åŠ¡è®¡åˆ’å’Œä½¿ç”¨æ—¥ç¨‹è¡¨(agenda)</a></h3>
 
 <p>Scheduling tasks and using the agenda
 </p>
@@ -506,40 +506,40 @@ hit C-c C-s to run org-schedule. The calendar pops up, and I can
 either enter or click the desired date: 
 </p>
 <p>
-ÎÒ¼Æ»®½ñÌìÀ´×ö¡°Finish documnet¡±£¨¡°Íê³ÉÎÄµµ¡±£©¡£ÎÒ°Ñ¹â±êÒÆµ½TODOÏîÄ¿¡°Finish
-documnet¡±£¨¡°Íê³ÉÎÄµµ¡±£©ÉÏ£¬°´Ctrl-cºÍCtrl-sÀ´ÔËĞĞorg-scheduleÃüÁî¡£ÈÕÀúÌø
-ÁË³öÀ´£¬ÎÒÄÜÊäÈë»òÕßµã»÷ÎÒÑ¡ÔñµÄÈÕÆÚ£º
-<img src="http://dto.freeshell.org/images/tutorial-12.png"/>
+æˆ‘è®¡åˆ’ä»Šå¤©æ¥åšâ€œFinish documnetâ€ï¼ˆâ€œå®Œæˆæ–‡æ¡£â€ï¼‰ã€‚æˆ‘æŠŠå…‰æ ‡ç§»åˆ°TODOé¡¹ç›®â€œFinish
+documnetâ€ï¼ˆâ€œå®Œæˆæ–‡æ¡£â€ï¼‰ä¸Šï¼ŒæŒ‰Ctrl-cå’ŒCtrl-sæ¥è¿è¡Œorg-scheduleå‘½ä»¤ã€‚æ—¥å†è·³
+äº†å‡ºæ¥ï¼Œæˆ‘èƒ½è¾“å…¥æˆ–è€…ç‚¹å‡»æˆ‘é€‰æ‹©çš„æ—¥æœŸï¼š
+<img src="../images/tutorial-12.png"/>
 </p>
 <p>
 Once I select the date, org-mode inserts a scheduling timestamp 
 after the TODO item:
 </p>
 <p>
-µ±ÎÒÑ¡ÔñºÃÈÕÆÚ£¬Org-ModeÔÚÕâ¸öTODOÏîÄ¿ºó²åÈëÁËÒ»¸öÊ±¼ä´Á£º
-<img src="http://dto.freeshell.org/images/tutorial-13.png"/>
+å½“æˆ‘é€‰æ‹©å¥½æ—¥æœŸï¼ŒOrg-Modeåœ¨è¿™ä¸ªTODOé¡¹ç›®åæ’å…¥äº†ä¸€ä¸ªæ—¶é—´æˆ³ï¼š
+<img src="../images/tutorial-13.png"/>
 </p>
 <p>
 Now save your file, and hit C-c a a for org-agenda. A display 
 of this week's scheduled items are displayed:
 </p>
 <p>
-ÏÖÔÚ°ÑÄãµÄÎÄµµ´æÅÌ£¬²¢ÒÀ´Î¼üÈëCtrl-c¡¢a¡¢aÀ´½øÈëorg-agendaÄ£Ê½¡£±¾ĞÇÆÚµÄ
-¼Æ»®ÖĞÏîÄ¿ÏÔÊ¾ÁË³öÀ´£º
-<img src="http://dto.freeshell.org/images/tutorial-14.png"/>
+ç°åœ¨æŠŠä½ çš„æ–‡æ¡£å­˜ç›˜ï¼Œå¹¶ä¾æ¬¡é”®å…¥Ctrl-cã€aã€aæ¥è¿›å…¥org-agendaæ¨¡å¼ã€‚æœ¬æ˜ŸæœŸçš„
+è®¡åˆ’ä¸­é¡¹ç›®æ˜¾ç¤ºäº†å‡ºæ¥ï¼š
+<img src="../images/tutorial-14.png"/>
 </p>
 <p>
 Now press "l" (lowercase L) to turn on log display. This displays 
 the all finished tasks and their completion times.
 </p>
 <p>
-ÏÖÔÚ°´l¼ü£¨LµÄĞ¡Ğ´×ÖÄ¸£©ÏÔÊ¾ÈÕÖ¾£¨log£©¡£ÕâÑù»áÏÔÊ¾ËùÓĞÒÑ¾­Íê³ÉµÄÈÎÎñºÍËüÃÇÍê³É
-µÄÊ±¼ä¡£
-<img src="http://dto.freeshell.org/images/tutorial-15.png"/>
+ç°åœ¨æŒ‰lé”®ï¼ˆLçš„å°å†™å­—æ¯ï¼‰æ˜¾ç¤ºæ—¥å¿—ï¼ˆlogï¼‰ã€‚è¿™æ ·ä¼šæ˜¾ç¤ºæ‰€æœ‰å·²ç»å®Œæˆçš„ä»»åŠ¡å’Œå®ƒä»¬å®Œæˆ
+çš„æ—¶é—´ã€‚
+<img src="../images/tutorial-15.png"/>
 </p>
 
 
-<h2><a name="sec-16">4 ÔÙ»á</a></h2>
+<h2><a name="sec-16">4 å†ä¼š</a></h2>
 
 <p>Farewell
 </p>
@@ -548,11 +548,11 @@ This has been only a brief tour of org-mode. More excitement awaits
 you at the <a href="http://staff.science.uva.nl/~dominik/Tools/org/org.html">online org-mode manual</a>. 
 </p>
 <p>
-±¾ÎÄÖ»ÊÇOrg-ModeµÄ¼òÃ÷½Ì³Ì¡£ÔÚ<a href="http://staff.science.uva.nl/~dominik/Tools/org/org.html">Org-ModeµÄÔÚÏßÎÄµµ</a>ÀïÓĞ¸ü¶àµÄÈÃÈËĞË·ÜµÄÌØÕ÷µÈ×ÅÄã
-·¢¾ò¡£
+æœ¬æ–‡åªæ˜¯Org-Modeçš„ç®€æ˜æ•™ç¨‹ã€‚åœ¨<a href="http://staff.science.uva.nl/~dominik/Tools/org/org.html">Org-Modeçš„åœ¨çº¿æ–‡æ¡£</a>é‡Œæœ‰æ›´å¤šçš„è®©äººå…´å¥‹çš„ç‰¹å¾ç­‰ç€ä½ 
+å‘æ˜ã€‚
 </p><p class="author"> Author: Original Version: David O'Toole   Translate by: Hokmen Chan
 <a href="mailto:hokmen (dot) chan (AT) gmail (dot) com">&lt;hokmen (dot) chan (AT) gmail (dot) com&gt;</a>
 </p>
-<p class="date"> Date: 2007/01/01 12Ê±15·Ö30Ãë</p>
+<p class="date"> Date: 2007/01/01 12æ—¶15åˆ†30ç§’</p>
 </body>
 </html>
