@@ -12,7 +12,7 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 
 * 下载和安装
 
-最新稳定版 8.2.5c (2014年1月) -- [[http://orgmode.org/org-8.2.5c.tar.gz][tar.gz]] 或者[[http://orgmode.org/org-8.2.5c.zip][zip]] ([[file:Changes][更新日志]])
+最新稳定版 8.2.5h (2014年1月) -- [[http://orgmode.org/org-8.2.5h.tar.gz][tar.gz]] 或者[[http://orgmode.org/org-8.2.5h.zip][zip]] ([[file:Changes][更新日志]])
 
 开发版([[http://orgmode.org/cgit.cgi/org-mode.git/][cgit]]):
 
@@ -46,9 +46,9 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 
 浏览手册(每章一页)
 
-阅读完整手册：HTML或者PDF
+阅读完整手册：[[file:org.org][HTML]] 或者PDF
 
-阅读精华版指南：HTML 或者 PDF
+阅读精华版指南：[[file:guide/index.org][HTML]] 或者 PDF
 
 查看 Worg上的 FAQ、hacks，和指南
 
