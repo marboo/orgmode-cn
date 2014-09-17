@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Org Mode 工具箱!</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Org Mode 工具箱!"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2014-09-17T17:26+0800"/>
+<meta name="author" content="Worg people"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Org Mode 工具箱!</h1>
+
+<p>This page lists external tools useful for handling Org files.
+本页列出一些有用的处理Org文件的外部工具
+</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Org-mode 解析器</a>
+<ul>
+<li><a href="#sec-1-1">Orgile - PHP 写的 Org 解析器</a></li>
+<li><a href="#sec-1-2">pico-org - PicoLisp 写的解析器</a></li>
+<li><a href="#sec-1-3">cl-org-mode - 为org-mode 大纲而开发的 Common lisp 解释器</a></li>
+<li><a href="#sec-1-4">orgnode.py - 解析Org文件的python库</a></li>
+<li><a href="#sec-1-5">org-mode-parser for nodejs 作者 Giovanni Giorgi</a></li>
+<li><a href="#sec-1-6">PyOrgMode - 用来创建和解析Org文件的python库</a></li>
+<li><a href="#sec-1-7">NEO - No Emacs Org in Python</a></li>
+<li><a href="#sec-1-8">Org::Parser - 解析Org文件的Perl模块</a></li>
+<li><a href="#sec-1-9">org-ruby (used on github) 作者 Brian Dewey</a></li>
+<li><a href="#sec-1-10">org-js 作者 Masafumi Oyamada</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">特定用途的工具</a>
+<ul>
+<li><a href="#sec-2-1">nakkaya: a static site generator parsing Org's files (and MarkDown)</a></li>
+<li><a href="#sec-2-2">orgitdown - use Org keybindings in HTML text areas</a></li>
+<li><a href="#sec-2-3">Exporter for the Octopress blogging engine</a></li>
+<li><a href="#sec-2-4">Export OmniFocus to Org-mode files</a></li>
+<li><a href="#sec-2-5">Convert from Planner to Org</a></li>
+<li><a href="#sec-2-6">Export vCard to org-mode entries</a></li>
+<li><a href="#sec-2-7">ews-orgmode - Exchange calendar to orgmode</a></li>
+<li><a href="#sec-2-8">michel-orgmode - script for pushing to / pulling from Google-Tasks lists</a></li>
+<li><a href="#sec-2-9">Using GData API to import events in an Org file</a></li>
+<li><a href="#sec-2-10">Migrating from Tomboy to Org</a></li>
+<li><a href="#sec-2-11">orgutil - TCL script to manipulate org files</a></li>
+<li><a href="#sec-2-12">ical2org.awk - convert ics files to Org</a></li>
+<li><a href="#sec-2-13">ical2org.rb - convert ics files to Org</a></li>
+<li><a href="#sec-2-14">org2remind - perl script to convert org appointments to remind</a></li>
+<li><a href="#sec-2-15">org-manage - locate and manage your org files</a></li>
+<li><a href="#sec-2-16">vimwiki2org - convert vimwiki files to Org</a></li>
+<li><a href="#sec-2-17">Org Blog Wiki tools</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Org-mode 解析器</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1">Orgile - PHP 写的 Org 解析器</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+<p>
+详情请戳 <a href="http://toshine.org/etc/orgile-emacs-org-mode-file-html-parser-php-publishing-tool/">this blog entry</a> , 源代码托管在 <a href="https://github.com/mashdot/orgile">github</a>.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><a href="https://bitbucket.org/joebo/pico-org/src">pico-org</a> - PicoLisp 写的解析器</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<p>
+开发者 Joe Bogner <a href="http://thread.gmane.org/gmane.lisp.picolisp.general/3679">说</a>:
+</p>
+<pre class="example">
+I've written a tiny org-mode parser and hooked it up with my mustache
+implementation to create a simple web page that dumps out the org
+structure. I'm not sure where I'm going to go next but figured I'd
+share it since I enjoy reading other's code as well.
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><a href="http://common-lisp.net/project/cl-org-mode/">cl-org-mode</a> - 为org-mode 大纲而开发的 Common lisp 解释器</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+<p>
+Abstract: CL-ORG-MODE is a parser for org-mode files that uses an
+extensible CLOS-based recursive descent parser to create a tree of org-mode
+nodes. Also included is a (primitive) system for literate programming using
+org-mode
+</p></div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4">orgnode.py - 解析Org文件的python库</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+<ul>
+<li>作者: Charles Cave
+</li>
+<li>主页: <a href="http://members.optusnet.com.au/~charles57/GTD/orgnode.html">http://members.optusnet.com.au/~charles57/GTD/orgnode.html</a>
+</li>
+</ul>
+
+
+<pre class="example">
+The Orgnode module contains one class, called Orgnode and a routine to read
+an org-mode file and create a list of Orgnode objects.
+
+The module is for reading an org-mode file. There are no methods for
+writing org-mode since since I have no need for this functionality.
+
+You are welcome to extend the functionality of the __repr__ method of the
+Orgnode class if you would like this functionality.
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5"><a href="http://gioorgi.com/org-mode-parser/">org-mode-parser for nodejs</a> 作者 Giovanni Giorgi</h3>
+<div class="outline-text-3" id="text-1-5">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6">PyOrgMode - 用来创建和解析Org文件的python库</h3>
+<div class="outline-text-3" id="text-1-6">
+
+
+<ul>
+<li>Author: Jonathan Bisson (on gmail : bissonjonathan)
+</li>
+<li>Homepage: <a href="https://github.com/bjonnh/PyOrgMode">https://github.com/bjonnh/PyOrgMode</a>
+</li>
+</ul>
+
+
+<pre class="example">
+This python module allows for the creation and parsing of org-files. The
+org-files are loaded into python objects allowing the modification of the
+different recognized elements.
+
+The objects are defined in a plug-in way, allowing the user of this
+module to add easily a new kind of data and the relative functions.
+
+Current objects are : 
+- Schedule elements
+- Drawers
+- Tables
+- Nodes
+
+The project is contained in an unique tangle org-file which contains the
+documentation, the python files and the test suite.
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-7" class="outline-3">
+<h3 id="sec-1-7">NEO - No Emacs Org in Python</h3>
+<div class="outline-text-3" id="text-1-7">
+
+
+<ul>
+<li>Author: Olivier Schwander
+</li>
+<li>Homepage: <a href="http://redmine.chadok.info/projects/neo">http://redmine.chadok.info/projects/neo</a>
+</li>
+<li>Announcement: <a href="http://lists.gnu.org/archive/html/emacs-orgmode/2011-04/msg00598.html">http://lists.gnu.org/archive/html/emacs-orgmode/2011-04/msg00598.html</a>
+</li>
+</ul>
+
+
+<pre class="example">
+Another Python tool for parsing org mode files
+
+Current features 
+~~~~~~~~~~~~~~~~~
+  - Org file parser
+  - Agenda builder
+  - Todo-list builder
+  - Custom todo keywords
+  - Command line interface for agenda and todo-lists
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-8" class="outline-3">
+<h3 id="sec-1-8">Org::Parser - 解析Org文件的Perl模块</h3>
+<div class="outline-text-3" id="text-1-8">
+
+
+<ul>
+<li>Author: Steven Haryanto
+</li>
+<li>Homepage: <a href="http://search.cpan.org/dist/Org-Parser">http://search.cpan.org/dist/Org-Parser</a>
+</li>
+</ul>
+
+
+<p>
+There are several other Org-related modules on CPAN at various development
+stages, all utilizing Org::Parser: App::OrgUtils (some utilities for Org
+documents), Org::To::* (convert Org mode to various other formats).
+</p></div>
+
+</div>
+
+<div id="outline-container-1-9" class="outline-3">
+<h3 id="sec-1-9"><a href="https://github.com/bdewey/org-ruby">org-ruby (used on github)</a> 作者 Brian Dewey</h3>
+<div class="outline-text-3" id="text-1-9">
+
+
+<blockquote>
+
+<p>This gem contains Ruby routines for parsing org-mode files. The most
+significant thing this library does today is convert org-mode files to HTML
+or textile.
+</p>
+</blockquote>
+
+
+<p>
+Read <a href="http://orgmode.org/worg/org-tutorials/org-ruby.html">the org-ruby tutorial for details.</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-1-10" class="outline-3">
+<h3 id="sec-1-10"><a href="https://github.com/mooz/org-js">org-js</a> 作者 Masafumi Oyamada</h3>
+<div class="outline-text-3" id="text-1-10">
+
+
+<p>
+org-js is a javascript parser and converter for org-mode
+(<a href="http://orgmode.org/">http://orgmode.org/</a>) notation.
+</p>
+<p>
+For a working example of an interactive editor, see
+<a href="http://mooz.github.com/org-js/editor/">http://mooz.github.com/org-js/editor/</a>.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">特定用途的工具</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1">nakkaya: a static site generator parsing Org's files (and MarkDown)</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+<p>
+Static is a simple static site generator written in Clojure.  For a sample
+site build using static see <a href="http://nakkaya.com">http://nakkaya.com</a>
+</p>
+<p>
+You can grab the latest version of nakkaya from <a href="https://github.com/nakkaya/static">its github repository</a>.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2">orgitdown - use Org keybindings in HTML text areas</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+<p>
+<a href="https://github.com/gnowgi/orgitdown">orgitdown</a> is based on <a href="http://markitup.jaysalvat.com/home/">markitup</a> and allows to use Org keybindings in text
+areas through some javascript magic.  The text inserted is using Org's
+syntax, and can be further processed with Emacs in batch mode on the
+server.
+</p>
+<p>
+Check <a href="http://mid.gmane.org/CADSSMeg5BDkZMBWEhXF2K7kssrEsX6SkZE+OjvXFpHY5aTcgmQ@mail.gmail.com">Nagarjuna G announcement on the mailing list</a>.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3">Exporter for the Octopress blogging engine</h3>
+<div class="outline-text-3" id="text-2-3">
+
+
+<blockquote>
+
+<p>Octopress is a framework designed by Brandon Mathis for Jekyll, the blog
+aware static site generator powering Github Pages. To start blogging with
+Jekyll, you have to write your own HTML templates, CSS, Javascripts and set
+up your configuration. But with Octopress All of that is already taken care
+of. Simply clone or fork Octopress, install dependencies and the theme, and
+you’re set.
+</p>
+</blockquote>
+
+
+<p>
+You can clone Octopress from <a href="https://github.com/imathis/octopress">the github repository</a>.
+</p>
+<p>
+<a href="https://github.com/craftkiller/orgmode-octopress">orgmode-octopress</a> is an exporter for Emacs Org-Mode to Octopress by
+craftkiller.  For setup instructions, check <a href="http://blog.paphus.com/blog/2012/08/01/introducing-octopress-blogging-for-org-mode/">this blog entry</a>.  Note that
+orgmode-octopress will not work with the new export engine in Org 8.0.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4">Export OmniFocus to Org-mode files</h3>
+<div class="outline-text-3" id="text-2-4">
+
+
+<p>
+Jay McCarthy wrote <a href="https://github.com/jeapostrophe/exp/blob/master/of2org.rkt">this</a>, using <a href="http://racket-lang.org/">Racket</a>.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-5" class="outline-3">
+<h3 id="sec-2-5">Convert from Planner to Org</h3>
+<div class="outline-text-3" id="text-2-5">
+
+
+<p>
+See this message from <a href="http://mid.gmane.org/8ay5hehupe.fsf@faepop01.tu-graz.ac.at">Andreas Hirczy</a>:
+</p>
+<p>
+I have written yet another converter from planner to org:
+<a href="http://itp.tugraz.at/~ahi/Computer/SW/muse2org.html">http://itp.tugraz.at/~ahi/Computer/SW/muse2org.html</a>
+<a href="http://itp.tugraz.at/~ahi/Computer/SW/muse2org">http://itp.tugraz.at/~ahi/Computer/SW/muse2org</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-2-6" class="outline-3">
+<h3 id="sec-2-6">Export vCard to org-mode entries</h3>
+<div class="outline-text-3" id="text-2-6">
+
+
+<p>
+<a href="http://mid.gmane.org/50B28EA7.6020900@gmx.de">Simon Thum</a> shared some <a href="https://gist.github.com/4145201">Ruby code</a> to export vCards to Org-mode entries.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-7" class="outline-3">
+<h3 id="sec-2-7">ews-orgmode - Exchange calendar to orgmode</h3>
+<div class="outline-text-3" id="text-2-7">
+
+
+<p>
+<a href="https://github.com/kautsig/ews-orgmode">https://github.com/kautsig/ews-orgmode</a>
+</p>
+<p>
+See <a href="http://mid.gmane.org/50B78A90.3040609@kautsig.org">this message</a> from Chris Raschl:
+</p>
+<pre class="example">
+I recently wrote a python script to fetch my calendar from the corporate
+exchange server into an orgmode file to view it in my agenda.
+It uses the exchange webservices (ews).
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-8" class="outline-3">
+<h3 id="sec-2-8">michel-orgmode - script for pushing to / pulling from Google-Tasks lists</h3>
+<div class="outline-text-3" id="text-2-8">
+
+
+<ul>
+<li>Authors: Mark Edgington, Christophe-Marie Duquesne
+</li>
+<li>Homepage: <a href="https://bitbucket.org/edgimar/michel-orgmode">https://bitbucket.org/edgimar/michel-orgmode</a>
+</li>
+</ul>
+
+
+<p>
+Michel-orgmode is a python script which serves as a bridge between an
+org-mode textfile and a Google-tasks task list.  It can pull the contents
+of a Google-tasks list into an org-mode file, or push an org-mode file's
+contents to a Google-tasks list.  It supports bidirectional sync.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-9" class="outline-3">
+<h3 id="sec-2-9">Using GData API to import events in an Org file</h3>
+<div class="outline-text-3" id="text-2-9">
+
+
+<p>
+Mon, 11 Jul 2011, Felix Geller wrote:
+</p>
+<pre class="example">
+I wrote a Python [[https://bitbucket.org/fgeller/gcal2org/src/8fa7d2b83ab3/gcal2org.py][script]] that uses the GData API to download events for your
+Google Calendar and prints them to a given org-file. It is a very tiny
+script, but perhaps it is of use to other people as well.
+
+Small disclaimer: I've tested this on Mac OS X only, using Python 2.7.2.
+</pre>
+
+
+<p>
+The script can be found here: <a href="https://bitbucket.org/fgeller/gcal2org/src/8fa7d2b83ab3/gcal2org.py">gcal2org.py</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-2-10" class="outline-3">
+<h3 id="sec-2-10">Migrating from Tomboy to Org</h3>
+<div class="outline-text-3" id="text-2-10">
+
+
+<p>
+In <a href="http://article.gmane.org/gmane.emacs.orgmode/45239">this email</a>, Attila shared a script to move notes from Tomboy to
+Org-mode &ndash; see his message:
+</p>
+<pre class="example">
+I'm moving my note-taking from GNote (C++ rewrite of Tomboy Notes) to
+org-mode.  As I have a lot of notes all over the place, I wrote a script to
+convert from the XML format used by the Tomboy-style tools to org-mode.
+</pre>
+
+
+<p>
+You can find the script here: <a href="https://github.com/StAlphonsos/scriptologie">https://github.com/StAlphonsos/scriptologie</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-2-11" class="outline-3">
+<h3 id="sec-2-11">orgutil - TCL script to manipulate org files</h3>
+<div class="outline-text-3" id="text-2-11">
+
+
+<ul>
+<li>Author: Patrick Brennan
+</li>
+<li>Homepage: <a href="http://sourceforge.net/projects/orgutil/">http://sourceforge.net/projects/orgutil/</a>
+</li>
+</ul>
+
+
+<pre class="example">
+Script for converting files into and out of Org-mode, and for performing
+various analyses and conversions. The primary use case for this utility is
+to convert between Org-mode outline text and AbstractSpoon's ToDoList.
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-12" class="outline-3">
+<h3 id="sec-2-12">ical2org.awk - convert ics files to Org</h3>
+<div class="outline-text-3" id="text-2-12">
+
+
+<ul>
+<li>Author: Eric S Fraga
+</li>
+<li>Code: <a href="../code/awk/ical2org.awk">ical2org.awk</a>
+</li>
+</ul>
+
+
+<p>
+See <a href="../org-tutorials/org-google-sync.html">the org-google-sync tutorial</a> for explanations on how to use this
+script.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-13" class="outline-3">
+<h3 id="sec-2-13">ical2org.rb - convert ics files to Org</h3>
+<div class="outline-text-3" id="text-2-13">
+
+<ul>
+<li>Author: Simon Thum
+</li>
+<li>Code: <a href="https://github.com/simonthum/ical2org">ical2org</a>
+</li>
+<li>handles events and TODOs
+</li>
+<li>all sorts of repeating events
+</li>
+<li>and timezones!
+</li>
+<li>one-way only though
+<ul>
+<li>except if you have a REST-capable ical server, see README
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-14" class="outline-3">
+<h3 id="sec-2-14">org2remind - perl script to convert org appointments to remind</h3>
+<div class="outline-text-3" id="text-2-14">
+
+
+<ul>
+<li>Author: Matt Lundin
+</li>
+<li>Code: <a href="../code/perl/org2remind.pl">org2remind</a>
+</li>
+</ul>
+
+
+<p>
+Remind is a command line calendar application for Unix/Linux that
+can, among other things, spit out formatted plain text calendars and
+agendas.
+</p>
+<p>
+<a href="http://www.roaringpenguin.com/products/remind">http://www.roaringpenguin.com/products/remind</a>
+</p>
+<pre class="example">
+To convert org-mode appointments to remind data, simply call the
+script on one or more org files:
+
+perl org2remind.pl ~/org/*.org
+
+(Optionally, add the script to your path and make it executable.)
+
+The results of this script can saved in a file...
+
+perl org2remind.pl ~/org/*.org &gt;&gt; org.rem 
+
+...or piped directly into a remind command...
+
+perl org2remind.pl ~/org/*.org | remind -
+
+For a nice calendar of the current month, use the following: 
+
+perl org2remind.pl ~/org/*.org | remind -c -
+
+This script is similar to org2rem.el (in the contrib directory of the
+org-mode repository), except that, instead of saving files from within
+org-mode, it allows for easier and faster access to org/remind data
+from the command line.
+
+Currently, the script supports appointments (i.e., active timestamps)
+and the org-diary-class sexp.
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-15" class="outline-3">
+<h3 id="sec-2-15">org-manage - locate and manage your org files</h3>
+<div class="outline-text-3" id="text-2-15">
+
+<ul>
+<li>Author: Daniel German
+</li>
+<li>Code:   <a href="http://github.com/dmgerman/org-manage">org-manage</a> (based on <a href="https://github.com/yoshinari-nomura/org-octopress">org-octopress</a>)
+</li>
+<li>Lists all org files in a given directory and its subdirectories,
+  providing a table of org files, including their title and category.
+</li>
+</ul>
+
+
+<blockquote>
+
+<p>This is a module to help managing a large collection of org files. It
+is based on org-octopress by Yoshinari Nomura.
+</p>
+<p>
+org-manage scans a given directory (recursively) looking for org
+files. For each, an entry is created. The title is extracted from the
+attribute #+TITLE: in the org file. The category is extracted from the
+first #+CATEGORY in the file (I suggest you add a default category to
+each file.
+</p>
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-16" class="outline-3">
+<h3 id="sec-2-16">vimwiki2org - convert vimwiki files to Org</h3>
+<div class="outline-text-3" id="text-2-16">
+
+<ul>
+<li>Author: Xu FaSheng
+</li>
+<li>Homepage: <a href="https://github.com/fasheng/vimwiki2org">https://github.com/fasheng/vimwiki2org</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-17" class="outline-3">
+<h3 id="sec-2-17">Org Blog Wiki tools</h3>
+<div class="outline-text-3" id="text-2-17">
+
+
+<p>
+See the page <a href="../org-blog-wiki.html">Org Blogs and Wikis</a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2014-09-17T17:26+0800</p>
+<p class="author">Author: Worg people</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
