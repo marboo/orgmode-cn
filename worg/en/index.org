@@ -1,0 +1,134 @@
+#+TITLE: Hello Worg, the Org-Mode Community!
+#+AUTHOR: Worg people
+#+EMAIL: mdl AT imapmail DOT org
+#+STARTUP: align fold nodlcheck hidestars oddeven intestate
+#+SEQ_TODO: TODO(t) INPROGRESS(i) WAITING(w@) | DONE(d) CANCELED(c@)
+#+TAGS: Write(w) Update(u) Fix(f) Check(c)
+#+LANGUAGE: en
+#+PRIORITIES: A C B
+#+CATEGORY: worg
+#+OPTIONS: H:3 num:nil toc:t \n:nil ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc
+
+
+
+
+Worg [[http://orgmode.org/worg/sitemap.html][sitemap]] and [[http://orgmode.org/worg/theindex.html][index]]
+
+* Introduction to Org-Mode and Worg
+
+[[http://orgmode.org][Org-mode]] is a powerful system for organizing your complex life with
+simple plain-text files.  It seamlessly integrates all your notes,
+mindmaps, TODO lists, calendar, day planner, and project schedules
+into a single system that can be easily searched (e.g. by grep),
+encrypted (e.g. by [[http://www.gnupg.org/][GnuPG]]), backed up and synced (e.g.  by Dropbox),
+imported/exported, and [[file:org-faq.org::*MobileOrg][accessed on the go]] (e.g. on an iPhone or
+Android smartphone).  It can even be used for authoring web pages and
+documents.
+
+Check out some [[file:org-screenshots.org][screenshots of Org-mode]] in action.  See [[file:org-quotes.org][what people have to
+say]] about Org-mode, and read a few [[file:org-testimonies/index.org][user stories]]!
+
+Org-mode is distributed as part of the popular [[http://www.gnu.org/software/emacs/][Emacs]] text editor and runs
+wherever Emacs runs, including on GNU-Linux, Windows, and Mac.  Written by
+Carsten Dominik, it is currently maintained by Bastien Guerry and used by
+many helpful people who, like you, are desperate to get and stay organized.
+
+The page you're reading is part of =Worg=, a section of the [[http://orgmode.org/][Org-mode web
+site]] that is written by a volunteer community of Org-mode fans.  It
+includes tutorials, ideas, code snippets, etc., shared to make your
+introduction and customization of Org-mode as easy as possible.  Worg is
+maintained by Matthew Lundin, a group of [[file:worgers.org][Worg contributors]], and maybe [[file:worg-todo.org][you]].
+* Org-Mode Resources
+:PROPERTIES:
+:ID:       A6F83C16-B1B9-405A-B996-8D2CA1274DEB
+:END:
+
+** Learn Org-Mode
+
+#+INDEX: Tutorials
+#+INDEX: Glossary
+
+- [[http://orgmode.org/][Org-mode Main Page]]               : The official page for Org-mode
+- [[file:org-tutorials/index.org][Org-mode Tutorials]]               : Your best starting point
+- [[file:org-glossary.org][Org-mode Glossary]]                : An explanation of org-mode terminology
+- [[http://orgmode.org/manual/index.html][Org-mode Manual]]             : Extensive and complete documentation
+- [[http://orgmode.org/guide/index.html][Org-mode Guide]]                   : Not extensive, but complete documentation
+  - Spanish translation of the orgguide ([[file:orgguide/orgguide.es.texi][texi]] - [[http://www.davidam.com/docu/orgguide.es.html][html]])
+- [[file:org-configs/index.org][Org-mode configuration]]           : Beginner's customization guide, examples, survey,
+  and a list of all hooks
+- [[file:orgcard.org][Org-mode reference card]]          : check the [[file:orgcard.org][HTML]], [[http://orgmode.org/orgcard.pdf][pdf]] and [[http://orgmode.org/orgcard.txt][ASCII]] versions.
+  - French translation of the orgcard ([[file:code/latex/fr-orgcard.tex][tex]] - [[file:images/bzg/fr-orgcard.pdf][pdf]])
+- [[file:exporters/index.org][New exporter]]            : Preliminary documentation for the new exporter.
+** Get Help with Org-Mode
+
+- [[file:org-faq.org][Org-mode FAQ]]      : Check here before writing to the mailing list
+- [[file:org-mailing-list.org][Org-mode Mailing List]]   : For unanswered questions, suggestions, and
+  discussion
+- Org-mode IRC Channel    : For live Q&A, go to =#org-mode= on [[http://freenode.net/][Freenode]]
+** Use Org-Mode Effectively
+
+- Use Org-mode as a [[file:org-gtd-etc.org][task management system]] (perfect for GTD and the
+  Pomodoro Technique)
+- Author [[file:org-blog-wiki.org][Blogs and Wikis with Org-mode]] (see [[file:org-web.org][example web wages]])
+- Integrate [[file:org-mac.org][Org-mode with Mac OS X]]
+- Synchronize org-mode files easily with [[https://github.com/simonthum/git-sync][git-sync]], a [[file:org-tutorials/org-vcs.org][VCS of your choice]], or [[file:org-tutorials/unison-sync.org][Unison]]
+** Dive Deeper into Org-Mode
+
+- [[file:dev/index.org][Org-mode for developers]] : reference documentation for developers
+- [[file:org-blog-articles.org][Blog posts]]              : Read a variety of articles from introductions to
+  specific customizations
+- [[file:org-hacks.org][Org-mode Hacks]]          : Copy code snippets from other users
+- [[file:org-contrib/babel/index.html][Org Babel]] : Learn about [[http://en.wikipedia.org/wiki/Literate_programming][Literate programming]] within Org-mode
+- Tools
+  - [[file:org-translators.org][Org-mode conversion tools]]  : Import into and export out of Org-mode
+  - [[file:org-tools/index.org][Org-mode parsing libraries]] : Parse and analyze .org files
+- [[file:org-dependencies.org][Org-mode dependencies]] : Dependencies on external packages for advanced
+  functionality [Work in progress]
+- [[file:org-papers.org][Org-papers]] : Whitepapers and books about Org-mode
+** Check Out Third-Party Contributions
+
+- [[file:org-contrib/index.org][Contributed packages]], including extensive documentation
+- Repository of contributed code:
+  1. the =contrib/= directory of the Org-mode package
+  2. the [[http://orgmode.org/worg/code/][code]] directory of Worg
+     - [[http://orgmode.org/worg/code/org-info-js][org-info-js]] by Sebastian Rose: great javascript
+       tool to navigate through a HTML page (as exported by Org) the way you
+       navigate through an Org or an info manual, i.e. supporting folding,
+       previous/next buttons, etc.
+- [[file:org-devel.org][Additions under development]]
+* Join the Community
+
+- Check out the list of [[file:worgers.org][Worgers and their User Pages]] and a few
+    [[file:org-people.org][profiles of the Org-mode Community]] (with photos ☺)
+- Meet other users in the flesh at [[file:orgcamps.org][OrgCamps]]
+
+** Help out
+
+- Improve Worg by sharing your knowledge about Org-mode: see [[Maintenance of Worg]].
+- Improve Org-mode:
+  - Send [[http://orgmode.org/org.html#Feedback][bug reports]] after checking the [[file:org-issues.org][issue tracker]]
+  - Help [[file:org-tests/index.org][test]]
+  - [[file:org-contribute.org][Contribute to Org-mode]]
+* Maintenance of Worg
+
+- Intro
+  - [[file:worg-about.org][About the Worg project]]
+  - [[file:worg-setup.org][How Worg is set up on the server]]
+  - [[file:worg-maintainance.org][About Worg maintainer and gardners]]
+- Tasks
+  - [[file:worg-todo.org][The Worg TODO file]]
+- Howtos
+  - [[file:worg-git.org][An introduction to git for Worgers]]
+  - [[file:worg-editing.org][Conventions and tools for editing Worg]]
+  - [[file:worg-git-ssh-key.org][How to create your own SSH key?]]
+- Miscellaneous
+  - [[http://orgmode.org/w/worg.git][Recent changes to Worg]] (git log at /orgmode.org/)
+  - [[http://orgmode.org/worg/sources/][Org-mode source documents of all Worg pages]]
+
+** Latest changes to the Worg git repository
+
+Note: You can also subscribe to changes via [[http://orgmode.org/w/?p%3Dworg.git%3Ba%3Drss%3Bopt%3D--no-merges][RSS]] or [[http://orgmode.org/w/?p%3Dworg.git%3Ba%3Datom%3Bopt%3D--no-merges][ATOM]] (courtesy of repo.or.cz).
+* Git'r done!
+
+If you like losing your time by reading stuff on how to get organized,
+go and check the [[file:gitrdone.org][Git'r done!]] page.
