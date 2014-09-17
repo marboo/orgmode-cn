@@ -1,26 +1,31 @@
 #+TITLE: Emacs的Org Mode -- 用纯文本书写人生
 #+AUTHOR: amoblin
 #+EMAIL: amoblin@gmail.com
-#+DATE: 2013-12-16 13:11:23
+#+DATE: <2013-12-16 Mon 13:11:23>
 #+OPTIONS: toc:nil
 #+bind: org-export-publishing-directory "./exports"
 
 [[http://orgmode.org/img/org-mode-unicorn-logo.png]]
 
+#+BEGIN_HTML
+<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+#+END_HTML
+
 Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理待办事项、安排项目以及制作文档。
--- 由Carsten Dominik于2003年创建，目前有数千用户和Carsten一起维护。
+
+-- 由Carsten Dominik于2003年创建，目前由[[http://bzg.fr/][ Bastien Guerry]] 维护，大家共同开发。
 
 * 下载和安装
 
-最新稳定版 8.2.5h (2014年1月) -- [[http://orgmode.org/org-8.2.5h.tar.gz][tar.gz]] 或者[[http://orgmode.org/org-8.2.5h.zip][zip]] ([[file:Changes][更新日志]])
+最新稳定版 8.2.7c (2014年7月) -- [[http://orgmode.org/org-8.2.7c.tar.gz][tar.gz]] 或者[[http://orgmode.org/org-8.2.7c.zip][zip]] ([[file:Changes][更新日志]])
 
 开发版([[http://orgmode.org/cgit.cgi/org-mode.git/][cgit]]):
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
   ~$ git clone git://orgmode.org/org-mode.git
 #+END_SRC
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
   M-x list-packages RET(see Org ELPA)
 #+END_SRC
 
@@ -28,7 +33,7 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 
 - [[file:features][新特性列表]]
 - [[file:#docs][手册和教程]]
-- [[file:worg/org-tools/index.org][Org工具(可能和Emacs毫无瓜葛)]]
+- [[file:worg/org-tools/index.org][Org工具箱(可能和Emacs毫无瓜葛)]]
 - [[file:worg/index.org][Worg: 社区文档]]
 - [[file:worg/org-contribute][如何向Org贡献？]]
 - [[file:org.html][历史和鸣谢]]
@@ -36,7 +41,8 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 - [[file:community.html#gsoc][谷歌2012编程之夏]]
 - [[file:community.html][邮件列表和涂鸦]]
 
-安装Org mode的详情
+更多 [[http://orgmode.org/worg/dev/org-build-system.html][安装 Org mode]] 的信息(Worg)
+[[http://orgmode.org/worg/org-faq.html#keeping-current-with-Org-mode-development][Staying on the bleeding edge]] (Worg)
 
 * 文档和文学
 
