@@ -17,7 +17,7 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 
 * 下载和安装
 
-最新稳定版 8.2.7c (2014年7月) -- [[http://orgmode.org/org-8.2.7c.tar.gz][tar.gz]] 或者[[http://orgmode.org/org-8.2.7c.zip][zip]] ([[file:Changes][更新日志]])
+最新稳定版 8.2.10 (2014年10月) -- [[http://orgmode.org/org-8.2.10.tar.gz][tar.gz]] 或者[[http://orgmode.org/org-8.2.10.zip][zip]] ([[file:Changes][更新日志]])
 
 开发版([[http://orgmode.org/cgit.cgi/org-mode.git/][cgit]]):
 
@@ -26,7 +26,7 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 #+END_SRC
 
 #+BEGIN_SRC sh
-  M-x list-packages RET(see Org ELPA)
+  M-x list-packages RET(参见 Org ELPA)
 #+END_SRC
 
 每日更新版：[[http://orgmode.org/org-latest.tar.gz][tar.gz]] 或者 [[http://orgmode.org/org-latest.zip][zip]]
