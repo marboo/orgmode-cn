@@ -1,63 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Emacs的Org Mode &ndash; 用纯文本书写人生</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="Emacs的Org Mode &ndash; 用纯文本书写人生"/>
-<meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-12-16"/>
-<meta name="author" content="amoblin"/>
-<meta name="description" content=""/>
-<meta name="keywords" content=""/>
+<title>Emacs的Org Mode &#x2013; 用纯文本书写人生</title>
+<!-- 2014-10-31 Fri 21:58 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="amoblin" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  html { font-family: Times, serif; font-size: 12pt; }
   .title  { text-align: center; }
-  .todo   { color: red; }
+  .todo   { font-family: monospace; color: red; }
   .done   { color: green; }
-  .tag    { background-color: #add8e6; font-weight:normal }
-  .target { }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
-  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
-  .center {margin-left:auto; margin-right:auto; text-align:center;}
-  p.verse { margin-left: 3% }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
   pre {
-	border: 1pt solid #AEBDCC;
-	background-color: #F3F5F7;
-	padding: 5pt;
-	font-family: courier, monospace;
-        font-size: 90%;
-        overflow:auto;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
   }
-  table { border-collapse: collapse; }
-  td, th { vertical-align: top;  }
-  th.right  { text-align:center;  }
-  th.left   { text-align:center;   }
-  th.center { text-align:center; }
-  td.right  { text-align:right;  }
-  td.left   { text-align:left;   }
-  td.center { text-align:center; }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
   dt { font-weight: bold; }
-  div.figure { padding: 0.5em; }
-  div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
     background: #ffffcc;
   }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
   textarea { overflow-x: auto; }
-  .linenr { font-size:smaller }
-  .code-highlighted {background-color:#ffff00;}
-  .org-info-js_info-navigation { border-style:none; }
-  #org-info-js_console-label { font-size:10px; font-weight:bold;
-                               white-space:nowrap; }
-  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
-                                 font-weight:bold; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
   /*]]>*/-->
 </style>
 <script type="text/javascript">
@@ -106,62 +134,54 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-
 </head>
 <body>
+<div id="content">
+<h1 class="title">Emacs的Org Mode &#x2013; 用纯文本书写人生</h1>
 
-<div id="preamble">
-
+<div class="figure">
+<p><img src="http://orgmode.org/img/org-mode-unicorn-logo.png" alt="org-mode-unicorn-logo.png" />
+</p>
 </div>
 
-<div id="content">
-<h1 class="title">Emacs的Org Mode &ndash; 用纯文本书写人生</h1>
-
-<p><img src="http://orgmode.org/img/org-mode-unicorn-logo.png"  alt="http://orgmode.org/img/org-mode-unicorn-logo.png" />
-</p>
-
-
-<a href="https://github.com/amoblin/orgmode-cn">
-<img style="position: absolute; top: 0; right: 0; border: 0;"
-src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67"
-alt="Fork me on GitHub"
-data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png">
-</a>
+<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
 
 <p>
 Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理待办事项、安排项目以及制作文档。
 </p>
+
 <p>
-&ndash; 由Carsten Dominik于2003年创建，目前由<a href="http://bzg.fr/"> Bastien Guerry</a> 维护，大家共同开发。
+&#x2013; 由Carsten Dominik于2003年创建，目前由<a href="http://bzg.fr/"> Bastien Guerry</a> 维护，大家共同开发。
 </p>
 
-<div id="outline-container-1" class="outline-2">
+<div id="outline-container-sec-1" class="outline-2">
 <h2 id="sec-1"><span class="section-number-2">1</span> 下载和安装</h2>
 <div class="outline-text-2" id="text-1">
-
-
 <p>
-最新稳定版 8.2.7c (2014年7月) &ndash; <a href="http://orgmode.org/org-8.2.7c.tar.gz">tar.gz</a> 或者<a href="http://orgmode.org/org-8.2.7c.zip">zip</a> (<a href="Changes">更新日志</a>)
+最新稳定版 8.2.10 (2014年10月) &#x2013; <a href="http://orgmode.org/org-8.2.10.tar.gz">tar.gz</a> 或者<a href="http://orgmode.org/org-8.2.10.zip">zip</a> (<a href="Changes">更新日志</a>)
 </p>
+
 <p>
 开发版(<a href="http://orgmode.org/cgit.cgi/org-mode.git/">cgit</a>):
 </p>
 
+<div class="org-src-container">
 
-
-<pre class="example">~$ git clone git://orgmode.org/org-mode.git
+<pre class="src src-sh">~$ git clone git://orgmode.org/org-mode.git
 </pre>
+</div>
 
+<div class="org-src-container">
 
-
-<pre class="example">M-x list-packages RET(see Org ELPA)
+<pre class="src src-sh">M-x list-packages RET(&#21442;&#35265; Org ELPA)
 </pre>
-
+</div>
 
 <p>
 每日更新版：<a href="http://orgmode.org/org-latest.tar.gz">tar.gz</a> 或者 <a href="http://orgmode.org/org-latest.zip">zip</a>
 </p>
-<ul>
+
+<ul class="org-ul">
 <li><a href="features">新特性列表</a>
 </li>
 <li><a href="#docs">手册和教程</a>
@@ -182,66 +202,70 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 </li>
 </ul>
 
-
 <p>
 更多 <a href="http://orgmode.org/worg/dev/org-build-system.html">安装 Org mode</a> 的信息(Worg)
 <a href="http://orgmode.org/worg/org-faq.html#keeping-current-with-Org-mode-development">Staying on the bleeding edge</a> (Worg)
 </p>
 </div>
-
 </div>
 
-<div id="outline-container-2" class="outline-2">
+<div id="outline-container-sec-2" class="outline-2">
 <h2 id="sec-2"><span class="section-number-2">2</span> 文档和文学</h2>
 <div class="outline-text-2" id="text-2">
-
-
 <p>
 购买 Org手册的 印刷版 ()
 </p>
+
 <p>
 每本书里，Network-Theory Ltd. 会捐助1美元给Org mode维护者
 </p>
+
 <p>
 浏览手册(每章一页)
 </p>
+
 <p>
 阅读完整手册：<a href="org.html">HTML</a> 或者PDF
 </p>
+
 <p>
 阅读精华版指南：<a href="guide/index.html">HTML</a> 或者 PDF
 </p>
+
 <p>
 查看 Worg上的 FAQ、hacks，和指南
 </p>
+
 <p>
 查看 关于 钩子、命令和选项的 参考 文档 
 </p>
+
 <p>
 查看 关于Org mode的（学术）论文 列表
 </p>
+
 <p>
 提交bug报告之前，最好先读读手册里的“反馈”章节
 </p>
+
 <p>
 还可以读读 如何聪明地问问题 ，由 Eric S. Raymond 和 Rick Moen合著。
 </p>
 
+<div class="org-src-container">
 
-
-<pre class="example">M-x org-submit-bug-report RET
+<pre class="src src-shell">M-x org-submit-bug-report RET
 </pre>
-
 </div>
 </div>
 </div>
-
-<div id="postamble">
-<p class="date">Date: 2013-12-16</p>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2013-12-16 Mon 13:11:23&gt;</span></span></p>
 <p class="author">Author: amoblin</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
+<p class="date">Created: 2014-10-31 Fri 21:58</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
