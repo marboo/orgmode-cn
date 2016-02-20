@@ -17,7 +17,7 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 
 * 下载和安装
 
-最新稳定版 8.2.10 (2014年10月) -- [[http://orgmode.org/org-8.2.10.tar.gz][tar.gz]] 或者[[http://orgmode.org/org-8.2.10.zip][zip]] ([[file:Changes][更新日志]])
+最新稳定版 8.3.3 (2016年1月) -- [[http://orgmode.org/org-8.3.3.tar.gz][tar.gz]] 或者 [[http://orgmode.org/org-8.3.3.zip][zip]] ([[file:Changes][更新日志]])
 
 开发版([[http://orgmode.org/cgit.cgi/org-mode.git/][cgit]]):
 
@@ -66,6 +66,6 @@ Org mode给你提供一个快速和有效的纯文本系统来记笔记、管理
 
 还可以读读 如何聪明地问问题 ，由 Eric S. Raymond 和 Rick Moen合著。
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
   M-x org-submit-bug-report RET
 #+END_SRC
