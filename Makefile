@@ -4,7 +4,15 @@
 # create date: 2013-12-19 13:31:13
 # This file is created from ~/.marboo/source/media/file_init/default.init.py
 
-defualt:
+doc:
+	make gen
+	make update
+
+update:
+	/bin/mv -f README.html index.html
+	/bin/cp -rf html/* .	
+
+default:
 	find . -type f -name \*.org | xargs touch
 
 clean:
