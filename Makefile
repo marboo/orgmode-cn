@@ -9,8 +9,8 @@ doc:
 	make update
 
 update:
-	/bin/mv -f README.html index.html
 	/bin/cp -rf html/* .	
+	/bin/mv -f README.html index.html
 
 default:
 	find . -type f -name \*.org | xargs touch
