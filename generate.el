@@ -5,7 +5,7 @@
 ;; This file is created from ~Marboo/media/file_init/default.init.el
 ;; 本文件由 ~Marboo/media/file_init/default.init.el　复制而来
 
-(require 'org-publish)
+(require 'ox-publish)
 (setq org-publish-project-alist
       '(
 	;; ... add all the components here (see below)...
@@ -14,7 +14,7 @@
 	 :base-extension "org"
 	 :publishing-directory "html"
 	 :recursive t
-	 :publishing-function org-publish-org-to-html
+	 :publishing-function org-html-publish-to-html
 	 :headline-levels 4             ; Just the default for this project.
 	 :auto-preamble t
 	 )
