@@ -5,6 +5,11 @@
 ;; This file is created from ~Marboo/media/file_init/default.init.el
 ;; 本文件由 ~Marboo/media/file_init/default.init.el　复制而来
 
+(add-to-list 'load-path "~/.emacs.d/elpa/org-20160215")
+
+;(use-package uniquify)
+;(setq uniquify-buffer-name-style 'forward)
+
 (require 'ox-publish)
 (setq org-publish-project-alist
       '(
@@ -13,6 +18,10 @@
 	 :base-directory "."
 	 :base-extension "org"
 	 :publishing-directory "html"
+         :makeindex t
+         :index-filename "orgmode-cn.marboo.io"
+         :org-id-track-globally nil
+         :htmlized-source t
 	 :recursive t
 	 :publishing-function org-html-publish-to-html
 	 :headline-levels 4             ; Just the default for this project.
